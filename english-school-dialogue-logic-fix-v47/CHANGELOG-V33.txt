@@ -1,0 +1,10 @@
+VERSION 33
+- Added four distinct child voice profiles: two girls and two boys.
+- Corrected first-scene routing so girl 2 and boy 2 use their own voices.
+- Re-recorded all child phrases as lossless 44.1 kHz mono WAV.
+- Added 44.1 kHz / 192 kbps MP3 versions for later lesson scenes.
+- Normalized loudness and applied moderate child pitch/formant processing while
+  preserving natural speaking tempo and clear pronunciation.
+- The teacher keeps the original adult voice.
+- Added `?v=33` cache busting to audio URLs so browsers do not reuse the old
+  adult-sounding files cached by version 32.

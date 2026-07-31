@@ -1,0 +1,2361 @@
+/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--spacing:.25rem;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab, red, red)){::placeholder{color:color-mix(in oklab, currentcolor 50%, transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.relative{position:relative}.start{inset-inline-start:var(--spacing)}.table{display:table}.table\!{display:table!important}}:root{--ink:#173a57;--muted:#68829a;--cream:#fffaf0;--yellow:#ffd75a;--orange:#ff8842;--blue:#58b9ec;--green:#58c98b;--pink:#ff8faf;--red:#ec6f5a;--shadow:0 22px 60px #1b435e2e}*{box-sizing:border-box}html{background:#eef7ee}body{color:var(--ink);background:#eef7ee;margin:0;font-family:Trebuchet MS,Avenir Next,Arial,sans-serif}button,input{font:inherit}button{-webkit-tap-highlight-color:transparent}.game-shell{background:radial-gradient(circle at 10% 5%,#fff4bb 0,#0000 24%),radial-gradient(circle at 92% 20%,#d8f2ff 0,#0000 25%);min-height:100vh;padding-bottom:26px}.topbar{-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);background:#ffffffe6;border-bottom:1px solid #173a571a;grid-template-columns:1fr 1.2fr 1fr;align-items:center;gap:20px;min-height:82px;padding:10px max(22px,50vw - 610px);display:grid}.brand{align-items:center;gap:11px;display:flex}.brand-mark{color:#fff;background:linear-gradient(145deg, var(--orange), #ffb443);border-radius:15px;place-items:center;width:48px;height:48px;font-weight:900;display:grid;transform:rotate(-3deg);box-shadow:0 6px #db682c}.brand strong,.brand small{display:block}.brand strong{font-size:17px}.brand small{color:#e16b31;letter-spacing:1.2px;margin-top:2px;font-size:10px;font-weight:900}.header-center{grid-template-columns:auto 1fr auto;align-items:center;gap:9px;display:grid}.header-center small{white-space:nowrap;text-overflow:ellipsis;max-width:130px;color:var(--muted);font-size:10px;font-weight:800;overflow:hidden}.header-center b{color:var(--muted);font-size:11px}.top-progress{background:#e2ece5;border-radius:20px;height:8px;overflow:hidden}.top-progress span{border-radius:inherit;background:linear-gradient(90deg, var(--green), var(--blue));height:100%;transition:width .35s;display:block}.star-counter{background:#fff8ca;border:2px solid #edcc54;border-radius:999px;justify-content:center;justify-self:end;align-items:center;gap:7px;min-width:83px;padding:10px 15px;display:flex;box-shadow:0 4px #e7d58a}.star-counter span,.star-counter b{font-size:21px}.stage{max-width:1220px;min-height:650px;box-shadow:var(--shadow);background:#fff;border:1px solid #173a5714;border-radius:32px;grid-template-columns:.74fr 1.26fr;margin:24px auto 0;display:grid;position:relative;overflow:hidden}.stage-visual{min-height:650px;position:relative;overflow:hidden}.setting-school .stage-visual{background:linear-gradient(#91def7 0 57%,#83d482 57%)}.setting-classroom .stage-visual,.setting-floor .stage-visual{background:linear-gradient(#fff8dd 0 72%,#e0b77f 72%)}.sky-sun{background:#ffdc5d;border-radius:50%;width:88px;height:88px;position:absolute;top:45px;left:38px;box-shadow:0 0 0 13px #ffdc5d38}.school-building{background:#fff1c8;border:7px solid #d8974c;border-radius:17px 17px 4px 4px;width:300px;height:290px;position:absolute;top:48%;left:50%;transform:translate(-50%,-50%);box-shadow:0 16px #37673f29}.school-building:before{content:"";clip-path:polygon(50% 0,100% 100%,0 100%);background:#e76056;height:90px;position:absolute;top:-87px;left:25px;right:25px}.school-building:after{content:"▦  ▦  ▦";text-align:center;color:#5ca5c9;width:100%;font-size:49px;font-weight:900;position:absolute;top:94px}.school-building b{text-align:center;color:#fff;background:var(--blue);letter-spacing:1px;border-radius:7px;padding:9px 3px;font-size:12px;position:absolute;top:25px;left:45px;right:45px}.school-building i{text-align:center;color:#fff;background:#4c96bd;border:6px solid #d79448;width:75px;height:89px;padding-top:24px;font-size:9px;font-style:normal;font-weight:900;position:absolute;bottom:0;left:105px}.school-path{background:#efd095;border-radius:50% 50% 0 0;width:230px;height:310px;position:absolute;bottom:-215px;left:50%;transform:translate(-50%)}.class-window{text-align:right;background:#9edff4;border:8px solid #e2ae64;width:115px;height:125px;padding:15px;font-size:34px;position:absolute;top:47px;right:28px;box-shadow:inset 0 0 0 4px #fff}.alphabet-board{text-align:center;color:#f6f0d9;letter-spacing:10px;background:#407866;border:11px solid #b77e47;width:240px;height:147px;padding:28px 15px;font-family:Georgia,serif;font-size:32px;font-weight:900;position:absolute;top:52px;left:28px;transform:rotate(-1deg);box-shadow:0 8px #442f1e21}.alphabet-board small{color:#ffda65;letter-spacing:1px;font-size:24px}.class-shelf{background:#ffeac4;border-bottom:15px solid #aa7042;justify-content:space-around;padding:22px 10px 13px;display:flex;position:absolute;bottom:170px;left:30px;right:30px;box-shadow:0 9px #583a2021}.class-shelf span{filter:drop-shadow(0 5px 3px #1e1e141f);font-size:48px}.teacher-desk{background:#c48651;border-radius:10px 10px 3px 3px;width:260px;height:92px;position:absolute;bottom:33px;left:50%;transform:translate(-50%);box-shadow:inset 0 10px #e5ac71}.teacher-desk:after{content:"ABC";color:#f8d17a;background:#a66a41;place-items:center;width:95px;height:70px;font-size:20px;font-weight:900;display:grid;position:absolute;top:14px;left:82px}.scene-card{background:linear-gradient(100deg,#fffffff5,#fff),radial-gradient(circle,#ffdb71 1.5px,#0000 2px) 0 0/24px 24px;flex-direction:column;min-width:0;padding:30px clamp(27px,4vw,60px) 34px;display:flex}.scene-heading{border-bottom:1px solid #e7eeea;padding-bottom:15px}.scene-heading>span{color:#e17135;letter-spacing:1.6px;font-size:10px;font-weight:900}.scene-heading h2{letter-spacing:-1.2px;margin:4px 0 0;font-size:clamp(25px,3vw,38px)}.scene-content{text-align:center;flex-direction:column;flex:1;justify-content:center;padding-top:20px;animation:.32s enter;display:flex}@keyframes enter{0%{opacity:0;transform:translateY(7px)}}.cinema-label{color:#fff;background:var(--ink);letter-spacing:1px;border-radius:999px;align-self:center;margin-bottom:12px;padding:6px 11px;font-size:10px;font-weight:900}h1{letter-spacing:-2.2px;margin:0;font-size:clamp(37px,4vw,57px);line-height:1.02}.scene-intro{max-width:520px;color:var(--muted);margin:16px auto 20px;line-height:1.55}.school-friends{justify-content:center;gap:13px;margin:5px 0 22px;display:flex}.primary-action,.secondary-action,.next-button,.back-button{cursor:pointer;border:0;border-radius:15px;font-weight:900;transition:all .15s}.primary-action{color:#fff;background:var(--orange);align-self:center;margin-top:14px;padding:14px 23px;box-shadow:0 6px #d56227}.primary-action:hover:not(:disabled),.next-button:hover:not(:disabled){transform:translateY(-2px)}.primary-action:active:not(:disabled),.next-button:active:not(:disabled){transform:translateY(4px);box-shadow:0 2px #d56227}.secondary-action{color:var(--ink);background:#eaf0ed;align-self:center;margin-top:15px;padding:11px 18px}.speech{text-align:left;background:#eef9ff;border:2px solid #c1e3f3;border-radius:20px 20px 20px 6px;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;width:100%;max-width:570px;margin:7px auto;padding:12px 14px;display:grid}.speech-child,.speech-girl,.speech-boy{background:#fff4dc;border-color:#f0d59d;border-radius:20px 20px 6px}.speech-dunno{background:#fff1c9;border-color:#efcf72}.speech-roy{background:#edf6e9;border-color:#beddb2}.speaker-avatar{background:#fff;border-radius:50%;place-items:center;width:55px;height:55px;font-size:35px;display:grid;box-shadow:0 3px 8px #223b461a}.speaker-name{color:#3d7d9a;letter-spacing:1px;text-transform:uppercase;margin-bottom:3px;font-size:9px;font-weight:900;display:block}.speech-text{font-size:14px;line-height:1.42}.speech-text b{font-size:17px}.gesture-note{color:var(--muted);margin-top:5px;font-size:10px;line-height:1.35;display:block}.round-sound{cursor:pointer;background:#fff;border:0;border-radius:50%;place-items:center;width:37px;height:37px;display:grid;box-shadow:0 3px 9px #1c3f551f}.prompt{color:var(--muted);margin:15px 0 10px;font-size:13px;font-weight:900}.choice-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;display:grid}.choice-row{flex-wrap:wrap;justify-content:center;gap:9px;display:flex}.choice-button{min-width:100px;color:var(--ink);cursor:pointer;background:#fff;border:3px solid #d7e2e5;border-radius:15px;padding:12px 14px;font-weight:900;transition:all .15s;box-shadow:0 4px #dbe3e4}.choice-button:hover{border-color:var(--blue);transform:translateY(-2px)}.choice-button.right,.toy-choice-grid button.right{background:#e3f9ea;border-color:#3eb270;box-shadow:0 4px #a4dab8}.choice-button.wrong,.toy-choice-grid button.wrong{background:#fff0ec;border-color:#e97561;animation:.25s linear shake}@keyframes shake{33%{transform:translate(-4px)}66%{transform:translate(4px)}}.feedback{text-align:center;color:#9f5939;background:#fff0e6;border-radius:14px;margin-top:14px;padding:11px 14px;font-size:13px;font-weight:900}.feedback.success{color:#26784b;background:#e3f8ea}.seat-activity{margin-top:10px}.semicircle{justify-content:center;align-items:flex-end;gap:8px;height:90px;display:flex}.semicircle span{font-size:40px}.semicircle span:first-child,.semicircle span:last-child{transform:translateY(-28px)rotate(8deg)}.semicircle span:last-child{transform:translateY(-28px)rotate(-8deg)}.semicircle span:nth-child(2),.semicircle span:nth-child(4){transform:translateY(-8px)}.language-map{flex-direction:column;margin:12px auto;display:flex}.language-map span{font-size:75px;line-height:1}.language-map strong{margin-top:5px}.story-card{text-align:left;background:#edf8ef;border:2px solid #bfe1c5;border-radius:18px;align-items:center;gap:13px;margin-top:15px;padding:14px;display:flex}.story-card span{font-size:45px}.story-card p{color:#426c52;margin:0;font-size:13px;line-height:1.45}.hero-phrase{min-width:300px;color:var(--ink);cursor:pointer;background:#fff7c7;border:3px solid #f0c13d;border-radius:22px;grid-template-columns:auto 1fr;align-self:center;align-items:center;gap:10px 15px;margin:18px 0;padding:20px 25px;display:grid;box-shadow:0 7px #efd36f}.hero-phrase span{grid-row:1/3;font-size:32px}.hero-phrase b{text-align:left;font-size:33px}.hero-phrase small{text-align:left;color:#897526;font-weight:800}.echo-gnomes{justify-content:center;align-items:center;gap:8px;margin:16px 0;display:flex}.echo-gnomes>span{font-size:32px}.echo-gnomes button{color:var(--ink);cursor:pointer;background:#e7f7ff;border:0;border-bottom:4px solid #a8d9eb;border-radius:12px;padding:10px 14px;font-size:20px;font-weight:900}.name-line{background:#fff;border:3px solid #c9dfc7;border-radius:15px;align-items:center;gap:8px;max-width:430px;margin:5px auto;padding:7px 8px 7px 15px;display:flex}.name-line span{white-space:nowrap;font-weight:900}.name-line input{width:100%;min-width:0;color:var(--ink);background:#f1f7ef;border:0;border-radius:9px;outline:0;padding:9px;font-weight:900}.toy-cloud{flex-wrap:wrap;justify-content:center;gap:2px 10px;max-width:470px;margin:7px auto;display:flex}.toy-cloud span{filter:drop-shadow(0 4px 3px #0000001a);font-size:41px}.door-scene{justify-content:center;align-items:center;gap:14px;display:flex}.class-door{background:#5ca7c9;border:9px solid #b87842;justify-content:center;align-items:flex-end;width:100px;height:150px;display:flex;overflow:hidden}.class-door span{font-size:70px;transition:transform .4s;transform:translate(85px)}.class-door span.dunno-visible{transform:translate(0)}.knock-button{color:#fff;background:var(--orange);cursor:pointer;border:0;border-radius:14px;padding:12px;font-weight:900;box-shadow:0 5px #d96327}.character-card{justify-items:center;margin:0 auto 8px;display:grid}.character-card span{background:#fff0bf;border:4px solid #fff;border-radius:50%;place-items:center;width:88px;height:88px;font-size:58px;display:grid;box-shadow:0 0 0 3px #edc94f}.character-card strong{margin-top:7px;font-size:19px}.character-card small{color:var(--muted);font-weight:800}.finger-count{justify-content:center;gap:7px;margin:5px 0;display:flex}.finger-count button{color:#fff;background:var(--blue);cursor:pointer;border:0;border-radius:50% 50% 45% 45%;width:46px;height:46px;font-size:18px;font-weight:900;box-shadow:0 4px #398aaf}.action-card{background:#eff9ff;border:3px solid #bce1f3;border-radius:22px;justify-items:center;max-width:330px;margin:15px auto;padding:16px;display:grid;box-shadow:0 7px #d5ebf4}.action-card>span{font-size:65px}.action-card b{font-size:27px}.action-card small{color:var(--muted);margin:2px 0 9px;font-weight:800}.action-card button{color:#287a9c;cursor:pointer;background:#fff;border:0;border-radius:999px;padding:8px 12px;font-size:11px;font-weight:900}.mini-progress{justify-content:center;gap:5px;margin-top:13px;display:flex}.mini-progress span{background:#dfe8e2;border-radius:8px;width:26px;height:6px}.mini-progress span.filled{background:var(--green)}.table-toys{background:#fff2d8;border-bottom:13px solid #a96f40;justify-content:space-around;max-width:440px;margin:9px auto;padding:15px 12px 8px;display:flex;box-shadow:0 8px #e6ccb0}.table-toys span{font-size:51px}.table-toys.small span{font-size:38px}.word-card{background:#fff7cf;border:2px solid #edd06b;border-radius:18px;grid-template-columns:auto 1fr auto;align-items:center;gap:0 10px;max-width:300px;margin:10px auto 0;padding:13px;display:grid}.word-card>span{grid-row:1/3;font-size:55px}.word-card p{color:var(--muted);margin:0;font-size:11px;font-weight:900}.word-card b{font-size:16px}.word-card button{cursor:pointer;background:#fff;border:0;border-radius:50%;grid-area:1/3/3;width:37px;height:37px}.toy-choice-grid{grid-template-columns:repeat(4,1fr);gap:9px;display:grid}.toy-choice-grid button{color:var(--ink);cursor:pointer;background:#f8fbf7;border:3px solid #d8e5e1;border-radius:18px;padding:12px 6px}.toy-choice-grid span,.toy-choice-grid b{display:block}.toy-choice-grid span{font-size:48px}.toy-choice-grid b{font-size:12px}.rhyme-card{color:#315b73;background:#eaf8ff;border:3px dashed #73bddf;border-radius:22px;align-items:center;gap:18px;max-width:400px;margin:14px auto;padding:18px;display:flex}.rhyme-card button{cursor:pointer;background:#fff;border:0;border-radius:50%;flex:none;width:50px;height:50px}.rhyme-card p{text-align:left;margin:0;line-height:1.5}.gift-row{grid-template-columns:repeat(3,1fr);gap:9px;margin:10px 0;display:grid}.gift-row button{color:var(--ink);cursor:pointer;background:#fff;border:2px solid #d5e3df;border-radius:17px;padding:9px}.gift-row button:disabled{background:#e6f8eb;border-color:#7bc797}.gift-row span,.gift-row b{display:block}.gift-row span{font-size:43px}.gift-row b{font-size:11px}.kindness{color:#3d7049;background:#e8f7e9;border-radius:14px;margin-top:10px;padding:10px;font-size:12px;font-weight:900}.kindness button,.inline-word{color:#247043;cursor:pointer;background:#fff;border:0;border-radius:8px;padding:5px 8px;font-weight:900}.near-far{grid-template-columns:1fr 1fr;gap:20px;max-width:410px;margin:17px auto;display:grid}.near-far>div{background:#e9f7ec;border:2px solid #b9dfc3;border-radius:19px;justify-items:center;padding:14px;display:grid}.near-far>div:last-child{opacity:.75;background:#f1f0e9;border-color:#d3d0bd;transform:scale(.77)}.near-far small{color:var(--muted);font-size:9px;font-weight:900}.near-far span{font-size:64px}.near-far b{font-size:19px}.nasty-frog{filter:grayscale(.5)contrast(1.2);transform:rotate(8deg)}.bag-scene{justify-items:center;margin:0 auto 5px;display:grid}.bag-scene span{font-size:78px}.bag-scene b{color:#b33f34}.picture-card{background:#fff1cf;border:8px solid #cf4444;border-radius:8px;flex-wrap:wrap;justify-content:center;gap:7px;max-width:430px;margin:12px auto;padding:15px;display:flex;box-shadow:0 7px #9e3535}.picture-card span{font-size:47px}.roy-card span{background:#e4f3df;box-shadow:0 0 0 3px #90c47c}.song-card{background:#fff5cc;border:2px solid #eed169;border-radius:18px;max-width:470px;margin:9px auto;padding:13px}.song-card button{color:#fff;background:var(--orange);cursor:pointer;border:0;border-radius:999px;padding:8px 13px;font-size:11px;font-weight:900}.song-card p{margin:10px 0 0;font-size:12px;line-height:1.45}.cinderella-card{text-align:left;background:#eee9ff;border:2px solid #c9bce8;border-radius:18px;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;max-width:480px;margin:0 auto 10px;padding:12px;display:grid}.cinderella-card>span{font-size:44px}.cinderella-card b,.cinderella-card small{display:block}.cinderella-card small{color:#6c5e8e;margin-top:3px;font-size:10px;line-height:1.35}.lesson-complete>span{font-size:65px}.lesson-complete p{color:var(--muted);margin:5px 0;font-weight:900}.lesson-complete button{color:#2c7697;cursor:pointer;background:#e7f7ff;border:0;border-radius:999px;margin-top:10px;padding:9px 13px;font-weight:900}.score-card{background:#fff5c8;border:2px solid #edd164;border-radius:15px;max-width:280px;margin:14px auto 0;padding:11px;display:grid}.score-card small{color:#8a7427;text-transform:uppercase;font-weight:900}.score-card b{font-size:27px}.score-card span{font-size:11px;font-weight:900}.lesson-controls{grid-template-columns:150px 1fr 190px;align-items:center;gap:18px;max-width:1220px;margin:17px auto 0;padding:0 5px;display:grid}.back-button{color:var(--ink);background:#fff;justify-self:start;padding:11px 16px;box-shadow:0 4px #dfe7e2}.back-button:disabled{opacity:.4;cursor:not-allowed}.next-button{color:#fff;background:var(--green);justify-self:end;padding:13px 18px;box-shadow:0 5px #2e9d63}.next-button:disabled{color:#91a19a;cursor:not-allowed;background:#dfe8e2;box-shadow:0 4px #cfd9d2}.chapter-dots{justify-content:center;gap:5px;display:flex}.chapter-dots button{background:#d1ddd5;border:0;border-radius:50%;width:8px;height:8px;padding:0}.chapter-dots button.active{background:var(--yellow);border-radius:8px;width:24px}.chapter-dots button.done{background:var(--green);cursor:pointer}.stage-visual{isolation:isolate;background:#153c50}.scene-backdrop{object-fit:cover;filter:saturate(1.05)contrast(1.02);width:106%;height:106%;animation:14s ease-in-out both camera-drift;position:absolute;inset:-3%}.visual-school .scene-backdrop{object-position:51% center;animation-name:walk-to-school}.visual-welcome .scene-backdrop{object-position:70% center}.visual-story .scene-backdrop{object-position:47% center}.cinematic-shade{z-index:1;background:linear-gradient(#08223108 35%,#082231a6 100%);position:absolute;inset:0}.floating-light{z-index:2;background:#fff5bad9;border-radius:50%;width:12px;height:12px;animation:5s ease-in-out infinite firefly;position:absolute;box-shadow:0 0 18px 7px #ffe77973}.light-one{top:23%;left:18%}.light-two{animation-delay:-2.5s;top:42%;right:14%;transform:scale(.65)}.visual-caption{z-index:3;color:#fff;text-shadow:0 2px 14px #00000073;animation:.8s .15s both caption-rise;position:absolute;bottom:24px;left:26px;right:26px}.visual-caption span,.visual-caption b{display:block}.visual-caption span{color:#ffe589;letter-spacing:1.4px;text-transform:uppercase;margin-bottom:4px;font-size:10px;font-weight:900}.visual-caption b{font-size:clamp(20px,2.2vw,31px);line-height:1.05}@keyframes camera-drift{0%{transform:scale(1.08)translate(-1.5%)}to{transform:scale(1.01)translate(1%,.5%)}}@keyframes walk-to-school{0%{transform:scale(1.16)translateY(2%)}to{transform:scale(1.02)translate(0)}}@keyframes firefly{0%,to{opacity:.3;transform:translate(0)scale(.55)}45%{opacity:1;transform:translate(28px,-35px)scale(1)}70%{opacity:.7;transform:translate(42px,-5px)scale(.75)}}@keyframes caption-rise{0%{opacity:0;transform:translateY(18px)}}.scene-card{animation:.5s cubic-bezier(.22,.75,.25,1) both panel-enter}@keyframes panel-enter{0%{opacity:0;transform:translate(28px)}}.speech{animation:.42s cubic-bezier(.2,.85,.3,1.25) both dialogue-pop;box-shadow:0 8px 22px #1f546f17}.speech+.speech{animation-delay:.12s}@keyframes dialogue-pop{0%{opacity:0;transform:translateY(12px)scale(.97)}}.speaker-avatar{animation:none}@keyframes character-breathe{0%,to{transform:translateY(0)rotate(-1deg)}50%{transform:translateY(-3px)rotate(1deg)}}.round-sound{color:#0000;background:linear-gradient(145deg,#62c9f2,#318fc4);position:relative;box-shadow:0 4px #277fae,0 8px 18px #2c8ebe38}.round-sound:before{content:"▶";color:#fff;font-size:13px;transform:translate(1px)}.round-sound:after{content:"";border-radius:inherit;border:2px solid #43a6d259;animation:2s ease-out infinite sound-pulse;position:absolute;inset:-5px}@keyframes sound-pulse{0%{opacity:0;transform:scale(.82)}35%{opacity:1}to{opacity:0;transform:scale(1.18)}}.translation-line{color:#4a6579;background:#ffffffd1;border-radius:9px;align-items:flex-start;gap:7px;margin-top:7px;padding:7px 9px;font-size:11px;font-weight:800;line-height:1.35;display:flex}.translation-line>span{color:#fff;letter-spacing:.7px;background:#67869b;border-radius:4px;flex:none;padding:2px 4px;font-size:7px}.prompt b,.prompt-translation{display:block}.prompt b{color:var(--ink);font-size:15px}.prompt-translation{color:#7890a0;margin-top:3px;font-size:11px}.school-friends span small{color:#6c8190;font-size:8px;display:block}.primary-action small{opacity:.9;font-size:10px}.name-line span small{color:var(--muted);font-size:9px}.word-card>small{color:#8a7428;grid-column:2;font-size:10px;font-weight:900}.verse-translation{color:#66899b;text-align:left;border-top:1px solid #b8dcea;margin-top:7px;padding-top:7px;font-size:10px;font-weight:800;display:block}.song-translation{color:#79661e;background:#ffffffb3;border-radius:10px;margin-top:9px;padding:8px;font-size:10px;font-weight:800;line-height:1.4}.lesson-complete p small{margin-top:2px;font-size:10px;display:block}.feedback.success{animation:.5s cubic-bezier(.2,.85,.3,1.35) success-bounce;position:relative;overflow:visible}.success-stars{pointer-events:none;position:absolute;inset:0}.success-stars i{color:#ffd64f;text-shadow:0 2px #da9a2b;font-style:normal;animation:1s ease-out both star-pop;position:absolute}.success-stars i:first-child{top:-14px;left:8%}.success-stars i:nth-child(2){animation-delay:80ms;top:-24px;left:48%}.success-stars i:nth-child(3){animation-delay:.16s;top:-12px;right:8%}@keyframes success-bounce{50%{transform:scale(1.035)}}@keyframes star-pop{0%{opacity:0;transform:translateY(18px)scale(.2)rotate(-20deg)}60%{opacity:1;transform:translateY(-9px)scale(1.2)rotate(12deg)}to{opacity:0;transform:translateY(-26px)scale(.75)rotate(25deg)}}.stage{background:#132f3e;min-height:740px;display:block;position:relative}.stage-visual{min-height:0;position:absolute;inset:0}.visual-dunno .scene-backdrop{object-position:43% center}.visual-toys .scene-backdrop{object-position:48% center}.visual-mystery .scene-backdrop{object-position:46% center}.stage .cinematic-shade{background:linear-gradient(90deg,#081c2814 0 45%,#081c2838 100%),linear-gradient(#0000 48%,#081c28b8 100%)}.stage .scene-card{z-index:5;-webkit-backdrop-filter:blur(22px)saturate(1.18);backdrop-filter:blur(22px)saturate(1.18);background:#ffffffe6;border:1px solid #ffffffc7;border-radius:28px;width:min(570px,48%);min-height:0;padding:26px 31px 30px;position:absolute;top:26px;bottom:26px;right:26px;overflow:auto;box-shadow:0 28px 70px #061e2c47}.stage .scene-content{flex:none;justify-content:flex-start;padding-top:14px}.knock-event{text-align:left;background:linear-gradient(135deg,#e7f8fffa,#fff5d6f5);border:1px solid #ffffffe0;border-radius:20px;grid-template-columns:54px 1fr auto;align-items:center;gap:13px;margin:8px 0 14px;padding:17px;display:grid;position:relative;overflow:hidden;box-shadow:0 12px 25px #245c771f}.knock-event>div:nth-child(2) b,.knock-event>div:nth-child(2) small{display:block}.knock-event>div:nth-child(2) b{font-size:14px}.knock-event>div:nth-child(2) small{color:var(--muted);margin-top:3px;font-size:9px;font-weight:800}.knock-rings{place-items:center;width:50px;height:50px;display:grid;position:relative}.knock-rings:before{content:"♪";z-index:2;color:#fff;background:linear-gradient(145deg,#58b9ec,#2b7da8);border-radius:50%;place-items:center;width:43px;height:43px;font-size:21px;font-weight:900;display:grid;position:relative;box-shadow:0 5px #256c91}.knock-rings i{border:2px solid #45a3cd73;border-radius:50%;animation:1.8s ease-out infinite knock-wave;position:absolute;inset:5px}.knock-rings i:nth-child(2){animation-delay:.35s}.knock-rings i:nth-child(3){animation-delay:.7s}@keyframes knock-wave{0%{opacity:0;transform:scale(.7)}30%{opacity:1}to{opacity:0;transform:scale(1.55)}}.knock-event .knock-button{white-space:nowrap;background:linear-gradient(145deg,#ff9953,#ff7838);border-radius:13px;padding:12px 14px;box-shadow:0 5px #d85d27,0 10px 20px #e25f272e}.knock-event .knock-button span{transform-origin:100%;animation:.8s ease-in-out infinite hand-knock;display:inline-block}@keyframes hand-knock{0%,to{transform:rotate(0)translate(0)}50%{transform:rotate(-12deg)translate(-3px)}}.animated-cast{z-index:3;pointer-events:none;position:absolute;inset:0;overflow:hidden}.cartoon-character{transform-origin:50% 100%;filter:drop-shadow(0 16px 12px #13303d47);animation:.75s cubic-bezier(.2,.85,.28,1.18) both character-arrive;position:absolute;bottom:-2%}.cartoon-character img{-webkit-user-select:none;user-select:none;width:100%;height:auto;display:block}.character-teacher{width:min(24%,265px);left:5%}.character-girl{width:min(16%,170px);animation-delay:.18s;left:31%}.character-boy{width:min(16%,170px);animation-delay:.3s;left:48%}.character-dunno{width:min(22%,230px);animation:.9s cubic-bezier(.2,.85,.28,1.18) .15s both dunno-arrive;left:34%}.character-roy{width:min(17%,175px);animation-delay:.15s;left:34%}.character-roy img{filter:hue-rotate(20deg)saturate(.9)}.cast-dunno-arrives .character-dunno{left:38%}.cast-dunno-arrives .character-girl,.cast-dunno-arrives .character-boy{transform-origin:50% 100%;transform:scale(.88)}.cast-actions .character-girl,.cast-actions .character-boy,.cast-rhyme .character-girl,.cast-rhyme .character-boy,.cast-likes .character-dunno{animation:.7s cubic-bezier(.2,.85,.28,1.18) both character-arrive}.cast-likes .character-boy{display:none}.cast-likes .character-girl{width:min(16%,165px);left:27%}.cast-likes .character-dunno{width:min(18%,190px);left:40%}.cartoon-character:after{content:"";z-index:-1;filter:blur(6px);background:#0e283345;border-radius:50%;height:4%;animation:none;position:absolute;bottom:0;left:12%;right:12%}.talk-bubble{opacity:0;color:#173a57;white-space:nowrap;background:#fff;border:3px solid #173a57;border-radius:16px 16px 16px 4px;min-width:72px;padding:8px 11px;font-size:12px;font-style:normal;font-weight:900;position:absolute;top:8%;left:64%;transform:translateY(8px)scale(.8);box-shadow:0 5px #173a572e}.is-speaking{z-index:8;animation:.38s ease-in-out 2 alternate talking-character}.is-speaking .talk-bubble{opacity:1;animation:.32s cubic-bezier(.2,.85,.3,1.3) both bubble-pop}.is-speaking img{animation:.22s ease-in-out 2 alternate talking-face}.is-reacting{z-index:7;animation:.55s ease-in-out 2 alternate child-react}.kids-seated .character-girl,.kids-seated .character-boy{z-index:4;animation:.5s cubic-bezier(.2,.8,.3,1.12) both pose-swap}.kids-seated .character-girl{width:min(17%,180px);left:31%}.kids-seated .character-boy{width:min(17%,180px);left:48%}.kids-on-floor .character-girl,.kids-on-floor .character-boy{animation:.5s cubic-bezier(.2,.8,.3,1.12) both pose-swap}.kids-on-floor .character-girl{width:min(16%,170px);left:32%}.kids-on-floor .character-boy{width:min(17%,180px);left:48%}.kids-standing .character-girl,.kids-standing .character-boy{animation:.6s cubic-bezier(.2,.8,.3,1.12) both stand-up}@keyframes character-arrive{0%{opacity:0;transform:translateY(28%)scale(.82)}}@keyframes dunno-arrive{0%{opacity:0;transform:translate(-65%)rotate(-12deg)scale(.75)}70%{transform:translate(4%)rotate(3deg)scale(1.04)}}@keyframes cartoon-idle{0%,to{transform:translateY(0)rotate(-.6deg)}50%{transform:translateY(-7px)rotate(.8deg)}}@keyframes dunno-idle{0%,to{transform:translateY(0)rotate(-2deg)}50%{transform:translateY(-10px)rotate(2deg)}}@keyframes talking-character{0%{transform:translateY(0)rotate(-1deg)}to{transform:translateY(-9px)rotate(1deg)}}@keyframes talking-face{0%{transform:scale(1)}to{transform:scale(1.012)}}@keyframes child-react{0%{transform:translateY(0)rotate(-2deg)}to{transform:translateY(-12px)rotate(3deg)}}@keyframes pose-swap{0%{opacity:0;transform:translateY(-10px)scale(.9)}to{opacity:1;transform:translateY(0)scale(1)}}@keyframes seated-idle{0%,to{transform:translateY(0)rotate(-.35deg)}50%{transform:translateY(-4px)rotate(.5deg)}}@keyframes floor-idle{0%,to{transform:translateY(0)rotate(-.7deg)}50%{transform:translateY(-5px)rotate(.7deg)}}@keyframes stand-up{0%{opacity:.4;transform:translateY(16%)scaleY(.86)}to{transform:translateY(0)scaleY(1)}}@keyframes bubble-pop{0%{opacity:0;transform:translateY(10px)scale(.65)rotate(-4deg)}to{opacity:1;transform:translateY(0)scale(1)rotate(0)}}@keyframes shadow-breathe{50%{opacity:.65;transform:scaleX(.84)}}@keyframes action-bounce{0%,to{transform:translateY(0)}45%{transform:translateY(-35px)rotate(-3deg)}60%{transform:translateY(-35px)rotate(3deg)}}@keyframes sit-and-count{0%,to{transform:translateY(10%)scaleY(.9)}50%{transform:translateY(6%)scaleY(.92)rotate(2deg)}}@keyframes happy-hug{0%,to{transform:rotate(-2deg)scale(1)}50%{transform:rotate(3deg)scale(1.05)}}.stage .scene-card{background:linear-gradient(145deg,#ffffffe8,#fffbf0d1);width:min(430px,35%);padding:22px 24px 25px;top:18px;bottom:18px;right:18px;box-shadow:0 22px 55px #061e2c3d}.stage .visual-caption{right:calc(35% + 52px)}.stage .scene-heading h2{font-size:clamp(25px,2.4vw,34px)}.scene-arrival .scene-backdrop{object-position:center center;width:100%;height:100%;animation:none;inset:0}.scene-arrival{min-height:clamp(560px,100vh - 145px,740px)}.scene-arrival .stage-visual{min-height:100%}.scene-arrival .cinematic-shade{background:linear-gradient(#0a2f462e 0,#0000 31% 68%,#0824347a 100%),linear-gradient(90deg,#07223414,#0000 30% 75%,#07223414)}.scene-arrival .visual-caption{display:none}.stage .arrival-stage-card{width:auto;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none;pointer-events:none;background:0 0;border:0;border-radius:0;padding:0;inset:0;overflow:visible}.arrival-stage-card .scene-heading{display:none}.stage .arrival-stage-card .scene-content{pointer-events:none;padding:0;display:block;position:absolute;inset:0}.arrival-hero{position:absolute;inset:0}.arrival-title{z-index:6;color:#fff;text-align:center;-webkit-backdrop-filter:blur(9px)saturate(1.15);backdrop-filter:blur(9px)saturate(1.15);pointer-events:auto;background:linear-gradient(135deg,#154e6fdb,#287d9ab8);border:1px solid #ffffffb8;border-radius:25px;width:min(690px,66%);padding:14px 30px 17px;position:absolute;top:4.5%;left:50%;transform:translate(-50%);box-shadow:0 18px 42px #08304638,inset 0 1px #ffffff80}.arrival-title>span{color:#ffe889;letter-spacing:1.7px;font-size:10px;font-weight:900}.arrival-title h1{color:#fff;text-shadow:0 4px 18px #04243757;margin-top:4px;font-size:clamp(36px,5vw,70px);line-height:.92}.arrival-title h1 small{color:#fff8d3;letter-spacing:.3px;margin-bottom:3px;font-size:clamp(16px,1.8vw,24px);display:block}.arrival-title p{color:#eaf8ff;margin:8px 0 0;font-size:12px;font-weight:900}.arrival-stage-card .school-friends{z-index:7;pointer-events:none;margin:0;display:block;position:absolute;inset:0}.school-friend{color:var(--ink);cursor:pointer;pointer-events:auto;background:0 0;border:0;border-radius:44%;padding:0;position:absolute}.school-friend:after{content:"▶";color:#fff;background:#ff8842;border:3px solid #fff;border-radius:50%;place-items:center;width:34px;height:34px;font-size:12px;transition:transform .18s,background .18s;display:grid;position:absolute;top:8%;left:50%;transform:translate(-50%);box-shadow:0 4px #c95b25,0 0 0 7px #ffffff47}.school-friend:hover:after,.school-friend:focus-visible:after,.school-friend.is-greeting:after{background:#57c98b;transform:translate(-50%)scale(1.13)}.school-friend span{opacity:0;color:#173a57;white-space:nowrap;background:#fff;border:3px solid #fff;border-radius:15px 15px 15px 4px;min-width:88px;padding:8px 12px;transition:opacity .18s,transform .18s;position:absolute;top:-3%;left:50%;transform:translate(-50%,-12px)scale(.86);box-shadow:0 6px 20px #082d4138}.school-friend:hover span,.school-friend:focus-visible span,.school-friend.is-greeting span{opacity:1;transform:translate(-50%,-12px)scale(1)}.school-friend span b,.school-friend span small{display:block}.school-friend span b{font-size:15px}.school-friend span small{color:#68829a;margin-top:2px;font-size:9px;font-weight:900}.friend-boy-front{width:14%;height:49%;top:38%;left:22%}.friend-girl-center{width:11%;height:39%;top:45%;left:38%}.friend-boy-center{width:9%;height:29%;top:48%;left:55%}.friend-girl-right{width:11%;height:40%;top:43%;left:61%}.friend-boy-center:after{top:3%}.arrival-enter{z-index:8;pointer-events:auto;border:2px solid #ffffffd1;min-width:205px;margin:0;padding:14px 22px 11px;position:absolute;bottom:4%;right:4%;box-shadow:0 7px #c95625,0 13px 30px #244a5a52}.arrival-enter>span{margin-left:5px}.arrival-enter small{color:#fff7e7;letter-spacing:.4px;margin-top:2px;font-size:9px;display:block}.seating-progress{color:#5e7484;background:#ffffffc7;border-radius:14px;align-items:center;gap:9px;margin:16px auto;padding:12px 15px;font-size:12px;font-weight:900;display:inline-flex}.seating-progress span{font-size:25px}.scene-heading{z-index:2;position:relative}.scene-heading:after{content:"";background:linear-gradient(90deg,#ff8842,#ffd75a);border-radius:4px;width:74px;height:4px;position:absolute;bottom:-2px;left:0}.language-map span{transform-origin:10%;animation:1.4s ease-in-out infinite flag-wave;display:inline-block}@keyframes flag-wave{0%,to{transform:perspective(120px)rotateY(-5deg)rotate(-1deg)}50%{transform:perspective(120px)rotateY(12deg)rotate(2deg)}}.choice-button{animation:.45s cubic-bezier(.2,.8,.3,1.15) both choice-rise}.choice-button:nth-child(2){animation-delay:60ms}.choice-button:nth-child(3){animation-delay:.12s}.choice-button:nth-child(4){animation-delay:.18s}@keyframes choice-rise{0%{opacity:0;transform:translateY(15px)scale(.92)}}@media (width<=880px){.topbar{grid-template-columns:1fr auto}.header-center{grid-area:2/1/auto/-1}.stage{grid-template-columns:1fr;min-height:0;margin:14px}.stage-visual{min-height:280px;display:block}.scene-backdrop{width:100%;height:100%;inset:0}.visual-welcome .scene-backdrop{object-position:65% 42%}.visual-story .scene-backdrop{object-position:47% 42%}.scene-card{min-height:665px}.lesson-controls{grid-template-columns:1fr 1fr;margin:14px}.chapter-dots{grid-area:1/1/auto/-1}}@media (width<=560px){.topbar{gap:8px;min-height:70px;padding:9px 14px}.brand-mark{border-radius:12px;width:40px;height:40px}.brand strong{font-size:14px}.star-counter{min-width:67px;padding:7px 9px}.header-center small{display:none}.stage{border-radius:23px}.stage-visual{min-height:220px}.visual-caption{bottom:14px;left:16px;right:16px}.visual-caption b{font-size:19px}.scene-card{min-height:700px;padding:23px 16px 25px}.scene-heading h2{font-size:25px}h1{font-size:38px}.speech{grid-template-columns:auto 1fr;gap:9px;padding:10px}.round-sound{border-radius:9px;grid-column:1/-1;justify-self:center;width:100%;height:31px}.choice-grid{grid-template-columns:1fr}.choice-button{padding:10px}.toy-choice-grid{grid-template-columns:repeat(2,1fr)}.echo-gnomes>span{display:none}.echo-gnomes button{font-size:17px}.name-line{flex-direction:column;align-items:stretch}.hero-phrase{min-width:min(100%,300px)}.gift-row{gap:5px}.lesson-controls{grid-template-columns:1fr 1fr}.back-button,.next-button{padding:11px 12px;font-size:12px}.chapter-dots{gap:3px}.chapter-dots button{width:6px;height:6px}.chapter-dots button.active{width:18px}}@media (width<=880px){.stage{min-height:0;display:flex}.stage-visual{min-height:390px;position:relative;inset:auto}.stage .scene-card{background:#fffffff7;border:0;border-radius:0;width:100%;min-height:0;padding:25px 24px 29px;position:relative;inset:auto;overflow:visible}.stage .visual-caption{right:20px}.stage .arrival-stage-card{background:0 0;width:auto;padding:0;position:absolute;inset:0}.scene-arrival .stage-visual{min-height:100%}.arrival-title{width:84%;padding:11px 18px 13px;top:3%}.arrival-title h1{font-size:clamp(34px,8vw,58px)}.arrival-title p{display:none}.arrival-enter{min-width:180px;bottom:3%;right:3%}.character-teacher{width:25%}.character-girl{width:18%;left:31%}.character-boy{width:14%;left:43%}.character-dunno,.character-roy{width:20%;left:39%}}@media (width<=560px){.stage-visual{min-height:280px}.stage .scene-card{min-height:0;padding:21px 15px 25px}.scene-arrival,.scene-arrival .stage-visual{min-height:520px}.stage .arrival-stage-card{padding:0}.arrival-title{width:92%}.arrival-title>span{font-size:8px}.arrival-title h1{font-size:38px}.arrival-title h1 small{font-size:14px}.school-friend:after{width:28px;height:28px}.friend-boy-front{width:18%;left:17%}.friend-girl-center{width:14%;left:37%}.friend-boy-center{width:12%;left:55%}.friend-girl-right{width:14%;left:64%}.arrival-enter{width:80%;bottom:3%;left:50%;right:auto;transform:translate(-50%)}.arrival-enter:hover:not(:disabled){transform:translate(-50%)translateY(-2px)}.knock-event{grid-template-columns:45px 1fr;padding:13px}.knock-event .knock-button{grid-column:1/-1;width:100%}}@media (prefers-reduced-motion:reduce){*,:before,:after{transition:none!important;animation:none!important}}
+
+@media (min-width: 881px){
+  .stage{display:block;min-height:clamp(560px,74vh,720px);margin-top:18px}
+  .stage-visual{min-height:clamp(560px,74vh,720px)}
+  .scene-backdrop{width:100%;height:100%;inset:0;animation:none}
+  .stage .scene-card{left:20px;right:20px;top:18px;bottom:auto;width:auto;max-height:42%;padding:18px 22px 18px;overflow:auto;background:linear-gradient(135deg,rgba(255,255,255,.34),rgba(255,255,255,.18));border:1px solid rgba(255,255,255,.56);border-radius:26px;box-shadow:0 18px 44px rgba(6,30,44,.24);backdrop-filter:blur(18px) saturate(1.18);-webkit-backdrop-filter:blur(18px) saturate(1.18)}
+  .stage .scene-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding-bottom:10px}
+  .stage .scene-heading:after{left:0;bottom:-1px;width:92px}
+  .stage .scene-heading h2{margin:0;font-size:clamp(24px,2vw,32px);line-height:1.05}
+  .stage .scene-content{padding-top:12px}
+  .stage .visual-caption{right:24px;left:24px;bottom:24px}
+  .stage .visual-caption span{font-size:11px}
+  .lesson-controls{grid-template-columns:140px 1fr 180px;gap:14px;max-width:1220px;margin:12px auto 0;padding:0 10px}
+  .back-button,.next-button{padding:12px 16px;font-size:14px}
+  .speech{max-width:none;background:linear-gradient(135deg,rgba(255,255,255,.7),rgba(241,251,255,.48));border:1px solid rgba(174,212,228,.85);box-shadow:0 10px 24px rgba(25,72,98,.14)}
+  .speech-child,.speech-girl,.speech-boy,.speech-dunno,.speech-roy{background:linear-gradient(135deg,rgba(255,255,255,.76),rgba(255,250,235,.54))}
+  .feedback{background:rgba(255,246,230,.88)}
+  .feedback.success{background:rgba(228,249,235,.88)}
+}
+.character-teacher{display:none!important}
+.cast-dunno-arrives .character-dunno{display:none!important}
+.cartoon-character,.cast-actions .character-girl,.cast-actions .character-boy,.cast-rhyme .character-girl,.cast-rhyme .character-boy,.cast-likes .character-dunno,.kids-seated .character-girl,.kids-seated .character-boy,.kids-on-floor .character-girl,.kids-on-floor .character-boy,.kids-standing .character-girl,.kids-standing .character-boy,.character-dunno,.character-roy,.is-speaking,.is-reacting{animation:none!important}
+.cartoon-character{bottom:0}
+.is-speaking img,.is-reacting img{animation:none!important;transform:none!important}
+.is-speaking .talk-bubble{opacity:1;animation:.2s ease-out both bubble-pop}
+.talk-bubble{background:rgba(255,255,255,.92);border-color:rgba(23,58,87,.78);box-shadow:0 8px 18px rgba(23,58,87,.16)}
+.animated-cast{overflow:visible}
+.character-girl{left:28%}
+.character-boy{left:44%}
+.character-dunno{left:56%;width:min(18%,190px)}
+.character-roy{left:57%;width:min(16%,170px)}
+.visual-story .scene-backdrop{object-position:center center}
+.visual-toys .scene-backdrop{object-position:center center}
+.visual-mystery .scene-backdrop{object-position:center center}
+.floating-light{opacity:.8}
+.topbar{min-height:78px}
+@media (prefers-reduced-motion: reduce){.is-speaking .talk-bubble{animation:none!important}}
+
+/* v11: layout corrections after full-screen review */
+.animated-cast{display:none!important}
+
+@media (min-width:881px){
+  .stage{min-height:clamp(560px,72vh,690px)}
+  .stage-visual{min-height:clamp(560px,72vh,690px)}
+
+  /* Compact floating dialogue strip for regular scenes */
+  .stage:not(.scene-arrival) .scene-card{
+    left:24px;
+    right:24px;
+    top:20px;
+    bottom:auto;
+    width:auto;
+    max-height:31%;
+    padding:16px 20px 16px;
+    border-radius:24px;
+    overflow:auto;
+    scrollbar-width:thin;
+  }
+  .stage:not(.scene-arrival) .scene-heading{
+    align-items:center;
+    padding-bottom:8px;
+  }
+  .stage:not(.scene-arrival) .scene-heading>span{font-size:9px}
+  .stage:not(.scene-arrival) .scene-heading h2{font-size:clamp(22px,1.8vw,30px)}
+  .stage:not(.scene-arrival) .scene-content{padding-top:8px}
+  .stage:not(.scene-arrival) .speech{
+    margin:4px auto;
+    padding:9px 12px;
+    border-radius:17px;
+    grid-template-columns:auto 1fr auto;
+    gap:10px;
+  }
+  .stage:not(.scene-arrival) .speaker-avatar{width:44px;height:44px;font-size:27px}
+  .stage:not(.scene-arrival) .speech-text{font-size:13px;line-height:1.3}
+  .stage:not(.scene-arrival) .speech-text b{font-size:15px}
+  .stage:not(.scene-arrival) .translation-line{font-size:10px}
+  .stage:not(.scene-arrival) .gesture-note{font-size:9px}
+  .stage:not(.scene-arrival) .round-sound{width:34px;height:34px}
+  .stage:not(.scene-arrival) .prompt{margin:9px 0 7px}
+  .stage:not(.scene-arrival) .feedback{margin-top:8px;padding:8px 12px}
+
+  /* Scene 1 is a dedicated cinematic cover, not a dialogue panel */
+  .scene-arrival .arrival-stage-card{
+    z-index:6!important;
+    pointer-events:none!important;
+    background:transparent!important;
+    border:0!important;
+    border-radius:0!important;
+    box-shadow:none!important;
+    backdrop-filter:none!important;
+    -webkit-backdrop-filter:none!important;
+    width:auto!important;
+    max-height:none!important;
+    padding:0!important;
+    overflow:visible!important;
+    position:absolute!important;
+    inset:0!important;
+  }
+  .scene-arrival .arrival-stage-card .scene-heading{display:none!important}
+  .scene-arrival .arrival-stage-card .scene-content{
+    pointer-events:none!important;
+    padding:0!important;
+    display:block!important;
+    position:absolute!important;
+    inset:0!important;
+  }
+  .scene-arrival .arrival-title{
+    pointer-events:auto!important;
+    width:min(700px,62%)!important;
+    top:4%!important;
+    padding:13px 26px 16px!important;
+  }
+  .scene-arrival .arrival-title h1{font-size:clamp(38px,4.7vw,66px)!important}
+  .scene-arrival .arrival-enter{
+    pointer-events:auto!important;
+    right:4%!important;
+    bottom:4%!important;
+    top:auto!important;
+    min-width:210px!important;
+  }
+  .scene-arrival .school-friends{pointer-events:none!important}
+  .scene-arrival .school-friend{pointer-events:auto!important}
+
+  .lesson-controls{margin-top:10px}
+}
+
+@media (max-width:880px){
+  .animated-cast{display:none!important}
+  .stage .scene-card{max-height:none}
+  .scene-arrival .arrival-stage-card{position:absolute!important;inset:0!important;background:transparent!important}
+}
+
+/* V12: cinematic speech directly from characters, no dialogue panel */
+@media (min-width: 881px){
+  .stage{position:relative;display:block;min-height:clamp(570px,76vh,730px);overflow:hidden}
+  .stage-visual{position:absolute;inset:0;min-height:0}
+  .scene-backdrop{width:100%;height:100%;inset:0;object-fit:cover;animation:none!important}
+  .stage .scene-card{position:absolute!important;inset:0!important;width:auto!important;max-height:none!important;padding:0!important;overflow:visible!important;background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;pointer-events:none}
+  .stage .scene-heading{display:none!important}
+  .stage .scene-content{position:absolute;inset:0;padding:0!important;display:flex!important;flex-direction:column;justify-content:flex-end;align-items:center;gap:9px;overflow:visible!important;text-align:center;pointer-events:none}
+  .stage .scene-content > *{pointer-events:auto}
+
+  /* Actual dialogue clouds */
+  .speech{position:absolute!important;z-index:12;width:auto!important;max-width:min(430px,34vw)!important;min-width:180px;margin:0!important;padding:12px 48px 12px 16px!important;display:block!important;text-align:left!important;background:rgba(255,255,255,.93)!important;border:2px solid rgba(255,255,255,.96)!important;border-radius:24px!important;box-shadow:0 13px 35px rgba(12,39,56,.23),0 0 0 1px rgba(31,88,116,.16)!important;backdrop-filter:blur(8px) saturate(1.12);-webkit-backdrop-filter:blur(8px) saturate(1.12);transform-origin:100% 100%;animation:mouthBubble .28s cubic-bezier(.2,.9,.3,1.15) both!important}
+  .speech:after{content:"";position:absolute;width:24px;height:24px;background:inherit;border-right:2px solid rgba(255,255,255,.96);border-bottom:2px solid rgba(255,255,255,.96);transform:rotate(34deg);filter:drop-shadow(5px 5px 5px rgba(12,39,56,.08))}
+  .speech-teacher{top:24%;right:20%;transform-origin:100% 100%}
+  .speech-teacher:after{right:-10px;bottom:7px}
+  .speech-girl,.speech-girl2,.speech-child{left:31%;bottom:27%;transform-origin:0 100%}
+  .speech-girl:after,.speech-girl2:after,.speech-child:after{left:-9px;bottom:7px;transform:rotate(124deg)}
+  .speech-boy,.speech-boy2{left:48%;bottom:30%;transform-origin:0 100%}
+  .speech-boy:after,.speech-boy2:after{left:-9px;bottom:7px;transform:rotate(124deg)}
+  .speech-dunno{left:18%;top:30%;transform-origin:0 100%}
+  .speech-dunno:after{left:-9px;bottom:7px;transform:rotate(124deg)}
+  .speech-roy{left:19%;top:31%;transform-origin:0 100%}
+  .speech-roy:after{left:-9px;bottom:7px;transform:rotate(124deg)}
+  .speaker-avatar,.speaker-name{display:none!important}
+  .speech-copy{display:block!important}
+  .speech-text{font-size:18px!important;line-height:1.22!important;color:#173a57;text-shadow:0 1px rgba(255,255,255,.6)}
+  .speech-text b{font-size:21px!important}
+  .translation-line{margin-top:6px!important;padding:5px 8px!important;background:rgba(238,249,255,.82)!important;border-radius:9px!important;font-size:11px!important;line-height:1.25}
+  .gesture-note{margin-top:6px!important;font-size:10px!important}
+  .round-sound{position:absolute!important;right:8px;top:50%;transform:translateY(-50%);width:34px!important;height:34px!important;background:linear-gradient(145deg,#63c7f4,#2c94c8)!important;color:#fff;box-shadow:0 4px #247eab!important}
+
+  /* Interactive tasks float at the bottom instead of living in a panel */
+  .scene-content > :not(.speech):not(.arrival-hero){position:relative;z-index:10;max-width:min(760px,82%);margin-left:auto;margin-right:auto}
+  .scene-content > .prompt,.scene-content > .choice-row,.scene-content > .choice-grid,.scene-content > .primary-action,.scene-content > .secondary-action,.scene-content > .name-line,.scene-content > .echo-gnomes,.scene-content > .seating-progress,.scene-content > .knock-event,.scene-content > .toy-cloud,.scene-content > .language-map,.scene-content > .story-card,.scene-content > .hero-phrase,.scene-content > .action-card,.scene-content > .rhyme-card,.scene-content > .table-toys,.scene-content > .gift-row,.scene-content > .near-far,.scene-content > .bag-scene,.scene-content > .picture-card,.scene-content > .song-card,.scene-content > .character-card,.scene-content > .lesson-complete,.scene-content > .cinderella-card,.scene-content > .kindness,.scene-content > .finger-count{
+    background:rgba(255,255,255,.86)!important;border:1px solid rgba(255,255,255,.92)!important;border-radius:18px!important;box-shadow:0 12px 30px rgba(10,38,54,.18)!important;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)
+  }
+  .scene-content > .prompt{padding:8px 14px;margin:0 0 2px!important}
+  .scene-content > .choice-row,.scene-content > .choice-grid,.scene-content > .name-line,.scene-content > .echo-gnomes,.scene-content > .gift-row,.scene-content > .finger-count{padding:10px 12px;margin-bottom:16px!important}
+  .scene-content > .primary-action,.scene-content > .secondary-action{margin-bottom:18px!important}
+  .feedback{position:absolute!important;z-index:20;left:50%;bottom:18px;transform:translateX(-50%);margin:0!important;max-width:520px;background:rgba(231,250,238,.94)!important;box-shadow:0 10px 26px rgba(13,67,40,.17)}
+
+  /* No stray overlay characters: backgrounds already contain the cast */
+  .animated-cast{display:none!important}
+  .visual-caption{z-index:4!important;pointer-events:none}
+  .cinematic-shade{background:linear-gradient(180deg,rgba(5,25,36,.04) 0,rgba(5,25,36,.02) 55%,rgba(5,25,36,.36) 100%)!important}
+  .lesson-controls{margin-top:12px!important}
+}
+@keyframes mouthBubble{0%{opacity:0;transform:translateY(10px) scale(.72)}65%{opacity:1;transform:translateY(-2px) scale(1.03)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@media (max-width: 880px){
+  .stage .scene-card{background:transparent!important;border:0!important;box-shadow:none!important}
+  .speech{border-radius:18px!important}
+}
+
+/* v13 cinematic dialogue placement */
+@media (min-width: 881px){
+  .stage{position:relative;display:block;min-height:clamp(560px,74vh,720px)}
+  .stage-visual{min-height:clamp(560px,74vh,720px)}
+  .stage .scene-card:not(.arrival-stage-card){position:absolute;inset:0;width:auto;height:auto;max-height:none;padding:0;background:transparent;border:0;border-radius:0;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:visible;pointer-events:none}
+  .stage .scene-card:not(.arrival-stage-card) .scene-heading{display:none}
+  .stage .scene-card:not(.arrival-stage-card) .scene-content{position:absolute;inset:0;padding:0;display:block;pointer-events:none}
+  .stage .scene-card:not(.arrival-stage-card) .speech{position:absolute;z-index:15;width:auto;max-width:min(460px,38vw);min-width:180px;margin:0;padding:12px 54px 11px 16px;border:0;border-radius:22px;background:rgba(255,255,255,.88);box-shadow:0 12px 32px rgba(18,52,70,.22);backdrop-filter:blur(10px) saturate(1.15);-webkit-backdrop-filter:blur(10px) saturate(1.15);pointer-events:auto;animation:.22s ease-out both dialogue-pop}
+  .stage .scene-card:not(.arrival-stage-card) .speech:before{content:"";position:absolute;width:22px;height:22px;background:inherit;transform:rotate(45deg);filter:drop-shadow(4px 4px 4px rgba(18,52,70,.08))}
+  .stage .scene-card:not(.arrival-stage-card) .speech-teacher{top:18%;right:18%}
+  .stage .scene-card:not(.arrival-stage-card) .speech-teacher:before{right:-8px;bottom:18px}
+  .stage .scene-card:not(.arrival-stage-card) .speech-girl,.stage .scene-card:not(.arrival-stage-card) .speech-child{left:28%;bottom:22%}
+  .stage .scene-card:not(.arrival-stage-card) .speech-girl:before,.stage .scene-card:not(.arrival-stage-card) .speech-child:before{left:-8px;bottom:16px}
+  .stage .scene-card:not(.arrival-stage-card) .speech-boy{left:46%;bottom:20%}
+  .stage .scene-card:not(.arrival-stage-card) .speech-boy:before{left:-8px;bottom:16px}
+  .stage .scene-card:not(.arrival-stage-card) .speech-dunno{left:15%;top:23%}
+  .stage .scene-card:not(.arrival-stage-card) .speech-dunno:before{left:-8px;bottom:18px}
+  .stage .scene-card:not(.arrival-stage-card) .speech-roy{right:23%;bottom:22%}
+  .stage .scene-card:not(.arrival-stage-card) .speech-roy:before{right:-8px;bottom:18px}
+  .stage .scene-card:not(.arrival-stage-card) .speaker-avatar,.stage .scene-card:not(.arrival-stage-card) .speaker-name{display:none!important}
+  .stage .scene-card:not(.arrival-stage-card) .speech-copy{display:block}
+  .stage .scene-card:not(.arrival-stage-card) .speech-text{font-size:15px;line-height:1.25}
+  .stage .scene-card:not(.arrival-stage-card) .speech-text b{font-size:22px;line-height:1.1}
+  .stage .scene-card:not(.arrival-stage-card) .translation-line{margin-top:5px;padding:4px 8px;border-radius:10px;background:rgba(238,248,252,.72);font-size:10px;line-height:1.2}
+  .stage .scene-card:not(.arrival-stage-card) .gesture-note{margin-top:5px;font-size:9px}
+  .stage .scene-card:not(.arrival-stage-card) .round-sound{position:absolute;right:10px;top:50%;width:34px;height:34px;transform:translateY(-50%);box-shadow:none;background:#50afe0;color:#fff}
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > :not(.speech){pointer-events:auto}
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .prompt,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .choice-grid,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .choice-row,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .primary-action,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .secondary-action,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .knock-event,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .name-line,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .echo-gnomes,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .toy-cloud,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .gift-row,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .near-far,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .rhyme-card,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .song-card,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .lesson-complete,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .character-card,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .bag-scene,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .picture-card,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .action-card,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .table-toys,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .kindness,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .finger-count,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .story-card,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .language-map,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .hero-phrase,
+  .stage .scene-card:not(.arrival-stage-card) .scene-content > .seating-progress{
+    position:absolute;z-index:18;left:50%;bottom:18px;transform:translateX(-50%);width:min(720px,82%);margin:0;padding:12px 16px;border-radius:18px;background:rgba(255,255,255,.9);box-shadow:0 12px 30px rgba(18,52,70,.18);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)
+  }
+  .stage .feedback{position:absolute;z-index:20;left:50%;bottom:18px;transform:translateX(-50%);width:auto;max-width:70%;margin:0}
+  .scene-arrival .arrival-title{width:min(680px,55%);top:4%;padding:12px 24px 14px}
+  .scene-arrival .arrival-title h1{font-size:clamp(34px,4.3vw,62px)}
+  .scene-arrival .arrival-title p{font-size:11px}
+  .scene-arrival .lesson-controls .next-button{visibility:hidden}
+}
+@media (max-width: 880px){
+  .speech{max-width:88%;margin:8px auto;padding:11px 48px 10px 14px}
+  .speaker-avatar,.speaker-name{display:none!important}
+}
+
+/* v14 cache-busting verification */
+
+.topbar{position:relative}
+@media (min-width:881px){
+  .stage .scene-card:not(.arrival-stage-card) .speech{max-width:360px!important;min-width:0!important;padding:10px 45px 9px 14px!important;border-radius:18px!important;background:rgba(255,255,255,.94)!important}
+  .stage .scene-card:not(.arrival-stage-card) .speech-text{font-size:14px!important}
+  .stage .scene-card:not(.arrival-stage-card) .speech-text b{font-size:19px!important}
+  .stage .scene-card:not(.arrival-stage-card) .translation-line{font-size:9px!important;background:transparent!important;padding:2px 0!important}
+  .stage .scene-card:not(.arrival-stage-card) .gesture-note{display:none!important}
+}
+
+/* v15 approved storyboard styling */
+.scene-backdrop{width:100%!important;height:100%!important;inset:0!important;object-fit:cover!important;object-position:center!important;animation:none!important;filter:none!important}
+.animated-cast{display:none!important}
+.visual-caption{display:none!important}
+.scene-heading{display:none!important}
+.stage .scene-card{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;overflow:visible!important}
+.scene-arrival .scene-card{display:block!important}
+.scene-arrival .arrival-title{display:none!important}
+.scene-arrival .arrival-enter{bottom:4%!important;right:4%!important}
+.speech{display:none!important}
+.stage .scene-content{pointer-events:none}
+.stage .scene-content button,.stage .scene-content input,.stage .scene-content .choice-grid,.stage .scene-content .choice-row,.stage .scene-content .primary-action,.stage .scene-content .secondary-action,.stage .scene-content .name-line,.stage .scene-content .feedback{pointer-events:auto}
+@media (min-width:881px){
+ .stage{min-height:clamp(600px,76vh,760px)}
+ .stage-visual{min-height:clamp(600px,76vh,760px)}
+ .stage .scene-card{left:50%;right:auto;top:auto;bottom:24px;width:min(760px,76%);transform:translateX(-50%);padding:0!important;max-height:34%;overflow:visible!important}
+ .scene-content{padding:0!important}
+ .choice-grid,.choice-row,.name-line,.knock-event,.action-card,.rhyme-card,.song-card,.gift-row,.near-far,.bag-scene,.picture-card,.toy-choice-grid,.prompt{background:rgba(255,255,255,.94)!important;border:2px solid rgba(255,255,255,.96)!important;border-radius:24px!important;padding:14px!important;box-shadow:0 12px 30px rgba(19,52,73,.22)!important}
+ .choice-grid{grid-template-columns:repeat(2,minmax(180px,1fr))}
+ .choice-button{font-size:18px;padding:16px 20px;border-radius:18px}
+ .feedback{width:max-content;max-width:82%;margin:12px auto 0}
+}
+.version-v14{display:none!important}
+
+
+/* V16 scenes 1-5 cleanup */
+.version-badge:after{content:"v16"!important}
+.scene-arrival .arrival-title,.scene-arrival .school-friends{display:none!important}
+.scene-arrival .arrival-hero{position:static!important;min-height:100%!important}
+.scene-arrival .arrival-enter{position:absolute!important;right:4%!important;bottom:5%!important;z-index:12!important}
+.scene-arrival .scene-card{pointer-events:none!important;background:transparent!important;box-shadow:none!important;border:0!important;padding:0!important}
+.scene-arrival .arrival-enter{pointer-events:auto!important}
+.scene-come-in .speech,.scene-why-english .speech,.scene-languages .speech,.scene-tongue .speech{display:none!important}
+.scene-come-in .scene-heading,.scene-why-english .scene-heading,.scene-languages .scene-heading,.scene-tongue .scene-heading{display:none!important}
+.scene-come-in .scene-card,.scene-why-english .scene-card,.scene-languages .scene-card,.scene-tongue .scene-card{background:transparent!important;border:0!important;box-shadow:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;left:3%!important;right:3%!important;top:auto!important;bottom:3%!important;width:auto!important;max-height:35%!important;padding:0!important;overflow:visible!important}
+.scene-come-in .scene-content,.scene-why-english .scene-content,.scene-languages .scene-content,.scene-tongue .scene-content{padding:0!important}
+.scene-why-english .choice-grid,.scene-languages .choice-grid,.scene-languages .choice-row,.scene-tongue .choice-grid,.scene-tongue .choice-row{background:rgba(255,255,255,.92)!important;border:2px solid rgba(255,255,255,.9)!important;border-radius:24px!important;padding:14px!important;box-shadow:0 18px 38px rgba(9,38,58,.25)!important;max-width:760px!important;margin:0 auto!important}
+.scene-why-english .choice-button,.scene-languages .choice-button,.scene-tongue .choice-button{font-size:16px!important;padding:14px 18px!important;border-radius:16px!important}
+.scene-come-in .feedback{max-width:520px!important;margin:0 auto!important;background:rgba(52,122,73,.88)!important;color:white!important}
+.scene-visual .scene-backdrop{animation:none!important;transform:none!important;width:100%!important;height:100%!important;inset:0!important;object-fit:cover!important}
+@media(max-width:900px){.scene-arrival .arrival-enter{right:3%!important;bottom:3%!important}.scene-come-in .scene-card,.scene-why-english .scene-card,.scene-languages .scene-card,.scene-tongue .scene-card{bottom:2%!important;max-height:42%!important}}
+
+/* v17: scene assets contain their own speech bubbles; keep only real controls. */
+.scene-arrival .school-friends,.scene-arrival .arrival-title{display:none!important}
+.scene-arrival .arrival-enter{position:absolute!important;right:4%!important;bottom:5%!important;left:auto!important;z-index:12!important;margin:0!important}
+.scene-arrival .scene-card{background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;inset:0!important;width:100%!important;overflow:visible!important;pointer-events:none!important}
+.scene-arrival .arrival-enter{pointer-events:auto!important}
+.scene-arrival .feedback{display:none!important}
+.scene-come-in .scene-card,.scene-why-english .scene-card,.scene-languages .scene-card,.scene-tongue .scene-card{position:absolute!important;inset:auto 3% 3%!important;width:auto!important;max-height:34%!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;overflow:visible!important}
+.scene-come-in .scene-heading,.scene-why-english .scene-heading,.scene-languages .scene-heading,.scene-tongue .scene-heading{display:none!important}
+.scene-come-in .speech,.scene-why-english .speech,.scene-languages .speech,.scene-tongue .speech{display:none!important}
+.scene-come-in .scene-content>*:not(.seating-progress),.scene-languages .scene-content>.language-map,.scene-tongue .scene-content>p{display:none!important}
+.scene-come-in .seating-progress{display:none!important}
+.scene-why-english .prompt,.scene-languages .prompt,.scene-tongue .prompt{display:none!important}
+.scene-why-english .choice-grid,.scene-languages .choice-row,.scene-tongue .choice-row{display:grid!important;grid-template-columns:repeat(4,minmax(130px,1fr))!important;gap:12px!important;max-width:960px!important;margin:0 auto!important;padding:14px!important;background:rgba(255,255,255,.9)!important;border-radius:24px!important;box-shadow:0 12px 34px rgba(20,60,80,.2)!important;backdrop-filter:blur(12px)!important}
+.scene-languages .choice-row,.scene-tongue .choice-row{grid-template-columns:repeat(3,minmax(140px,1fr))!important;max-width:720px!important}
+.scene-why-english .choice-button,.scene-languages .choice-button,.scene-tongue .choice-button{min-height:58px!important;font-size:17px!important;border-radius:18px!important}
+.scene-why-english .feedback,.scene-languages .feedback,.scene-tongue .feedback{max-width:600px!important;margin:10px auto 0!important;background:rgba(255,255,255,.94)!important}
+.stage-visual{overflow:hidden!important}.scene-backdrop{animation:none!important;transform:none!important;width:100%!important;height:100%!important;inset:0!important;object-fit:cover!important}
+@media(max-width:880px){.scene-why-english .choice-grid,.scene-languages .choice-row,.scene-tongue .choice-row{grid-template-columns:1fr 1fr!important}.scene-arrival .arrival-enter{right:3%!important;bottom:3%!important}}
+
+/* v18 definitive first-scene cleanup */
+.topbar::after,.game-shell::after{content:none!important;display:none!important}
+.scene-arrival .scene-card{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;margin:0!important;padding:0!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important;pointer-events:none!important}
+.scene-arrival .scene-heading,.scene-arrival .arrival-title,.scene-arrival .school-friends,.scene-arrival .feedback{display:none!important}
+.scene-arrival .scene-content{position:static!important;padding:0!important;margin:0!important}
+.scene-arrival .arrival-hero{position:static!important;min-height:0!important;height:0!important;margin:0!important;padding:0!important}
+.scene-arrival .arrival-enter{
+  position:absolute!important;
+  right:3.1%!important;
+  bottom:3.1%!important;
+  left:auto!important;
+  top:auto!important;
+  width:176px!important;
+  height:72px!important;
+  min-width:176px!important;
+  margin:0!important;
+  padding:0!important;
+  opacity:.01!important;
+  color:transparent!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  pointer-events:auto!important;
+  z-index:30!important;
+}
+.scene-arrival .arrival-enter small{display:none!important}
+.scene-arrival .lesson-controls .next-button{display:none!important}
+@media(max-width:900px){.scene-arrival .arrival-enter{right:3%!important;bottom:3%!important;width:150px!important;height:62px!important;min-width:150px!important}}
+
+/* v19: restore real interactive controls */
+.stage-visual,.stage-visual *{pointer-events:none!important}
+.stage .scene-card{pointer-events:auto!important;z-index:20!important}
+.stage .scene-content{pointer-events:auto!important}
+.stage .scene-content *{pointer-events:auto}
+.scene-arrival .scene-card{pointer-events:auto!important}
+.scene-arrival .scene-content{pointer-events:auto!important}
+.scene-arrival .arrival-hero{pointer-events:auto!important}
+.scene-arrival .arrival-enter{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex-direction:column!important;
+  opacity:1!important;
+  color:#fff!important;
+  background:linear-gradient(145deg,#ff9953,#ff7838)!important;
+  border:2px solid rgba(255,255,255,.95)!important;
+  border-radius:18px!important;
+  box-shadow:0 6px 0 #d85d27,0 14px 28px rgba(216,93,39,.28)!important;
+  font-weight:900!important;
+  font-size:16px!important;
+  cursor:pointer!important;
+  pointer-events:auto!important;
+}
+.scene-arrival .arrival-enter small{display:block!important;color:#fff!important;font-size:10px!important;margin-top:3px!important}
+.scene-arrival .arrival-enter:hover{transform:translateY(-2px)!important}
+.scene-arrival .arrival-enter:active{transform:translateY(3px)!important;box-shadow:0 3px 0 #d85d27!important}
+.lesson-controls{position:relative!important;z-index:40!important;pointer-events:auto!important}
+.lesson-controls button,.choice-button,.primary-action,.secondary-action,.round-sound,.knock-button,input{pointer-events:auto!important;cursor:pointer!important}
+
+
+/* === v20 clean responsive layer === */
+html,body{overflow-x:hidden}
+*{box-sizing:border-box}
+.game-shell{min-height:100dvh;background:linear-gradient(135deg,#fff9db 0,#eefcf5 52%,#eaf8ff 100%)}
+.topbar{min-height:76px;padding:10px max(18px,calc((100vw - 1220px)/2));display:grid;grid-template-columns:minmax(210px,1fr) minmax(320px,1.5fr) minmax(90px,1fr);align-items:center;gap:20px}
+.topbar:after{content:none!important}
+.stage{position:relative!important;width:min(1220px,calc(100vw - 32px),calc((100dvh - 170px)*1.7778));aspect-ratio:16/9!important;min-height:0!important;height:auto!important;max-height:calc(100dvh - 170px);margin:16px auto 0!important;overflow:hidden;border-radius:30px}
+.stage-visual{position:absolute!important;inset:0!important;min-height:0!important;width:100%!important;height:100%!important;pointer-events:none!important;background:#fff}
+.scene-backdrop{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;object-position:center!important;transform:none!important;animation:none!important;filter:none!important;image-rendering:auto}
+.cinematic-shade,.floating-light,.visual-caption,.animated-cast{display:none!important}
+.stage .scene-card{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;padding:0!important;margin:0!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow:visible!important;pointer-events:none!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.stage .scene-heading{display:none!important}
+.stage .scene-content{position:absolute!important;inset:0!important;padding:0!important;margin:0!important;pointer-events:none!important}
+.stage .scene-content>*{pointer-events:auto}
+
+/* First scene: only hit zones remain over the baked speech icons. */
+.scene-arrival .arrival-title,.scene-arrival .arrival-enter{display:none!important}
+.scene-arrival .arrival-hero{position:absolute!important;inset:0!important;pointer-events:none!important}
+.scene-arrival .school-friends{position:absolute!important;inset:0!important;pointer-events:none!important}
+.scene-arrival .school-friend{position:absolute!important;width:52px!important;height:52px!important;min-width:52px!important;padding:0!important;margin:0!important;border-radius:50%!important;border:3px solid transparent!important;background:transparent!important;box-shadow:none!important;color:transparent!important;opacity:.01!important;pointer-events:auto!important;cursor:pointer!important;z-index:30!important}
+.scene-arrival .school-friend span{display:none!important}
+.scene-arrival .school-friend:hover,.scene-arrival .school-friend:focus-visible{opacity:1!important;border-color:#fff!important;box-shadow:0 0 0 5px rgba(60,194,119,.7)!important;outline:0}
+.scene-arrival .friend-boy-front{left:12.1%!important;top:29.5%!important}
+.scene-arrival .friend-girl-center{left:25.6%!important;top:29.6%!important}
+.scene-arrival .friend-boy-center{left:42.0%!important;top:31.0%!important}
+.scene-arrival .friend-girl-right{left:56.0%!important;top:31.6%!important}
+
+/* Real speech bubbles */
+.stage .speech{position:absolute!important;z-index:15!important;max-width:360px!important;width:auto!important;min-width:180px!important;margin:0!important;padding:13px 52px 12px 16px!important;border:2px solid rgba(255,255,255,.95)!important;border-radius:20px!important;background:rgba(255,255,255,.96)!important;box-shadow:0 10px 28px rgba(17,48,67,.2)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;pointer-events:auto!important}
+.stage .speech-copy{display:block!important}.stage .speaker-avatar,.stage .speaker-name{display:none!important}
+.stage .speech-text{font-size:16px!important;line-height:1.25!important}.stage .speech-text b{font-size:21px!important}
+.stage .translation-line{margin-top:5px!important;padding:3px 0!important;background:transparent!important;font-size:11px!important;line-height:1.25!important}.stage .gesture-note{display:none!important}
+.stage .round-sound{position:absolute!important;right:9px!important;top:50%!important;transform:translateY(-50%)!important;width:38px!important;height:38px!important;min-width:38px!important;border-radius:50%!important;pointer-events:auto!important}
+.scene-come-in .speech-teacher{top:17%!important;right:12%!important}.scene-come-in .speech-girl{left:24%!important;bottom:20%!important}
+.scene-why-english .speech-teacher,.scene-languages .speech-teacher,.scene-tongue .speech-teacher{top:12%!important;left:50%!important;transform:translateX(-50%)!important}
+
+/* Task panel and feedback are safe and centered. */
+.stage .scene-content>:not(.speech):not(.arrival-hero){position:absolute!important;z-index:22!important;left:50%!important;bottom:16px!important;transform:translateX(-50%)!important;width:min(760px,88%)!important;max-width:88%!important;margin:0!important;padding:12px 14px!important;border-radius:18px!important;background:rgba(255,255,255,.96)!important;border:1px solid rgba(218,231,235,.95)!important;box-shadow:0 10px 26px rgba(20,54,72,.18)!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+.stage .choice-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+.stage .choice-row{display:flex!important;flex-wrap:wrap!important;justify-content:center!important;gap:10px!important}
+.stage .choice-button{min-height:48px!important;padding:11px 16px!important;font-size:15px!important;pointer-events:auto!important}
+.stage .feedback{position:absolute!important;z-index:28!important;left:50%!important;bottom:16px!important;transform:translateX(-50%)!important;width:auto!important;max-width:min(620px,88%)!important;margin:0!important;padding:11px 16px!important;background:#e6faed!important;border-radius:15px!important;box-shadow:0 8px 22px rgba(28,92,54,.18)!important;pointer-events:none!important}
+
+.lesson-controls{width:min(1220px,calc(100vw - 32px));margin:12px auto 0!important;padding:0!important;display:grid!important;grid-template-columns:170px minmax(0,1fr) 220px!important;align-items:center!important;gap:16px!important;position:relative!important;z-index:50!important;pointer-events:auto!important}
+.lesson-controls button{min-height:50px!important;pointer-events:auto!important}
+.scene-arrival+.lesson-controls .next-button{display:block!important}
+.enter-school-nav{background:linear-gradient(145deg,#ff9953,#ff7838)!important;box-shadow:0 5px #d85d27!important;color:#fff!important}
+.chapter-dots{overflow:hidden;min-width:0}
+
+@media(max-width:900px){
+ .topbar{grid-template-columns:1fr auto;padding:8px 14px;gap:10px}.header-center{grid-column:1/-1;grid-row:2}.brand{grid-row:1}.star-counter{grid-column:2;grid-row:1}
+ .stage{width:calc(100vw - 20px)!important;max-height:none!important;margin-top:10px!important;border-radius:22px!important}
+ .stage .speech{max-width:42vw!important;min-width:150px!important;padding:10px 44px 9px 12px!important}.stage .speech-text{font-size:14px!important}.stage .speech-text b{font-size:18px!important}
+ .stage .scene-content>:not(.speech):not(.arrival-hero){width:92%!important;max-width:92%!important;bottom:10px!important;padding:10px!important}
+ .lesson-controls{width:calc(100vw - 20px);grid-template-columns:130px minmax(0,1fr) 185px;gap:8px}
+}
+
+@media(max-width:640px){
+ .game-shell{padding-bottom:16px}
+ .topbar{min-height:auto}.brand small{display:none}.brand-mark{width:44px;height:44px}.brand strong{font-size:16px}.star-counter{min-width:66px;padding:8px 12px}
+ .stage{display:flex!important;flex-direction:column!important;aspect-ratio:auto!important;overflow:visible!important;background:transparent!important;border:0!important;box-shadow:none!important}
+ .stage-visual{position:relative!important;inset:auto!important;aspect-ratio:16/9!important;border-radius:18px!important;overflow:hidden!important}
+ .stage .scene-card{position:relative!important;inset:auto!important;height:auto!important;min-height:0!important;display:block!important;pointer-events:auto!important}
+ .stage .scene-content{position:relative!important;inset:auto!important;padding:10px 0 0!important;display:flex!important;flex-direction:column!important;gap:10px!important;pointer-events:auto!important}
+ .scene-arrival .scene-card{position:absolute!important;inset:0!important}.scene-arrival .scene-content{position:absolute!important;inset:0!important;padding:0!important}.scene-arrival .arrival-hero{position:absolute!important;inset:0!important}
+ .scene-arrival .school-friend{width:44px!important;height:44px!important;min-width:44px!important}
+ .stage .speech,.stage .scene-content>:not(.speech):not(.arrival-hero),.stage .feedback{position:relative!important;inset:auto!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important}
+ .stage .speech{padding:11px 48px 10px 14px!important;border-radius:16px!important}.stage .round-sound{width:36px!important;height:36px!important;min-width:36px!important}
+ .stage .choice-grid{grid-template-columns:1fr!important}.stage .choice-row{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+ .lesson-controls{width:calc(100vw - 20px);grid-template-columns:1fr 1.45fr!important;grid-template-areas:'dots dots' 'back next';gap:10px;margin-top:10px!important}.back-button{grid-area:back}.next-button{grid-area:next}.chapter-dots{grid-area:dots;min-height:16px}.lesson-controls button{width:100%;font-size:13px;padding:10px!important}
+}
+
+
+/* VERSION 26 — unified interaction and navigation rules */
+.brand small{white-space:nowrap}
+
+/* The illustration owns the first scene. Only the seven transparent buttons receive input. */
+.scene-arrival .scene-card,
+.scene-arrival .scene-content,
+.scene-arrival .arrival-hero{
+  pointer-events:none;
+}
+.scene-arrival .school-friends{
+  display:block;
+  position:absolute;
+  inset:0;
+  z-index:60;
+  pointer-events:none;
+}
+.scene-arrival .school-friend{
+  display:block;
+  position:absolute;
+  z-index:61;
+  min-width:44px;
+  min-height:44px;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:16px;
+  background:transparent;
+  box-shadow:none;
+  opacity:1;
+  pointer-events:auto;
+  cursor:pointer;
+  touch-action:manipulation;
+  user-select:none;
+  -webkit-user-select:none;
+  -webkit-tap-highlight-color:transparent;
+}
+.scene-arrival .school-friend::before,
+.scene-arrival .school-friend::after,
+.scene-arrival .school-friend span{display:none}
+.scene-arrival .school-friend:focus-visible{
+  outline:3px solid #ff8a43;
+  outline-offset:3px;
+}
+.scene-arrival .school-friend:active{
+  outline:3px solid rgba(255,255,255,.96);
+  outline-offset:2px;
+  background:rgba(86,201,139,.16);
+}
+
+/* Hit zones over the seven speech bubbles in the approved first-scene artwork. */
+.scene-arrival .friend-girl-left{left:6.9%;top:23%;width:8.4%;height:12%}
+.scene-arrival .friend-boy-left{left:21.4%;top:21%;width:8%;height:11.2%}
+.scene-arrival .friend-girl-glasses{left:35.2%;top:22.7%;width:10.2%;height:11.3%}
+.scene-arrival .friend-girl-curly{left:51.2%;top:24.1%;width:8.6%;height:10.8%}
+.scene-arrival .friend-boy-dark{left:64.4%;top:23.8%;width:7.6%;height:10.6%}
+.scene-arrival .friend-boy-red{left:76.7%;top:22.8%;width:8.1%;height:10.7%}
+.scene-arrival .friend-teacher{left:84.8%;top:5.2%;width:10.8%;height:15.5%}
+
+/* Progress is already shown in the header; footer contains navigation only. */
+.chapter-dots{display:none}
+.lesson-controls{grid-template-columns:170px minmax(0,1fr) 220px}
+.lesson-controls .back-button{grid-column:1}
+.lesson-controls .next-button{grid-column:3}
+.game-shell:has(.scene-arrival) .lesson-controls{grid-template-columns:minmax(0,1fr) 220px}
+.game-shell:has(.scene-arrival) .back-button{display:none}
+.game-shell:has(.scene-arrival) .next-button{grid-column:2;justify-self:stretch}
+
+@media(max-width:640px){
+  .brand small{display:block;font-size:8px;line-height:1.1}
+  .lesson-controls{grid-template-columns:1fr 1.35fr;grid-template-areas:none}
+  .lesson-controls .back-button{grid-column:1;grid-area:auto}
+  .lesson-controls .next-button{grid-column:2;grid-area:auto}
+  .game-shell:has(.scene-arrival) .lesson-controls{grid-template-columns:1fr}
+  .game-shell:has(.scene-arrival) .next-button{grid-column:1;width:100%}
+}
+
+/* VERSION 31 — one interaction model; old version overlays removed */
+.stage-visual,
+.stage-visual *{
+  pointer-events:none!important;
+}
+.stage .scene-card{
+  pointer-events:auto!important;
+}
+.stage .scene-content{
+  pointer-events:auto!important;
+}
+.stage .scene-content button,
+.stage .scene-content input,
+.stage .scene-content select,
+.stage .scene-content textarea,
+.stage .scene-content [role="button"]{
+  pointer-events:auto!important;
+}
+
+.scene-arrival.stage{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+}
+.scene-arrival .stage-visual{
+  position:absolute!important;
+  inset:0!important;
+  z-index:1!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:hidden!important;
+  border-radius:inherit!important;
+}
+.scene-arrival .scene-backdrop{
+  width:100%!important;
+  height:100%!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  filter:none!important;
+  transform:none!important;
+}
+.scene-arrival .arrival-stage-card{
+  position:absolute!important;
+  inset:0!important;
+  transform:none!important;
+  z-index:10!important;
+  width:100%!important;
+  height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  pointer-events:auto!important;
+}
+.scene-arrival .scene-content,
+.scene-arrival .arrival-hero{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:hidden!important;
+  pointer-events:auto!important;
+}
+.scene-arrival .arrival-title,
+.scene-arrival .arrival-enter{
+  display:none!important;
+}
+.scene-arrival .school-friends{
+  display:block!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:30!important;
+  width:100%!important;
+  height:100%!important;
+  overflow:visible!important;
+  pointer-events:auto!important;
+}
+.scene-arrival .school-friend{
+  display:block!important;
+  position:absolute!important;
+  z-index:31!important;
+  min-width:44px!important;
+  min-height:44px!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  outline:0!important;
+  border-radius:12px!important;
+  background:rgba(255,255,255,.01)!important;
+  box-shadow:none!important;
+  opacity:1!important;
+  color:transparent!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+  touch-action:manipulation!important;
+  -webkit-appearance:none!important;
+  appearance:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+.scene-arrival .school-friend span{display:none!important}
+.scene-arrival .friend-girl-left{left:7.10%!important;top:25.10%!important;width:8.20%!important;height:12.50%!important}
+.scene-arrival .friend-boy-left{left:21.35%!important;top:23.85%!important;width:8.10%!important;height:12.20%!important}
+.scene-arrival .friend-girl-glasses{left:35.95%!important;top:25.90%!important;width:10.70%!important;height:12.10%!important}
+.scene-arrival .friend-girl-curly{left:54.45%!important;top:27.75%!important;width:7.70%!important;height:12.20%!important}
+.scene-arrival .friend-boy-dark{left:66.20%!important;top:27.75%!important;width:7.65%!important;height:12.20%!important}
+.scene-arrival .friend-boy-red{left:76.15%!important;top:25.85%!important;width:7.60%!important;height:12.25%!important}
+.scene-arrival .friend-teacher{left:85.65%!important;top:4.15%!important;width:11.70%!important;height:18.10%!important}
+
+.lesson-controls,
+.lesson-controls button{
+  position:relative!important;
+  z-index:100!important;
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+}
+
+/* VERSION 32 — keep the first-scene hit layer in the stage coordinate system. */
+.scene-arrival .scene-content > .school-friends{
+  inset:0!important;
+  left:0!important;
+  right:0!important;
+  top:0!important;
+  bottom:0!important;
+  transform:none!important;
+  width:100%!important;
+  max-width:none!important;
+  height:100%!important;
+  margin:0!important;
+  padding:0!important;
+  border:0!important;
+  border-radius:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+
+/* VERSION 34 — clean scene art no longer contains baked-in dialogue.
+   Restore the real, clickable speech layer above every lesson background. */
+.stage:not(.scene-arrival) .speech{
+  display:grid!important;
+  pointer-events:auto!important;
+}
+.stage:not(.scene-arrival) .scene-content{
+  pointer-events:none;
+}
+.stage:not(.scene-arrival) .scene-content .speech,
+.stage:not(.scene-arrival) .scene-content button,
+.stage:not(.scene-arrival) .scene-content input,
+.stage:not(.scene-arrival) .scene-content .choice-grid,
+.stage:not(.scene-arrival) .scene-content .choice-row,
+.stage:not(.scene-arrival) .scene-content .primary-action,
+.stage:not(.scene-arrival) .scene-content .secondary-action,
+.stage:not(.scene-arrival) .scene-content .name-line,
+.stage:not(.scene-arrival) .scene-content .feedback{
+  pointer-events:auto!important;
+}
+@media(min-width:641px){
+  .stage:not(.scene-arrival) .scene-card{
+    inset:0!important;
+    left:0!important;
+    right:0!important;
+    top:0!important;
+    bottom:0!important;
+    transform:none!important;
+    width:100%!important;
+    height:100%!important;
+    max-height:none!important;
+  }
+}
+
+/* VERSION 36 — complete dialogue ownership, feedback clouds and task layout pass. */
+@media(min-width:641px){
+  /* Feedback is now a character speech cloud, never a toast over the controls. */
+  .stage:not(.scene-arrival) .scene-card>.feedback{
+    left:auto!important;
+    right:4.5%!important;
+    top:43%!important;
+    bottom:auto!important;
+    transform:none!important;
+    width:max-content!important;
+    max-width:min(340px,32%)!important;
+    min-height:58px!important;
+    padding:15px 20px!important;
+    color:#26784b!important;
+    text-align:left!important;
+    font-size:15px!important;
+    line-height:1.25!important;
+    background:rgba(255,255,255,.96)!important;
+    border:3px solid #58c98b!important;
+    border-radius:21px 21px 7px 21px!important;
+    box-shadow:0 12px 32px rgba(16,55,72,.25)!important;
+    pointer-events:none!important;
+  }
+  .stage:not(.scene-arrival) .scene-card>.feedback:after{
+    content:""!important;
+    position:absolute!important;
+    right:-14px!important;
+    bottom:7px!important;
+    width:25px!important;
+    height:25px!important;
+    background:#fff!important;
+    border-right:3px solid #58c98b!important;
+    border-bottom:3px solid #58c98b!important;
+    transform:rotate(-22deg)!important;
+  }
+  .stage.scene-dunno-arrives .scene-card>.feedback,
+  .stage.scene-four-toys .scene-card>.feedback,
+  .stage.scene-guess .scene-card>.feedback,
+  .stage.scene-dunno-test .scene-card>.feedback,
+  .stage.scene-nice-nasty .scene-card>.feedback{
+    left:5%!important;
+    right:auto!important;
+    border-radius:21px 21px 21px 7px!important;
+  }
+  .stage.scene-dunno-arrives .scene-card>.feedback:after,
+  .stage.scene-four-toys .scene-card>.feedback:after,
+  .stage.scene-guess .scene-card>.feedback:after,
+  .stage.scene-dunno-test .scene-card>.feedback:after,
+  .stage.scene-nice-nasty .scene-card>.feedback:after{
+    left:-14px!important;
+    right:auto!important;
+    transform:rotate(112deg)!important;
+  }
+
+  /* Scene 4: choices stay usable; confirmation sits by the teacher. */
+  .stage.scene-languages .scene-card{
+    inset:0!important;
+    max-height:none!important;
+  }
+  .stage.scene-languages .scene-content>.choice-row{
+    left:50%!important;
+    bottom:20px!important;
+    width:min(660px,70%)!important;
+    max-width:70%!important;
+  }
+  .stage.scene-languages .scene-card>.feedback{
+    left:auto!important;
+    right:5%!important;
+    top:43%!important;
+    bottom:auto!important;
+    max-width:310px!important;
+  }
+  .stage.scene-languages .scene-content>.story-card{
+    left:50%!important;
+    bottom:94px!important;
+    width:min(760px,72%)!important;
+    max-width:72%!important;
+  }
+  .stage.scene-languages .scene-card:not(:has(>.feedback.success)) .story-card{display:none!important}
+  .stage.scene-languages .scene-card:has(>.feedback.success) .choice-row{display:none!important}
+  .stage.scene-languages .scene-card:has(>.feedback.success) .story-card{bottom:22px!important}
+
+  /* Scene 6: the dynamic-name result is a cloud by Miss Emmy. */
+  .stage.scene-names .scene-card>.feedback{
+    left:5%!important;
+    right:auto!important;
+    top:41%!important;
+    bottom:auto!important;
+    max-width:380px!important;
+    border-radius:21px 21px 21px 7px!important;
+  }
+  .stage.scene-names .scene-card>.feedback:after{
+    left:-14px!important;
+    right:auto!important;
+    transform:rotate(112deg)!important;
+  }
+
+  /* Scene 8: teacher is on the left, Dunno is at the open door on the right. */
+  .stage.scene-dunno-arrives .speech-teacher{
+    left:7%!important;
+    right:auto!important;
+    top:15%!important;
+    transform:none!important;
+    max-width:310px!important;
+  }
+  .stage.scene-dunno-arrives .speech-dunno{
+    left:auto!important;
+    right:8%!important;
+    top:16%!important;
+    transform:none!important;
+    max-width:330px!important;
+  }
+  .stage.scene-dunno-arrives .knock-event{
+    left:50%!important;
+    bottom:20px!important;
+    width:min(700px,68%)!important;
+    max-width:68%!important;
+  }
+  .stage.scene-dunno-arrives .scene-content:has(>.primary-action)>.knock-event{display:none!important}
+  .stage.scene-dunno-arrives .primary-action{
+    left:50%!important;
+    bottom:22px!important;
+    width:auto!important;
+    max-width:58%!important;
+  }
+  .stage.scene-dunno-arrives .scene-card:has(>.feedback.success) .primary-action{display:none!important}
+
+  /* Scene 9: one coherent question, one Dunno answer, one age choice. */
+  .stage.scene-age .speech-teacher{
+    left:auto!important;
+    right:7%!important;
+    top:14%!important;
+    transform:none!important;
+    max-width:390px!important;
+  }
+  .stage.scene-age .speech-dunno{
+    left:30%!important;
+    right:auto!important;
+    top:24%!important;
+    transform:none!important;
+    max-width:360px!important;
+  }
+  .stage.scene-age .prompt{
+    left:50%!important;
+    bottom:88px!important;
+    width:min(500px,58%)!important;
+    max-width:58%!important;
+    padding:12px 18px!important;
+    background:rgba(255,255,255,.94)!important;
+    border-radius:18px!important;
+  }
+  .stage.scene-age .choice-row{
+    left:50%!important;
+    bottom:20px!important;
+    width:min(450px,54%)!important;
+    max-width:54%!important;
+  }
+  .stage.scene-age .scene-card:has(>.feedback.success) .prompt,
+  .stage.scene-age .scene-card:has(>.feedback.success) .choice-row{display:none!important}
+
+  /* Scene 10: each command has a matching full-scene pose and separate controls. */
+  .stage.scene-actions .speech-teacher{
+    left:auto!important;
+    right:6%!important;
+    top:14%!important;
+    transform:none!important;
+    max-width:350px!important;
+  }
+  .stage.scene-actions .action-card{
+    left:38%!important;
+    bottom:18px!important;
+    width:min(520px,52%)!important;
+    max-width:52%!important;
+    min-height:92px!important;
+    padding:12px 18px!important;
+    display:grid!important;
+    grid-template-columns:auto 1fr auto!important;
+    grid-template-rows:auto auto!important;
+    column-gap:15px!important;
+    text-align:left!important;
+  }
+  .stage.scene-actions .action-card>span{grid-row:1/3!important;font-size:48px!important}
+  .stage.scene-actions .action-card>b{font-size:25px!important}
+  .stage.scene-actions .action-card>small{margin:0!important;font-size:12px!important}
+  .stage.scene-actions .action-card>button{grid-column:3!important;grid-row:1/3!important}
+  .stage.scene-actions .primary-action{
+    left:auto!important;
+    right:4%!important;
+    bottom:31px!important;
+    width:210px!important;
+    max-width:22%!important;
+    padding:13px 16px!important;
+  }
+  .stage.scene-actions .mini-progress{
+    left:38%!important;
+    bottom:124px!important;
+    width:auto!important;
+    max-width:none!important;
+  }
+  .stage.scene-actions .scene-card:has(>.feedback.success) .action-card,
+  .stage.scene-actions .scene-card:has(>.feedback.success) .primary-action,
+  .stage.scene-actions .scene-card:has(>.feedback.success) .mini-progress{display:none!important}
+
+  /* Scenes 11–12: compact bottom tasks; Miss Emmy speaks from the left. */
+  .stage.scene-four-toys .speech-teacher,
+  .stage.scene-guess .speech-teacher{
+    left:6%!important;
+    right:auto!important;
+    top:13%!important;
+    transform:none!important;
+    max-width:420px!important;
+  }
+  .stage.scene-four-toys .table-toys{display:none!important}
+  .stage.scene-four-toys .word-card{
+    left:40%!important;
+    bottom:20px!important;
+    width:min(430px,46%)!important;
+    max-width:46%!important;
+  }
+  .stage.scene-four-toys .primary-action{
+    left:auto!important;
+    right:4%!important;
+    bottom:31px!important;
+    width:220px!important;
+    max-width:23%!important;
+  }
+  .stage.scene-guess .prompt{
+    left:50%!important;
+    bottom:142px!important;
+    width:min(540px,58%)!important;
+    max-width:58%!important;
+    padding:10px 16px!important;
+    background:rgba(255,255,255,.94)!important;
+    border-radius:16px!important;
+  }
+  .stage.scene-guess .toy-choice-grid{
+    left:50%!important;
+    bottom:18px!important;
+    width:min(760px,74%)!important;
+    max-width:74%!important;
+    padding:10px!important;
+    background:rgba(255,255,255,.94)!important;
+    border-radius:21px!important;
+  }
+  .stage.scene-guess .scene-card:has(>.feedback.success) .prompt,
+  .stage.scene-guess .scene-card:has(>.feedback.success) .toy-choice-grid{display:none!important}
+
+  /* Scene 13: the verse and its action no longer overlap. */
+  .stage.scene-rhyme .speech-teacher{
+    left:auto!important;
+    right:7%!important;
+    top:13%!important;
+    transform:none!important;
+    max-width:440px!important;
+  }
+  .stage.scene-rhyme .rhyme-card{
+    left:39%!important;
+    bottom:18px!important;
+    width:min(590px,56%)!important;
+    max-width:56%!important;
+    min-height:165px!important;
+  }
+  .stage.scene-rhyme .primary-action{
+    left:auto!important;
+    right:5%!important;
+    bottom:46px!important;
+    width:200px!important;
+    max-width:22%!important;
+  }
+  .stage.scene-rhyme .scene-card:has(>.feedback.success) .rhyme-card,
+  .stage.scene-rhyme .scene-card:has(>.feedback.success) .primary-action{display:none!important}
+
+  /* Scenes 14–15: speech ownership follows the visible characters. */
+  .stage.scene-dunno-test .speech-teacher,
+  .stage.scene-likes .speech-teacher{
+    left:5%!important;
+    right:auto!important;
+    top:14%!important;
+    transform:none!important;
+    max-width:430px!important;
+  }
+  .stage.scene-dunno-test .speech-dunno,
+  .stage.scene-likes .speech-dunno{
+    left:auto!important;
+    right:6%!important;
+    top:15%!important;
+    transform:none!important;
+    max-width:390px!important;
+  }
+  .stage.scene-dunno-test .prompt{
+    left:50%!important;
+    bottom:90px!important;
+    width:min(520px,55%)!important;
+    max-width:55%!important;
+    padding:10px 16px!important;
+    background:rgba(255,255,255,.94)!important;
+    border-radius:16px!important;
+  }
+  .stage.scene-dunno-test .choice-row{
+    left:50%!important;
+    bottom:20px!important;
+    width:min(520px,55%)!important;
+    max-width:55%!important;
+  }
+  .stage.scene-dunno-test .table-toys{display:none!important}
+  .stage.scene-dunno-test .scene-card:has(>.feedback.success) .prompt,
+  .stage.scene-dunno-test .scene-card:has(>.feedback.success) .choice-row{display:none!important}
+  .stage.scene-likes .gift-row{
+    left:50%!important;
+    bottom:18px!important;
+    width:min(720px,70%)!important;
+    max-width:70%!important;
+    padding:10px!important;
+    background:rgba(255,255,255,.94)!important;
+    border-radius:20px!important;
+  }
+  .stage.scene-likes .kindness{
+    left:50%!important;
+    bottom:25px!important;
+    width:auto!important;
+    max-width:58%!important;
+  }
+  .stage.scene-likes .scene-card:has(>.feedback.success) .gift-row{display:none!important}
+
+  /* Scene 16: near/far explanation and answer have dedicated rows. */
+  .stage.scene-nice-nasty .speech-teacher{
+    left:5%!important;
+    right:auto!important;
+    top:13%!important;
+    transform:none!important;
+    max-width:440px!important;
+  }
+  .stage.scene-nice-nasty .near-far{
+    left:43%!important;
+    bottom:112px!important;
+    width:min(520px,48%)!important;
+    max-width:48%!important;
+    padding:8px!important;
+    background:rgba(255,255,255,.93)!important;
+    border-radius:20px!important;
+  }
+  .stage.scene-nice-nasty .prompt{
+    left:67%!important;
+    bottom:76px!important;
+    width:280px!important;
+    max-width:26%!important;
+  }
+  .stage.scene-nice-nasty .choice-row{
+    left:67%!important;
+    bottom:19px!important;
+    width:320px!important;
+    max-width:30%!important;
+  }
+  .stage.scene-nice-nasty .scene-card:has(>.feedback.success) .near-far,
+  .stage.scene-nice-nasty .scene-card:has(>.feedback.success) .prompt,
+  .stage.scene-nice-nasty .scene-card:has(>.feedback.success) .choice-row{display:none!important}
+
+  /* Scene 17: teacher left, Dunno right, task along the bottom. */
+  .stage.scene-secret-bag .speech-teacher{
+    left:5%!important;
+    right:auto!important;
+    top:13%!important;
+    transform:none!important;
+    max-width:430px!important;
+  }
+  .stage.scene-secret-bag .speech-dunno{
+    left:auto!important;
+    right:6%!important;
+    top:15%!important;
+    transform:none!important;
+    max-width:360px!important;
+  }
+  .stage.scene-secret-bag .bag-scene{display:none!important}
+  .stage.scene-secret-bag .prompt{
+    left:50%!important;
+    bottom:86px!important;
+    width:min(520px,55%)!important;
+    max-width:55%!important;
+    padding:10px 16px!important;
+    background:rgba(255,255,255,.94)!important;
+    border-radius:16px!important;
+  }
+  .stage.scene-secret-bag .choice-row,
+  .stage.scene-secret-bag .picture-card{
+    left:50%!important;
+    bottom:18px!important;
+    width:min(650px,64%)!important;
+    max-width:64%!important;
+  }
+  .stage.scene-secret-bag .primary-action{
+    left:auto!important;
+    right:5%!important;
+    bottom:26px!important;
+    width:180px!important;
+    max-width:20%!important;
+  }
+
+  /* Scene 18: lyrics, music button and answer are separate, readable layers. */
+  .stage.scene-roy .speech-teacher{
+    left:auto!important;
+    right:6%!important;
+    top:12%!important;
+    transform:none!important;
+    max-width:440px!important;
+  }
+  .stage.scene-roy .roy-card{display:none!important}
+  .stage.scene-roy .song-card{
+    left:41%!important;
+    bottom:112px!important;
+    width:min(650px,60%)!important;
+    max-width:60%!important;
+    min-height:215px!important;
+    max-height:245px!important;
+    overflow:auto!important;
+  }
+  .stage.scene-roy .prompt{
+    left:66%!important;
+    bottom:76px!important;
+    width:300px!important;
+    max-width:28%!important;
+  }
+  .stage.scene-roy .choice-row{
+    left:66%!important;
+    bottom:18px!important;
+    width:350px!important;
+    max-width:34%!important;
+  }
+  .stage.scene-roy .scene-card:has(>.feedback.success) .prompt,
+  .stage.scene-roy .scene-card:has(>.feedback.success) .choice-row{display:none!important}
+}
+
+@media(max-width:640px){
+  .stage:not(.scene-arrival) .scene-card>.feedback{
+    position:relative!important;
+    inset:auto!important;
+    transform:none!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin-top:12px!important;
+    border:2px solid #58c98b!important;
+    border-radius:16px!important;
+    background:#fff!important;
+  }
+}
+
+/* VERSION 35 — scene-specific task layouts.
+   The generic absolute task rule previously stacked every sibling at bottom:16px. */
+@media(min-width:641px){
+  .stage.scene-tongue .scene-content>.hero-phrase{
+    left:50%!important;
+    right:auto!important;
+    bottom:22px!important;
+    width:min(560px,72%)!important;
+    min-width:0!important;
+    max-width:72%!important;
+    min-height:74px!important;
+    padding:12px 22px!important;
+    display:grid!important;
+    grid-template-columns:auto 1fr!important;
+    grid-template-rows:auto auto!important;
+    align-items:center!important;
+    column-gap:14px!important;
+    text-align:left!important;
+  }
+  .stage.scene-tongue .scene-content>.hero-phrase>span{
+    grid-row:1/3!important;
+    font-size:28px!important;
+  }
+  .stage.scene-tongue .scene-content>.hero-phrase>b{
+    font-size:30px!important;
+    line-height:1!important;
+  }
+  .stage.scene-tongue .scene-content>.hero-phrase>small{
+    font-size:12px!important;
+    line-height:1.2!important;
+  }
+  .stage.scene-tongue .scene-content>.primary-action{
+    left:50%!important;
+    right:auto!important;
+    bottom:112px!important;
+    width:auto!important;
+    max-width:70%!important;
+    padding:11px 22px!important;
+    color:#fff!important;
+    background:linear-gradient(145deg,#58c98b,#37a96d)!important;
+    border:0!important;
+    box-shadow:0 5px #248454,0 10px 24px rgba(20,96,60,.2)!important;
+  }
+  .stage.scene-tongue .scene-card>.feedback{
+    left:50%!important;
+    right:auto!important;
+    bottom:24px!important;
+    width:auto!important;
+    max-width:70%!important;
+  }
+  .stage.scene-tongue .scene-card:has(>.feedback) .scene-content>.hero-phrase,
+  .stage.scene-tongue .scene-card:has(>.feedback) .scene-content>.primary-action{
+    display:none!important;
+  }
+
+  .stage.scene-names .scene-content>.speech-teacher{
+    top:9%!important;
+    left:50%!important;
+    right:auto!important;
+    transform:translateX(-50%)!important;
+  }
+  .stage.scene-names .scene-content>.echo-gnomes{
+    left:50%!important;
+    right:auto!important;
+    bottom:142px!important;
+    width:min(610px,76%)!important;
+    max-width:76%!important;
+    min-height:52px!important;
+    padding:8px 12px!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:9px!important;
+  }
+  .stage.scene-names .scene-content>.echo-gnomes button{
+    min-width:86px!important;
+    padding:8px 13px!important;
+    font-size:18px!important;
+  }
+  .stage.scene-names .scene-content>.name-line{
+    left:50%!important;
+    right:auto!important;
+    bottom:76px!important;
+    width:min(760px,82%)!important;
+    max-width:82%!important;
+    min-height:54px!important;
+    padding:8px 12px!important;
+    display:grid!important;
+    grid-template-columns:auto minmax(180px,1fr)!important;
+    align-items:center!important;
+    gap:12px!important;
+  }
+  .stage.scene-names .scene-content>.name-line>span{
+    white-space:nowrap!important;
+    font-size:19px!important;
+    font-weight:900!important;
+  }
+  .stage.scene-names .scene-content>.name-line input{
+    width:100%!important;
+    min-width:0!important;
+    height:38px!important;
+    padding:7px 12px!important;
+    color:#173a57!important;
+    background:#fff!important;
+    border:2px solid #58b9ec!important;
+    border-radius:12px!important;
+    opacity:1!important;
+  }
+  .stage.scene-names .scene-content>.name-line input::placeholder{
+    color:#68829a!important;
+    opacity:1!important;
+  }
+  .stage.scene-names .scene-content>.primary-action{
+    left:50%!important;
+    right:auto!important;
+    bottom:18px!important;
+    width:auto!important;
+    max-width:70%!important;
+    padding:10px 22px!important;
+    color:#fff!important;
+    background:linear-gradient(145deg,#58c98b,#37a96d)!important;
+    border:0!important;
+    box-shadow:0 5px #248454,0 10px 24px rgba(20,96,60,.2)!important;
+  }
+  .stage.scene-names .scene-card>.feedback{
+    left:50%!important;
+    right:auto!important;
+    top:43%!important;
+    bottom:auto!important;
+    width:auto!important;
+    max-width:72%!important;
+  }
+}
+
+@media(max-width:640px){
+  .scene-tongue .hero-phrase,
+  .scene-tongue .primary-action,
+  .scene-names .echo-gnomes,
+  .scene-names .name-line,
+  .scene-names .primary-action{
+    position:relative!important;
+    inset:auto!important;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    transform:none!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+  }
+  .scene-names .name-line{
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+}
+
+/* VERSION 37 — FINAL CASCADE LAYER.
+   Keep this block at the physical end of the file: older v35 rules must never
+   be allowed to return feedback and task controls to the middle of the cast. */
+@media(min-width:641px){
+  .stage:not(.scene-arrival) .speech{
+    width:auto!important;
+    max-width:min(390px,32%)!important;
+    padding:10px 54px 10px 16px!important;
+    border-radius:18px!important;
+    font-size:15px!important;
+    line-height:1.22!important;
+    z-index:24!important;
+  }
+  .stage:not(.scene-arrival) .speech-copy,
+  .stage:not(.scene-arrival) .speech-text{min-width:0!important}
+  .stage:not(.scene-arrival) .round-sound{
+    width:42px!important;height:42px!important;right:8px!important;
+  }
+
+  /* Every success is a replacement teacher cloud, never a toast in the cast. */
+  .stage:not(.scene-arrival) .scene-card>.feedback{
+    position:absolute!important;
+    left:52%!important;right:auto!important;
+    top:7%!important;bottom:auto!important;
+    transform:translateX(-50%)!important;
+    width:auto!important;max-width:min(440px,42%)!important;
+    min-height:54px!important;
+    padding:13px 22px!important;
+    border:3px solid #58c98b!important;
+    border-radius:20px!important;
+    color:#238252!important;background:rgba(255,255,255,.97)!important;
+    box-shadow:0 12px 28px rgba(16,54,78,.18)!important;
+    font-size:17px!important;line-height:1.2!important;text-align:center!important;
+    z-index:45!important;
+  }
+  .stage:not(.scene-arrival) .scene-card>.feedback:after{
+    content:""!important;display:block!important;position:absolute!important;
+    right:-13px!important;bottom:8px!important;width:24px!important;height:24px!important;
+    background:#fff!important;border-right:3px solid #58c98b!important;
+    border-bottom:3px solid #58c98b!important;transform:rotate(-28deg)!important;
+  }
+  .stage:not(.scene-arrival) .scene-card:has(>.feedback) .speech-teacher{
+    display:none!important;
+  }
+
+  /* Interactive controls must keep their colour over the generic white tray. */
+  .stage:not(.scene-arrival) .primary-action{
+    color:#fff!important;
+    background:linear-gradient(145deg,#58c98b,#37a96d)!important;
+    border:0!important;border-radius:18px!important;
+    box-shadow:0 5px #248454,0 10px 24px rgba(20,96,60,.22)!important;
+    z-index:35!important;
+  }
+  .stage:not(.scene-arrival) .choice-row,
+  .stage:not(.scene-arrival) .action-card,
+  .stage:not(.scene-arrival) .song-card,
+  .stage:not(.scene-arrival) .knock-event{
+    background:rgba(255,255,255,.96)!important;
+    z-index:31!important;
+  }
+
+  /* 2 — one speaker at a time; board area is the safe dialogue zone. */
+  .stage.scene-come-in .speech-teacher{
+    left:52%!important;right:auto!important;top:7%!important;
+    transform:translateX(-50%)!important;max-width:370px!important;
+  }
+  .stage.scene-come-in .speech-child{
+    left:29%!important;right:auto!important;top:58%!important;
+    transform:translateX(-50%)!important;max-width:280px!important;
+  }
+  .stage.scene-come-in .scene-card>.feedback{display:none!important}
+
+  /* 4, 5, 6, 7 — blank board/wall areas above the children. */
+  .stage.scene-languages .speech-teacher,
+  .stage.scene-tongue .speech-teacher,
+  .stage.scene-names .speech-teacher,
+  .stage.scene-many-toys .speech-teacher{
+    left:52%!important;right:auto!important;top:7%!important;
+    transform:translateX(-50%)!important;max-width:390px!important;
+  }
+  .stage.scene-names .scene-card>.feedback{
+    left:52%!important;top:7%!important;bottom:auto!important;
+    max-width:440px!important;
+  }
+  .stage.scene-many-toys .scene-card>.feedback{
+    left:62%!important;top:8%!important;max-width:410px!important;
+  }
+
+  /* 8 — preserve the state machine and make its next action unmistakable. */
+  .stage.scene-dunno-arrives .speech-teacher{
+    left:29%!important;right:auto!important;top:7%!important;
+    transform:translateX(-50%)!important;max-width:300px!important;
+  }
+  .stage.scene-dunno-arrives .speech-dunno{
+    left:auto!important;right:8%!important;top:10%!important;
+    transform:none!important;max-width:330px!important;
+  }
+  .stage.scene-dunno-arrives .scene-content>.primary-action{
+    left:50%!important;right:auto!important;bottom:24px!important;
+    transform:translateX(-50%)!important;
+    display:block!important;width:auto!important;min-width:280px!important;
+    max-width:55%!important;padding:15px 28px!important;
+    font-size:18px!important;opacity:1!important;visibility:visible!important;
+  }
+  .stage.scene-dunno-arrives .scene-content:has(>.primary-action)>.knock-event{
+    display:none!important;
+  }
+  .stage.scene-dunno-arrives .knock-event{
+    left:50%!important;bottom:22px!important;width:min(650px,68%)!important;
+  }
+
+  /* 9 — separate question, Dunno answer and choices. */
+  .stage.scene-age .speech-teacher{
+    left:33%!important;right:auto!important;top:7%!important;
+    transform:translateX(-50%)!important;max-width:350px!important;
+  }
+  .stage.scene-age .speech-dunno{
+    left:auto!important;right:6%!important;top:10%!important;
+    transform:none!important;max-width:340px!important;
+  }
+
+  /* 10 — command card and confirmation button occupy different columns. */
+  .stage.scene-actions .speech-teacher{
+    left:51%!important;right:auto!important;top:7%!important;
+    transform:translateX(-50%)!important;max-width:350px!important;
+  }
+  .stage.scene-actions .action-card{
+    left:28%!important;right:auto!important;bottom:22px!important;
+    transform:translateX(-50%)!important;
+    width:min(430px,42%)!important;max-width:42%!important;
+    min-height:126px!important;padding:14px 18px!important;
+  }
+  .stage.scene-actions .primary-action{
+    left:73%!important;right:auto!important;bottom:42px!important;
+    transform:translateX(-50%)!important;
+    width:auto!important;max-width:35%!important;padding:14px 24px!important;
+  }
+  .stage.scene-actions .mini-progress{
+    left:73%!important;right:auto!important;bottom:20px!important;
+    transform:translateX(-50%)!important;
+  }
+  .stage.scene-actions .scene-card:has(>.feedback) .action-card,
+  .stage.scene-actions .scene-card:has(>.feedback) .primary-action{display:none!important}
+
+  /* Toy-table scenes: success replaces the teacher, not the children. */
+  .stage.scene-four-toys .scene-card>.feedback,
+  .stage.scene-guess .scene-card>.feedback,
+  .stage.scene-dunno-test .scene-card>.feedback,
+  .stage.scene-likes .scene-card>.feedback,
+  .stage.scene-nice-nasty .scene-card>.feedback{
+    left:60%!important;top:7%!important;max-width:430px!important;
+  }
+
+  /* 13 — lyrics stay inside a single bottom card. */
+  .stage.scene-rhyme .rhyme-card{
+    left:50%!important;bottom:22px!important;width:min(650px,66%)!important;
+    max-width:66%!important;max-height:225px!important;overflow:auto!important;
+  }
+
+  /* 18 — lyrics above, answer row below; no layers share the same pixels. */
+  .stage.scene-roy .speech-teacher{
+    left:61%!important;right:auto!important;top:7%!important;
+    transform:translateX(-50%)!important;max-width:430px!important;
+  }
+  .stage.scene-roy .song-card{
+    left:48%!important;right:auto!important;bottom:102px!important;
+    transform:translateX(-50%)!important;
+    width:min(650px,60%)!important;max-width:60%!important;
+    min-height:0!important;max-height:220px!important;overflow:auto!important;
+  }
+  .stage.scene-roy .prompt{display:none!important}
+  .stage.scene-roy .choice-row{
+    left:50%!important;right:auto!important;bottom:20px!important;
+    transform:translateX(-50%)!important;
+    width:360px!important;max-width:38%!important;
+  }
+  .stage.scene-roy .scene-card:has(>.feedback) .song-card,
+  .stage.scene-roy .scene-card:has(>.feedback) .choice-row{display:none!important}
+}
+
+@media(max-width:640px){
+  .stage:not(.scene-arrival) .scene-card>.feedback{
+    position:relative!important;inset:auto!important;transform:none!important;
+    width:100%!important;max-width:100%!important;margin-top:10px!important;
+  }
+  .stage.scene-actions .action-card,
+  .stage.scene-actions .primary-action,
+  .stage.scene-actions .mini-progress,
+  .stage.scene-roy .song-card,
+  .stage.scene-roy .choice-row{
+    position:relative!important;inset:auto!important;transform:none!important;
+    width:100%!important;max-width:100%!important;margin:8px 0!important;
+  }
+}
+
+/* VERSION 38 — dialogue ownership and single-task controls.
+   This is intentionally the last cascade block. */
+@media(min-width:641px){
+  /* Scene 4: the current country is part of the task, not a tiny decoration. */
+  html body .stage.scene-languages .language-map{display:none!important}
+  html body .stage.scene-languages .speech-teacher{
+    left:auto!important;right:18%!important;top:7%!important;
+    bottom:auto!important;transform:none!important;max-width:380px!important;
+  }
+  html body .stage.scene-languages .country-question{
+    position:absolute!important;left:50%!important;bottom:88px!important;
+    transform:translateX(-50%)!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    gap:12px!important;width:min(540px,58%)!important;max-width:58%!important;
+    min-height:58px!important;padding:10px 18px!important;
+    color:#173a57!important;background:rgba(255,255,255,.97)!important;
+    border:3px solid #58b9ec!important;border-radius:18px!important;
+    box-shadow:0 8px 20px rgba(14,59,84,.16)!important;
+    font-size:18px!important;z-index:36!important;
+  }
+  html body .stage.scene-languages .country-question>span{font-size:30px!important}
+  html body .stage.scene-languages .choice-row{
+    left:50%!important;bottom:20px!important;transform:translateX(-50%)!important;
+    width:min(540px,58%)!important;max-width:58%!important;
+  }
+  html body .stage.scene-languages .scene-card:has(>.feedback.success) .country-question,
+  html body .stage.scene-languages .scene-card:has(>.feedback.success) .choice-row{
+    display:none!important;
+  }
+
+  /* Scene 8: there is never an empty task/feedback rectangle. */
+  html body .stage.scene-dunno-arrives .scene-card>.feedback{display:none!important}
+  html body .stage.scene-dunno-arrives .scene-content>.primary-action{
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    color:#fff!important;background:linear-gradient(145deg,#ff984f,#f27634)!important;
+    border:3px solid #fff!important;min-width:300px!important;min-height:58px!important;
+    padding:13px 25px!important;font-size:17px!important;
+    box-shadow:0 6px #c95723,0 12px 26px rgba(93,48,18,.22)!important;
+  }
+
+  /* Scene 9: each bubble is anchored to its actual speaker. */
+  html body .stage.scene-age .speech-teacher{
+    left:auto!important;right:7%!important;top:7%!important;
+    bottom:auto!important;transform:none!important;max-width:350px!important;
+  }
+  html body .stage.scene-age .speech-dunno{
+    left:50%!important;right:auto!important;top:7%!important;
+    bottom:auto!important;transform:translateX(-50%)!important;max-width:310px!important;
+  }
+  html body .stage.scene-age .prompt{
+    left:50%!important;bottom:85px!important;transform:translateX(-50%)!important;
+    width:430px!important;max-width:46%!important;
+    padding:10px 16px!important;background:rgba(255,255,255,.97)!important;
+    border-radius:16px!important;
+  }
+  html body .stage.scene-age .choice-row{
+    left:50%!important;bottom:20px!important;transform:translateX(-50%)!important;
+    width:430px!important;max-width:46%!important;
+  }
+
+  /* Scene 10: one command cloud and one confirmation button only. */
+  html body .stage.scene-actions .action-card{display:none!important}
+  html body .stage.scene-actions .speech-teacher{
+    left:auto!important;right:17%!important;top:7%!important;
+    bottom:auto!important;transform:none!important;max-width:330px!important;
+  }
+  html body .stage.scene-actions .scene-content>.primary-action{
+    left:50%!important;right:auto!important;bottom:40px!important;
+    transform:translateX(-50%)!important;
+    display:flex!important;align-items:center!important;justify-content:center!important;
+    width:auto!important;min-width:330px!important;max-width:55%!important;
+    min-height:58px!important;padding:13px 25px!important;
+    color:#fff!important;background:linear-gradient(145deg,#58c98b,#37a96d)!important;
+    font-size:17px!important;z-index:38!important;
+  }
+  html body .stage.scene-actions .mini-progress{
+    left:50%!important;right:auto!important;bottom:18px!important;
+    transform:translateX(-50%)!important;margin:0!important;z-index:38!important;
+  }
+  html body .stage.scene-actions .scene-card:has(>.feedback) .mini-progress{display:none!important}
+}
+
+@media(max-width:640px){
+  .scene-languages .country-question,
+  .scene-actions .primary-action,
+  .scene-actions .mini-progress{
+    position:relative!important;inset:auto!important;transform:none!important;
+    width:100%!important;max-width:100%!important;margin:8px 0!important;
+  }
+}
+
+/* VERSION 40 — interaction fix only. Preserve the VERSION 38 layout exactly. */
+.scene-arrival .school-friends{
+  pointer-events:none!important;
+}
+.scene-arrival .school-friend{
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+.scene-arrival .school-friend:hover,
+.scene-arrival .school-friend:focus,
+.scene-arrival .school-friend:focus-visible,
+.scene-arrival .school-friend.is-greeting{
+  outline:0!important;
+  border-color:transparent!important;
+  box-shadow:none!important;
+}
+.scene-arrival .school-friend::before,
+.scene-arrival .school-friend::after{
+  display:none!important;
+}
+
+
+/* VERSION 42 — full interaction and scene-specific repair */
+html body .stage:not(.scene-arrival) .scene-card,
+html body .stage:not(.scene-arrival) .scene-content { pointer-events:none!important; }
+html body .stage:not(.scene-arrival) .scene-content button,
+html body .stage:not(.scene-arrival) .scene-content input,
+html body .stage:not(.scene-arrival) .scene-content select,
+html body .stage:not(.scene-arrival) .scene-content [role="button"],
+html body .stage:not(.scene-arrival) .speech,
+html body .stage:not(.scene-arrival) .feedback { pointer-events:auto!important; }
+html body .stage:not(.scene-arrival) .choice-row,
+html body .stage:not(.scene-arrival) .primary-action,
+html body .stage:not(.scene-arrival) .secondary-action,
+html body .stage:not(.scene-arrival) .toy-choice-grid,
+html body .stage:not(.scene-arrival) .gift-row { z-index:80!important; }
+html body .stage:not(.scene-arrival) .choice-button,
+html body .stage:not(.scene-arrival) .primary-action,
+html body .stage:not(.scene-arrival) .secondary-action,
+html body .stage:not(.scene-arrival) .toy-choice-grid button,
+html body .stage:not(.scene-arrival) .gift-row button {
+  position:relative!important; pointer-events:auto!important; touch-action:manipulation!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+
+/* Scene 9: keep both speech cards away from faces and keep the task clickable. */
+html body .stage.scene-age .speech-dunno {
+  left:38%!important; right:auto!important; top:6%!important;
+  transform:translateX(-50%)!important; width:min(330px,31vw)!important; max-width:330px!important;
+}
+html body .stage.scene-age .speech-teacher {
+  left:53%!important; right:auto!important; top:6%!important;
+  transform:none!important; width:min(390px,35vw)!important; max-width:390px!important;
+}
+html body .stage.scene-age .prompt {
+  z-index:78!important; pointer-events:none!important;
+}
+html body .stage.scene-age .choice-row {
+  display:flex!important; visibility:visible!important; opacity:1!important;
+  pointer-events:auto!important; z-index:90!important;
+}
+html body .stage.scene-age .choice-row .choice-button {
+  min-width:112px!important; min-height:58px!important; cursor:pointer!important;
+}
+
+/* Scene 10: never hide the only action button after feedback. */
+html body .stage.scene-actions .scene-card:has(>.feedback) .primary-action,
+html body .stage.scene-actions .scene-card:has(>.feedback) .mini-progress,
+html body .stage.scene-actions .scene-content>.primary-action {
+  display:flex!important; visibility:visible!important; opacity:1!important;
+}
+html body .stage.scene-actions .scene-content>.primary-action {
+  left:50%!important; right:auto!important; bottom:52px!important;
+  transform:translateX(-50%)!important; z-index:95!important;
+  width:min(620px,70%)!important; min-height:62px!important;
+  pointer-events:auto!important; cursor:pointer!important;
+}
+html body .stage.scene-actions .mini-progress {
+  display:flex!important; bottom:20px!important; z-index:94!important; pointer-events:none!important;
+}
+html body .stage.scene-actions .feedback {
+  top:18px!important; bottom:auto!important; left:50%!important; right:auto!important;
+  transform:translateX(-50%)!important; max-width:520px!important; z-index:70!important;
+}
+
+@media(max-width:900px){
+  html body .stage.scene-age .speech-dunno {left:25%!important; width:42%!important; max-width:none!important;}
+  html body .stage.scene-age .speech-teacher {left:51%!important; width:45%!important; max-width:none!important;}
+  html body .stage.scene-age .choice-row {width:min(520px,82%)!important; max-width:82%!important;}
+  html body .stage.scene-age .prompt {width:min(520px,82%)!important; max-width:82%!important;}
+  html body .stage.scene-actions .scene-content>.primary-action {width:82%!important; max-width:82%!important;}
+}
+
+@media(max-width:640px){
+  html body .stage.scene-age .speech-dunno,
+  html body .stage.scene-age .speech-teacher {position:relative!important; inset:auto!important; transform:none!important; width:100%!important; max-width:100%!important; margin:8px 0!important;}
+  html body .stage.scene-age .prompt,
+  html body .stage.scene-age .choice-row {position:relative!important; inset:auto!important; transform:none!important; width:100%!important; max-width:100%!important; margin:8px 0!important;}
+  html body .stage.scene-actions .scene-content>.primary-action,
+  html body .stage.scene-actions .mini-progress,
+  html body .stage.scene-actions .feedback {position:relative!important; inset:auto!important; transform:none!important; width:100%!important; max-width:100%!important; margin:8px 0!important;}
+}
+
+
+/* VERSION 42 — dialogue cleanup pass */
+html body .stage:not(.scene-arrival) .speech::before,
+html body .stage:not(.scene-arrival) .speech::after{
+  content:none !important;
+  display:none !important;
+}
+html body .stage:not(.scene-arrival) .speech{
+  border-radius:22px !important;
+}
+/* Scene 2 — remove stray white shards and keep greeting bubble compact. */
+html body .stage.scene-come-in .speech-girl{
+  left:22% !important;
+  bottom:18% !important;
+  max-width:280px !important;
+}
+/* Scene 4 — only one question bubble, no duplicate question cards. */
+html body .stage.scene-languages .language-map,
+html body .stage.scene-languages .country-question{
+  display:none !important;
+}
+html body .stage.scene-languages .speech-teacher{
+  left:53% !important;
+  right:auto !important;
+  top:7% !important;
+  transform:none !important;
+  max-width:420px !important;
+}
+html body .stage.scene-languages .scene-content > .choice-row{
+  left:50% !important;
+  bottom:18px !important;
+  transform:translateX(-50%) !important;
+  width:min(560px,58%) !important;
+  max-width:58% !important;
+  background:rgba(255,255,255,.96) !important;
+  border-radius:20px !important;
+  padding:12px 14px !important;
+  box-shadow:0 10px 28px rgba(18,52,73,.18) !important;
+}
+html body .stage.scene-languages .scene-content > .story-card{
+  left:50% !important;
+  bottom:92px !important;
+  width:min(700px,66%) !important;
+  max-width:66% !important;
+}
+/* Scene 9 — correct dialogue order visually, keep teacher face open, remove redundant lower prompt. */
+html body .stage.scene-age .speech-teacher{
+  left:25% !important;
+  right:auto !important;
+  top:8% !important;
+  transform:none !important;
+  max-width:460px !important;
+}
+html body .stage.scene-age .speech-dunno{
+  left:33% !important;
+  right:auto !important;
+  top:24% !important;
+  transform:none !important;
+  max-width:330px !important;
+}
+html body .stage.scene-age .prompt{
+  display:none !important;
+}
+html body .stage.scene-age .choice-row{
+  left:50% !important;
+  bottom:18px !important;
+  transform:translateX(-50%) !important;
+  width:min(430px,44%) !important;
+  max-width:44% !important;
+  background:rgba(255,255,255,.96) !important;
+  border-radius:22px !important;
+  padding:16px !important;
+  box-shadow:0 10px 28px rgba(18,52,73,.18) !important;
+}
+/* Scene 12 — teacher bubble should not cover Miss Emmy. */
+html body .stage.scene-guess .speech-teacher{
+  left:6% !important;
+  right:auto !important;
+  top:7% !important;
+  transform:none !important;
+  max-width:400px !important;
+}
+html body .stage.scene-guess .prompt{
+  bottom:152px !important;
+}
+@media (width<=880px){
+  html body .stage.scene-languages .speech-teacher,
+  html body .stage.scene-age .speech-teacher,
+  html body .stage.scene-age .speech-dunno,
+  html body .stage.scene-guess .speech-teacher{
+    position:relative !important;
+    left:auto !important;
+    right:auto !important;
+    top:auto !important;
+    bottom:auto !important;
+    max-width:100% !important;
+    width:100% !important;
+  }
+  html body .stage.scene-languages .scene-content > .choice-row,
+  html body .stage.scene-age .choice-row,
+  html body .stage.scene-languages .scene-content > .story-card,
+  html body .stage.scene-guess .prompt,
+  html body .stage.scene-guess .toy-choice-grid{
+    width:100% !important;
+    max-width:100% !important;
+  }
+}
+
+/* VERSION 43 — scene-by-scene desktop layout repair. No shared bottom overlays. */
+@media (min-width:881px){
+  /* 09 — question belongs to teacher (right side of board), answer belongs to Dunno (left). */
+  html body .stage.scene-age .speech-teacher{
+    left:52%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    transform:none!important; width:min(390px,33vw)!important; max-width:390px!important;
+  }
+  html body .stage.scene-age .speech-dunno{
+    left:27%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    transform:none!important; width:min(350px,30vw)!important; max-width:350px!important;
+  }
+  html body .stage.scene-age .choice-row{
+    left:50%!important; bottom:18px!important; width:min(600px,58%)!important; max-width:58%!important;
+    padding:12px 18px!important;
+  }
+
+  /* 11 — the word card and the continue button use separate rows. */
+  html body .stage.scene-four-toys .speech-teacher{
+    left:37%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    transform:none!important; width:min(420px,36vw)!important; max-width:420px!important;
+  }
+  html body .stage.scene-four-toys .word-card{
+    left:50%!important; right:auto!important; bottom:92px!important;
+    transform:translateX(-50%)!important; width:min(650px,62%)!important; max-width:62%!important;
+    min-height:94px!important; max-height:110px!important; padding:12px 70px 12px 82px!important;
+    overflow:hidden!important;
+  }
+  html body .stage.scene-four-toys .word-card>span{position:absolute!important;left:24px!important;top:50%!important;transform:translateY(-50%)!important;font-size:42px!important}
+  html body .stage.scene-four-toys .word-card>p,
+  html body .stage.scene-four-toys .word-card>b,
+  html body .stage.scene-four-toys .word-card>small{margin:0!important;line-height:1.2!important}
+  html body .stage.scene-four-toys .word-card>button{position:absolute!important;right:18px!important;top:50%!important;transform:translateY(-50%)!important}
+  html body .stage.scene-four-toys .primary-action{
+    left:50%!important; right:auto!important; bottom:18px!important; transform:translateX(-50%)!important;
+    width:auto!important; min-width:280px!important; max-width:46%!important; min-height:52px!important;
+  }
+
+  /* 13 — teacher text stays on the empty board; rhyme and action never overlap. */
+  html body .stage.scene-rhyme .speech-teacher{
+    left:48%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    transform:none!important; width:min(430px,37vw)!important; max-width:430px!important;
+  }
+  html body .stage.scene-rhyme .rhyme-card{
+    left:50%!important; right:auto!important; bottom:82px!important; transform:translateX(-50%)!important;
+    width:min(680px,64%)!important; max-width:64%!important; min-height:0!important; max-height:180px!important;
+    padding:14px 22px!important; overflow:hidden!important; display:grid!important;
+    grid-template-columns:54px 1fr!important; gap:14px!important; align-items:center!important;
+  }
+  html body .stage.scene-rhyme .rhyme-card p{margin:0!important;font-size:16px!important;line-height:1.25!important}
+  html body .stage.scene-rhyme .rhyme-card p br:nth-of-type(1){display:none!important}
+  html body .stage.scene-rhyme .rhyme-card .verse-translation{display:block!important;margin-top:6px!important}
+  html body .stage.scene-rhyme .primary-action{
+    left:50%!important; right:auto!important; bottom:18px!important; transform:translateX(-50%)!important;
+    width:auto!important; min-width:260px!important; max-width:42%!important; min-height:50px!important;
+  }
+
+  /* 17 — reveal card, vocabulary line and continue button each have their own row. */
+  html body .stage.scene-secret-bag .speech-teacher{
+    left:38%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    transform:none!important; max-width:390px!important;
+  }
+  html body .stage.scene-secret-bag .speech-dunno{
+    left:auto!important; right:6%!important; top:13%!important; bottom:auto!important;
+    transform:none!important; max-width:300px!important;
+  }
+  html body .stage.scene-secret-bag .picture-card{
+    left:50%!important; bottom:104px!important; transform:translateX(-50%)!important;
+    width:min(650px,62%)!important; max-width:62%!important; min-height:64px!important;
+    padding:9px 16px!important;
+  }
+  html body .stage.scene-secret-bag .scene-content>.prompt{
+    left:50%!important; bottom:62px!important; transform:translateX(-50%)!important;
+    width:min(650px,62%)!important; max-width:62%!important; min-height:36px!important;
+    margin:0!important; padding:7px 12px!important;
+  }
+  html body .stage.scene-secret-bag .scene-content>.choice-row{
+    left:50%!important; bottom:18px!important; transform:translateX(-50%)!important;
+    width:min(650px,62%)!important; max-width:62%!important;
+  }
+  html body .stage.scene-secret-bag .primary-action{
+    left:50%!important; right:auto!important; bottom:16px!important; transform:translateX(-50%)!important;
+    width:auto!important; min-width:250px!important; max-width:40%!important; min-height:50px!important;
+  }
+
+  /* 18 — visible complete lyrics card above a separate answer row. */
+  html body .stage.scene-roy .speech-teacher{
+    left:44%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    transform:none!important; width:min(420px,36vw)!important; max-width:420px!important;
+  }
+  html body .stage.scene-roy .song-card{
+    left:50%!important; right:auto!important; bottom:102px!important; transform:translateX(-50%)!important;
+    width:min(720px,68%)!important; max-width:68%!important; min-height:0!important; max-height:230px!important;
+    padding:12px 20px!important; overflow:hidden!important;
+  }
+  html body .stage.scene-roy .song-card>button{margin:0 auto 7px!important;padding:8px 15px!important;font-size:13px!important}
+  html body .stage.scene-roy .song-card p{margin:4px 0!important;font-size:14px!important;line-height:1.25!important}
+  html body .stage.scene-roy .song-card .song-translation{margin-top:6px!important;padding-top:5px!important;font-size:11px!important;line-height:1.2!important}
+  html body .stage.scene-roy .prompt{display:none!important}
+  html body .stage.scene-roy .choice-row{
+    left:50%!important; right:auto!important; bottom:18px!important; transform:translateX(-50%)!important;
+    width:min(430px,42%)!important; max-width:42%!important; padding:10px 14px!important;
+  }
+
+  /* 19 — result panel and replay button are separate. */
+  html body .stage.scene-final .cinderella-card{display:none!important}
+  html body .stage.scene-final .lesson-complete{
+    left:50%!important; right:auto!important; top:50%!important; bottom:auto!important;
+    transform:translate(-50%,-54%)!important; width:min(720px,68%)!important; max-width:68%!important;
+    min-height:0!important; max-height:450px!important; padding:24px 28px!important; overflow:hidden!important;
+  }
+  html body .stage.scene-final .lesson-complete>span{font-size:48px!important;line-height:1!important}
+  html body .stage.scene-final .lesson-complete>p{margin:8px 0!important}
+  html body .stage.scene-final .lesson-complete h1{font-size:48px!important;line-height:1!important;margin:6px 0 10px!important}
+  html body .stage.scene-final .score-card{margin:14px auto 0!important;padding:10px 22px!important;min-height:86px!important}
+  html body .stage.scene-final .secondary-action{
+    left:50%!important; right:auto!important; bottom:18px!important; transform:translateX(-50%)!important;
+    width:min(380px,42%)!important; max-width:42%!important; min-height:52px!important; z-index:90!important;
+  }
+}
+
+/* VERSION 44 — deterministic desktop dialogue and task layout. */
+@media (min-width:881px){
+  html body .stage:not(.scene-arrival) .scene-card,
+  html body .stage:not(.scene-arrival) .scene-content{pointer-events:none!important}
+  html body .stage:not(.scene-arrival) .speech,
+  html body .stage:not(.scene-arrival) .speech button,
+  html body .stage:not(.scene-arrival) .choice-row,
+  html body .stage:not(.scene-arrival) .choice-row button,
+  html body .stage:not(.scene-arrival) .toy-choice-grid,
+  html body .stage:not(.scene-arrival) .toy-choice-grid button,
+  html body .stage:not(.scene-arrival) .primary-action,
+  html body .stage:not(.scene-arrival) .secondary-action,
+  html body .stage:not(.scene-arrival) .word-card,
+  html body .stage:not(.scene-arrival) .word-card button,
+  html body .stage:not(.scene-arrival) .song-card,
+  html body .stage:not(.scene-arrival) .song-card button{pointer-events:auto!important}
+  html body .stage:not(.scene-arrival) .speech{z-index:120!important}
+  html body .stage:not(.scene-arrival) .speech .round-sound{z-index:125!important;pointer-events:auto!important}
+
+  /* Scene 9: two independent cards with a visible gap. */
+  html body .stage.scene-age .speech-dunno{
+    left:27%!important;right:auto!important;top:7%!important;bottom:auto!important;
+    width:330px!important;max-width:28%!important;transform:none!important
+  }
+  html body .stage.scene-age .speech-teacher{
+    left:55%!important;right:auto!important;top:7%!important;bottom:auto!important;
+    width:350px!important;max-width:29%!important;transform:none!important
+  }
+  html body .stage.scene-age .speech-dunno .round-sound,
+  html body .stage.scene-age .speech-teacher .round-sound{position:absolute!important;right:10px!important;top:50%!important;transform:translateY(-50%)!important}
+  html body .stage.scene-age .choice-row{
+    left:50%!important;bottom:18px!important;transform:translateX(-50%)!important;
+    width:560px!important;max-width:58%!important;min-height:82px!important;z-index:110!important
+  }
+
+  /* Scene 11: one compact vocabulary card; action is a real orange button, not a white overlay. */
+  html body .stage.scene-four-toys .word-card{
+    left:50%!important;bottom:22px!important;transform:translateX(-50%)!important;
+    width:700px!important;max-width:64%!important;height:108px!important;min-height:108px!important;
+    padding:14px 205px 14px 78px!important;overflow:visible!important;z-index:105!important
+  }
+  html body .stage.scene-four-toys .primary-action{
+    left:calc(50% + 210px)!important;right:auto!important;bottom:47px!important;transform:translateX(-50%)!important;
+    width:180px!important;min-width:180px!important;max-width:180px!important;height:52px!important;min-height:52px!important;
+    padding:8px 12px!important;background:linear-gradient(180deg,#ff9a54,#ff7d3f)!important;color:#fff!important;
+    border:0!important;border-radius:16px!important;box-shadow:0 5px #d9612e!important;z-index:130!important
+  }
+  html body .stage.scene-four-toys .word-card>button{right:155px!important}
+
+  /* Scene 12: instruction uses the empty upper centre, never the teacher portrait. */
+  html body .stage.scene-guess .speech-teacher{
+    left:38%!important;right:auto!important;top:7%!important;bottom:auto!important;
+    width:390px!important;max-width:34%!important;transform:none!important
+  }
+  html body .stage.scene-guess .toy-choice-grid{z-index:110!important}
+
+  /* Any two-speaker classroom scene gets separate columns rather than stacked cards. */
+  html body .stage.scene-dunno-test .speech-teacher,
+  html body .stage.scene-likes .speech-teacher,
+  html body .stage.scene-secret-bag .speech-teacher{
+    left:50%!important;right:auto!important;top:6%!important;bottom:auto!important;
+    width:360px!important;max-width:31%!important;transform:none!important
+  }
+  html body .stage.scene-dunno-test .speech-dunno,
+  html body .stage.scene-likes .speech-dunno,
+  html body .stage.scene-secret-bag .speech-dunno{
+    left:22%!important;right:auto!important;top:6%!important;bottom:auto!important;
+    width:340px!important;max-width:29%!important;transform:none!important
+  }
+}
+
+/* VERSION 45 — final scene-specific layout reset. Do not add generic dialogue positioning below this block. */
+@media (min-width: 881px) {
+  /* Restore a simple interaction model: artwork never catches clicks; lesson UI always does. */
+  html body .stage:not(.scene-arrival) .stage-visual,
+  html body .stage:not(.scene-arrival) .stage-visual * { pointer-events:none!important; }
+  html body .stage:not(.scene-arrival) .scene-card,
+  html body .stage:not(.scene-arrival) .scene-content,
+  html body .stage:not(.scene-arrival) .scene-content > *,
+  html body .stage:not(.scene-arrival) .speech,
+  html body .stage:not(.scene-arrival) button { pointer-events:auto!important; }
+  html body .stage:not(.scene-arrival) .scene-heading { display:none!important; }
+  html body .stage:not(.scene-arrival) .speech { box-sizing:border-box!important; }
+  html body .stage:not(.scene-arrival) .speech:before,
+  html body .stage:not(.scene-arrival) .speech:after { display:none!important; content:none!important; }
+  html body .stage:not(.scene-arrival) .speaker-avatar,
+  html body .stage:not(.scene-arrival) .speaker-name { display:none!important; }
+  html body .stage:not(.scene-arrival) .speech-copy { min-width:0!important; padding-right:58px!important; }
+  html body .stage:not(.scene-arrival) .round-sound {
+    position:absolute!important; right:10px!important; top:50%!important; transform:translateY(-50%)!important;
+    width:48px!important; height:48px!important; z-index:500!important; cursor:pointer!important;
+  }
+
+  /* Scene 9 — cards cannot overlap and neither card covers a face. */
+  html body .stage.scene-age .speech-dunno {
+    left:25%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    width:27%!important; max-width:27%!important; min-width:0!important; transform:none!important;
+  }
+  html body .stage.scene-age .speech-teacher {
+    left:53%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    width:26%!important; max-width:26%!important; min-width:0!important; transform:none!important;
+  }
+  html body .stage.scene-age .speech-text { font-size:17px!important; line-height:1.12!important; }
+  html body .stage.scene-age .translation-line { font-size:10px!important; white-space:normal!important; }
+  html body .stage.scene-age .choice-row {
+    left:50%!important; right:auto!important; top:auto!important; bottom:18px!important;
+    transform:translateX(-50%)!important; width:58%!important; max-width:58%!important;
+    min-height:86px!important; z-index:300!important;
+  }
+  html body .stage.scene-age .scene-card>.feedback { display:none!important; }
+
+  /* Scene 11 — one compact word card; no second white overlay. */
+  html body .stage.scene-four-toys .speech-teacher {
+    left:36%!important; right:auto!important; top:7%!important; width:31%!important; max-width:31%!important;
+  }
+  html body .stage.scene-four-toys .table-toys { display:none!important; }
+  html body .stage.scene-four-toys .word-card {
+    display:grid!important; grid-template-columns:64px 1fr 56px!important; grid-template-rows:auto auto!important;
+    align-items:center!important; column-gap:12px!important;
+    left:50%!important; right:auto!important; top:auto!important; bottom:22px!important;
+    transform:translateX(-50%)!important; width:58%!important; max-width:58%!important;
+    height:100px!important; min-height:100px!important; padding:12px 16px!important;
+    overflow:hidden!important; z-index:250!important;
+  }
+  html body .stage.scene-four-toys .word-card>span { position:static!important; transform:none!important; grid-row:1/3!important; font-size:42px!important; }
+  html body .stage.scene-four-toys .word-card>p,
+  html body .stage.scene-four-toys .word-card>b,
+  html body .stage.scene-four-toys .word-card>small { position:static!important; margin:0!important; line-height:1.15!important; }
+  html body .stage.scene-four-toys .word-card>button { position:static!important; transform:none!important; grid-column:3!important; grid-row:1/3!important; }
+  html body .stage.scene-four-toys .primary-action {
+    position:absolute!important; left:auto!important; right:5%!important; top:auto!important; bottom:42px!important;
+    transform:none!important; width:170px!important; max-width:170px!important; min-height:50px!important;
+    padding:10px 12px!important; color:#fff!important; background:#ff8245!important;
+    border-radius:15px!important; box-shadow:0 5px #d45f2d!important; z-index:350!important;
+  }
+  html body .stage.scene-four-toys .scene-card>.feedback { display:none!important; }
+
+  /* Scene 12 — question uses empty top-centre area, away from Miss Emmy. */
+  html body .stage.scene-guess .speech-teacher {
+    left:35%!important; right:auto!important; top:7%!important; bottom:auto!important;
+    width:31%!important; max-width:31%!important; transform:none!important;
+  }
+  html body .stage.scene-guess .toy-choice-grid {
+    left:50%!important; right:auto!important; bottom:20px!important; transform:translateX(-50%)!important;
+    width:62%!important; max-width:62%!important; z-index:300!important;
+  }
+  html body .stage.scene-guess .scene-card>.feedback { display:none!important; }
+
+  /* Scene 13 — teacher prompt and rhyme card are separate and fully visible. */
+  html body .stage.scene-rhyme .speech-teacher {
+    left:57%!important; right:auto!important; top:7%!important; width:31%!important; max-width:31%!important;
+  }
+  html body .stage.scene-rhyme .rhyme-card {
+    left:23%!important; right:auto!important; bottom:18px!important; transform:none!important;
+    width:55%!important; max-width:55%!important; min-height:150px!important; max-height:180px!important;
+    padding:16px 80px 16px 70px!important; overflow:hidden!important;
+  }
+  html body .stage.scene-rhyme .primary-action {
+    left:auto!important; right:5%!important; bottom:58px!important; transform:none!important;
+    width:180px!important; max-width:180px!important; z-index:350!important;
+  }
+  html body .stage.scene-rhyme .scene-card>.feedback { display:none!important; }
+
+  /* Scene 17 — two speakers on separate sides, task panel is a single row. */
+  html body .stage.scene-secret-bag .speech-teacher {
+    left:34%!important; right:auto!important; top:7%!important; width:29%!important; max-width:29%!important;
+  }
+  html body .stage.scene-secret-bag .speech-dunno {
+    left:70%!important; right:auto!important; top:12%!important; width:20%!important; max-width:20%!important;
+  }
+  html body .stage.scene-secret-bag .picture-card,
+  html body .stage.scene-secret-bag .choice-row {
+    left:50%!important; bottom:52px!important; transform:translateX(-50%)!important; width:58%!important; max-width:58%!important;
+  }
+  html body .stage.scene-secret-bag .prompt { left:50%!important; bottom:18px!important; transform:translateX(-50%)!important; width:58%!important; max-width:58%!important; }
+  html body .stage.scene-secret-bag .primary-action { right:5%!important; left:auto!important; bottom:30px!important; transform:none!important; z-index:350!important; }
+  html body .stage.scene-secret-bag .scene-card>.feedback { display:none!important; }
+
+  /* Scene 18 — clear song panel; teacher prompt never covers teacher. */
+  html body .stage.scene-roy .speech-teacher {
+    left:42%!important; right:auto!important; top:7%!important; width:31%!important; max-width:31%!important;
+  }
+  html body .stage.scene-roy .song-card {
+    left:22%!important; right:auto!important; top:auto!important; bottom:82px!important; transform:none!important;
+    width:54%!important; max-width:54%!important; height:210px!important; max-height:210px!important;
+    padding:12px 18px!important; overflow:auto!important; z-index:240!important;
+  }
+  html body .stage.scene-roy .song-card>button { display:block!important; margin:0 auto 8px!important; background:#ff8245!important; color:#fff!important; }
+  html body .stage.scene-roy .song-card p { margin:3px 0!important; font-size:14px!important; line-height:1.22!important; }
+  html body .stage.scene-roy .song-card .song-translation { font-size:11px!important; line-height:1.15!important; }
+  html body .stage.scene-roy .choice-row {
+    left:50%!important; right:auto!important; bottom:18px!important; transform:translateX(-50%)!important;
+    width:42%!important; max-width:42%!important; min-height:58px!important; z-index:320!important;
+  }
+  html body .stage.scene-roy .scene-card>.feedback { display:none!important; }
+
+  /* Scene 19 — result and replay are never layered on top of one another. */
+  html body .stage.scene-final .lesson-complete {
+    left:50%!important; top:48%!important; bottom:auto!important; transform:translate(-50%,-50%)!important;
+    width:58%!important; max-width:58%!important; height:auto!important; max-height:410px!important; padding:22px!important;
+  }
+  html body .stage.scene-final .secondary-action {
+    left:50%!important; right:auto!important; bottom:20px!important; transform:translateX(-50%)!important;
+    width:330px!important; max-width:38%!important; min-height:52px!important; z-index:350!important;
+  }
+  html body .stage.scene-final .scene-card>.feedback { display:none!important; }
+}
+
+/* VERSION 46 — scene 11 rebuilt as one interactive card. */
+@media (min-width: 881px) {
+  html body .stage.scene-four-toys .word-card {
+    position:absolute!important;
+    left:50%!important; right:auto!important; top:auto!important; bottom:22px!important;
+    transform:translateX(-50%)!important;
+    display:grid!important;
+    grid-template-columns:64px minmax(0,1fr) 52px 190px!important;
+    grid-template-rows:auto auto auto!important;
+    align-items:center!important;
+    column-gap:12px!important;
+    width:min(860px,72%)!important; max-width:72%!important;
+    height:112px!important; min-height:112px!important; max-height:112px!important;
+    margin:0!important; padding:12px 14px!important;
+    overflow:hidden!important;
+    background:rgba(255,255,255,.97)!important;
+    border:1px solid #dce8e8!important;
+    border-radius:22px!important;
+    box-shadow:0 12px 28px rgba(20,54,72,.18)!important;
+    z-index:400!important;
+    pointer-events:auto!important;
+  }
+  html body .stage.scene-four-toys .word-card > span {
+    position:static!important; transform:none!important;
+    grid-column:1!important; grid-row:1/4!important;
+    align-self:center!important; justify-self:center!important;
+    font-size:46px!important;
+  }
+  html body .stage.scene-four-toys .word-card > p {
+    position:static!important; grid-column:2!important; grid-row:1!important;
+    margin:0!important; color:#68829a!important; font-size:12px!important; line-height:1.1!important;
+  }
+  html body .stage.scene-four-toys .word-card > b {
+    position:static!important; grid-column:2!important; grid-row:2!important;
+    margin:0!important; color:#173a57!important; font-size:19px!important; line-height:1.15!important;
+  }
+  html body .stage.scene-four-toys .word-card > small {
+    position:static!important; grid-column:2!important; grid-row:3!important;
+    margin:0!important; color:#68829a!important; font-size:11px!important; line-height:1.1!important;
+  }
+  html body .stage.scene-four-toys .word-card > .word-sound-button {
+    position:static!important; transform:none!important;
+    grid-column:3!important; grid-row:1/4!important;
+    width:48px!important; height:48px!important; border-radius:50%!important;
+    background:#58b9ec!important; color:#fff!important;
+    box-shadow:0 4px #2787b7!important;
+    z-index:410!important; pointer-events:auto!important; cursor:pointer!important;
+  }
+  html body .stage.scene-four-toys .word-card > .word-next-button {
+    position:static!important; transform:none!important;
+    grid-column:4!important; grid-row:1/4!important;
+    width:190px!important; min-width:190px!important; height:52px!important;
+    margin:0!important; padding:8px 12px!important;
+    border:0!important; border-radius:15px!important;
+    background:linear-gradient(180deg,#ff9a54,#ff7d3f)!important;
+    color:#fff!important; font-weight:900!important;
+    box-shadow:0 5px #d9612e!important;
+    z-index:410!important; pointer-events:auto!important; cursor:pointer!important;
+  }
+  html body .stage.scene-four-toys .scene-content > .primary-action { display:none!important; }
+}
+
+/* VERSION 47 — MOBILE RESET. One vertical document flow; no absolute overlays. */
+@media (max-width: 880px) {
+  html, body { overflow-x:hidden!important; }
+  html body .game-shell { min-height:100dvh!important; }
+  html body .topbar {
+    display:grid!important; grid-template-columns:1fr auto!important; gap:8px 12px!important;
+    align-items:center!important; min-height:0!important; padding:14px 18px!important;
+  }
+  html body .brand { min-width:0!important; }
+  html body .brand strong { font-size:20px!important; }
+  html body .brand small { font-size:11px!important; }
+  html body .header-center { grid-column:1/-1!important; grid-row:2!important; display:flex!important; width:100%!important; gap:8px!important; }
+  html body .header-center small, html body .top-progress { display:none!important; }
+  html body .star-counter { grid-column:2!important; grid-row:1!important; position:static!important; }
+
+  html body .stage,
+  html body .stage.scene-arrival {
+    display:flex!important; flex-direction:column!important; gap:16px!important;
+    width:100%!important; min-height:0!important; height:auto!important; max-height:none!important;
+    padding:18px!important; overflow:visible!important; background:transparent!important;
+  }
+  html body .stage .stage-visual,
+  html body .stage.scene-arrival .stage-visual {
+    display:block!important; position:relative!important; inset:auto!important; order:1!important;
+    width:100%!important; height:auto!important; min-height:0!important; aspect-ratio:16/9!important;
+    overflow:hidden!important; border-radius:28px!important; pointer-events:none!important;
+    background:#f2dfb9!important;
+  }
+  html body .stage .scene-backdrop,
+  html body .stage.scene-arrival .scene-backdrop {
+    display:block!important; position:absolute!important; inset:0!important;
+    width:100%!important; height:100%!important; max-width:none!important; max-height:none!important;
+    object-fit:cover!important; object-position:center!important; opacity:1!important; visibility:visible!important;
+  }
+  html body .stage .cinematic-shade,
+  html body .stage .floating-light,
+  html body .stage .visual-caption,
+  html body .stage .stage-visual > div:not(.cinematic-shade):not(.floating-light):not(.visual-caption) {
+    display:none!important;
+  }
+  html body .stage .scene-card,
+  html body .stage.scene-arrival .scene-card {
+    display:block!important; position:relative!important; inset:auto!important; order:2!important;
+    width:100%!important; max-width:none!important; min-height:0!important; height:auto!important;
+    padding:0!important; margin:0!important; overflow:visible!important; background:transparent!important;
+    border:0!important; box-shadow:none!important; pointer-events:auto!important;
+  }
+  html body .stage .scene-heading { display:none!important; }
+  html body .stage .scene-content {
+    display:flex!important; flex-direction:column!important; gap:16px!important;
+    position:relative!important; inset:auto!important; width:100%!important; height:auto!important;
+    padding:0!important; overflow:visible!important; pointer-events:auto!important;
+  }
+  html body .stage .scene-content > * {
+    position:relative!important; inset:auto!important; left:auto!important; right:auto!important; top:auto!important; bottom:auto!important;
+    transform:none!important; width:100%!important; max-width:100%!important; margin:0!important;
+    box-sizing:border-box!important; pointer-events:auto!important;
+  }
+  html body .stage .speech,
+  html body .stage .prompt,
+  html body .stage .hero-phrase,
+  html body .stage .name-line,
+  html body .stage .knock-event,
+  html body .stage .word-card,
+  html body .stage .rhyme-card,
+  html body .stage .song-card,
+  html body .stage .lesson-complete,
+  html body .stage .story-card,
+  html body .stage .picture-card,
+  html body .stage .character-card,
+  html body .stage .bag-scene,
+  html body .stage .near-far,
+  html body .stage .cinderella-card {
+    display:block!important; min-height:0!important; height:auto!important; max-height:none!important;
+    overflow:visible!important; opacity:1!important; visibility:visible!important;
+    background:rgba(255,255,255,.96)!important; color:#173a57!important;
+    border-radius:24px!important; padding:20px 28px!important;
+  }
+  html body .stage .speech { padding-right:92px!important; }
+  html body .stage .speech .round-sound {
+    display:flex!important; position:absolute!important; right:18px!important; top:50%!important; left:auto!important; bottom:auto!important;
+    transform:translateY(-50%)!important; width:64px!important; height:64px!important; z-index:5!important; pointer-events:auto!important;
+  }
+  html body .stage button { pointer-events:auto!important; touch-action:manipulation!important; }
+  html body .stage .choice-row,
+  html body .stage .choice-grid,
+  html body .stage .toy-choice-grid,
+  html body .stage .gift-row,
+  html body .stage .table-toys,
+  html body .stage .echo-gnomes {
+    display:grid!important; grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:12px!important; padding:16px!important; min-height:0!important; height:auto!important;
+    background:rgba(255,255,255,.96)!important; border-radius:24px!important;
+  }
+  html body .stage .choice-row > button:last-child:nth-child(odd),
+  html body .stage .choice-grid > button:last-child:nth-child(odd) { grid-column:1/-1!important; }
+  html body .stage .toy-choice-grid { grid-template-columns:repeat(2,minmax(0,1fr))!important; }
+  html body .stage .primary-action,
+  html body .stage .secondary-action,
+  html body .stage .word-next-button {
+    display:flex!important; align-items:center!important; justify-content:center!important;
+    position:relative!important; inset:auto!important; transform:none!important;
+    width:100%!important; max-width:100%!important; min-height:58px!important; height:auto!important;
+    padding:14px 18px!important; margin:0!important;
+    color:#fff!important; -webkit-text-fill-color:#fff!important; opacity:1!important; visibility:visible!important;
+    font-size:17px!important; font-weight:900!important; line-height:1.25!important; text-align:center!important;
+    background:linear-gradient(180deg,#ff9650,#ff7a3d)!important; border:0!important; border-radius:18px!important;
+    box-shadow:0 6px #d65f2e!important; pointer-events:auto!important;
+  }
+  html body .stage .feedback:empty,
+  html body .stage .primary-action:empty,
+  html body .stage .secondary-action:empty { display:none!important; }
+  html body .stage .feedback {
+    position:relative!important; inset:auto!important; transform:none!important; width:100%!important; max-width:100%!important;
+    min-height:0!important; height:auto!important; margin:0!important; padding:14px 18px!important;
+    opacity:1!important; visibility:visible!important; overflow:visible!important;
+  }
+  html body .stage .word-card {
+    display:grid!important; grid-template-columns:72px minmax(0,1fr) 58px!important; gap:8px 14px!important; align-items:center!important;
+  }
+  html body .stage .word-card > span { grid-row:1/4!important; font-size:56px!important; }
+  html body .stage .word-card > p,
+  html body .stage .word-card > b,
+  html body .stage .word-card > small { grid-column:2!important; margin:0!important; }
+  html body .stage .word-card > .word-sound-button { grid-column:3!important; grid-row:1/4!important; }
+  html body .stage .word-card > .word-next-button { grid-column:1/-1!important; grid-row:4!important; margin-top:10px!important; }
+  html body .stage.scene-four-toys .table-toys { display:grid!important; grid-template-columns:repeat(4,1fr)!important; }
+  html body .stage.scene-four-toys .table-toys span { font-size:54px!important; text-align:center!important; }
+  html body .stage.scene-actions .mini-progress { display:flex!important; position:relative!important; inset:auto!important; width:100%!important; padding:12px!important; }
+  html body .stage.scene-rhyme .rhyme-card,
+  html body .stage.scene-roy .song-card { overflow:visible!important; }
+  html body .stage.scene-rhyme .rhyme-card button,
+  html body .stage.scene-roy .song-card button { display:flex!important; margin:0 0 12px!important; }
+  html body .stage.scene-final .lesson-complete { text-align:center!important; }
+
+  html body .lesson-controls {
+    display:grid!important; grid-template-columns:1fr 1.45fr!important; gap:14px!important;
+    position:relative!important; padding:0 18px 28px!important; margin:0!important;
+  }
+  html body .chapter-dots { display:none!important; }
+  html body .lesson-controls button { width:100%!important; min-height:58px!important; }
+  html body .stage.scene-arrival + .lesson-controls .back-button { display:none!important; }
+  html body .stage.scene-arrival + .lesson-controls { grid-template-columns:1fr!important; }
+
+  /* Arrival: artwork must be present above the enter button. */
+  html body .stage.scene-arrival .arrival-stage-card { display:none!important; }
+}
+
+@media (max-width: 420px) {
+  html body .topbar { padding:12px 14px!important; }
+  html body .brand strong { font-size:18px!important; }
+  html body .stage, html body .stage.scene-arrival { padding:14px!important; gap:14px!important; }
+  html body .stage .stage-visual, html body .stage.scene-arrival .stage-visual { border-radius:22px!important; }
+  html body .stage .speech,
+  html body .stage .prompt,
+  html body .stage .hero-phrase,
+  html body .stage .name-line,
+  html body .stage .knock-event,
+  html body .stage .word-card,
+  html body .stage .rhyme-card,
+  html body .stage .song-card { padding:18px 20px!important; }
+  html body .stage .speech { padding-right:82px!important; }
+  html body .stage .speech .round-sound { width:58px!important; height:58px!important; right:14px!important; }
+}

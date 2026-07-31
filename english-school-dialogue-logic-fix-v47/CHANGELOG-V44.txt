@@ -1,0 +1,7 @@
+VERSION 44
+- Removed the shared pointer-events conflict from interactive scene controls.
+- Scene 9 dialogue cards are separated into fixed non-overlapping columns.
+- Scene 11 uses one compact vocabulary card and a visible orange action button.
+- Scene 12 instruction moved away from the teacher portrait.
+- Two-speaker scenes use separate dialogue columns.
+- Roy audio replaced with a melodic boy-vocal track mixed with accompaniment.

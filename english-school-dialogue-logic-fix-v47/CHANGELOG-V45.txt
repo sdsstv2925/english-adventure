@@ -1,0 +1,7 @@
+VERSION 45
+
+- Removed the generic desktop dialogue positioning conflict for scenes 9, 11, 12, 13, 17, 18 and 19.
+- Restored pointer interaction for dialogue sound buttons and task controls.
+- Rebuilt each affected desktop scene as an independent layout.
+- Switched Roy to the dedicated alternate boy vocal song file.
+- Updated cache-busting to v45.

@@ -1,0 +1,8 @@
+VERSION 47
+- Full mobile layout reset for screens up to 880px.
+- All scenes use normal vertical document flow on phones.
+- Scene artwork is always visible with a fixed 16:9 frame.
+- Removed mobile absolute overlays and hidden decorative layers.
+- Empty feedback/action boxes are hidden.
+- Buttons, audio controls and choices are touchable.
+- Scene 11 vocabulary card rebuilt for mobile.

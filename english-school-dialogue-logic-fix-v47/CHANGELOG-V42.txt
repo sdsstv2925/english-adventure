@@ -1,0 +1,9 @@
+VERSION 42
+
+- removed speech-tail artifacts that appeared as stray white shapes on dialogue cards;
+- fixed scene 4 teacher question/task overlap;
+- fixed scene 9 dialogue ownership and moved both bubbles away from Miss Emmy's face;
+- restored the visible age prompt and separated it from the answer buttons;
+- moved scene 12 teacher dialogue away from Miss Emmy's face;
+- switched Dunno to dedicated /audio/voice-dunno/ files;
+- bumped asset query strings to v=42 and updated the in-app version label.

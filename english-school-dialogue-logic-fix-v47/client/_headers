@@ -1,0 +1,9 @@
+# Revalidate application assets after every deployment
+/assets/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/audio/*
+  Cache-Control: public, max-age=86400
+
+/scenes/*
+  Cache-Control: public, max-age=86400

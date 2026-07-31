@@ -1,0 +1,10 @@
+VERSION 32
+- Reset a stale responsive translateX(-50%) on the first-scene card that
+  shifted the entire transparent hit layer half a stage left.
+- Renamed the speaking-event helper so it is no longer shadowed by the
+  component's `m` state variable (`TypeError: m is not a function`).
+- Renamed the module audio handle so it is no longer shadowed by the
+  component's `d` state setter (`TypeError: d?.pause is not a function`).
+- All seven greeting buttons now align with the visible speech bubbles.
+- Kept the existing audio files and click handlers; audio playback now starts
+  from the intended visible targets.

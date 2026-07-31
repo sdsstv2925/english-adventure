@@ -1,0 +1,7 @@
+English Adventure VERSION 31
+
+- Opera/Android: removed transparent-parent pointer-event dependency.
+- All first-scene hit zones now live in a dedicated top interaction layer.
+- Footer navigation is explicitly above the scene and touch-enabled.
+- JS and CSS filenames changed to force a fresh client bundle.
+- Application assets now revalidate after deployment instead of caching forever.

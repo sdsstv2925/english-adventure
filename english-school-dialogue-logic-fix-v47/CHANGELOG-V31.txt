@@ -1,0 +1,5 @@
+VERSION 31
+- Removed all appended VERSION 27–30 interaction layers.
+- One pointer-events model for all scenes.
+- First-scene speech buttons use one top-level hit layer.
+- Cache-busted JS and CSS asset names.

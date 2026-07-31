@@ -1,0 +1,9 @@
+VERSION 41
+
+- Restored clickability for all task controls above visual layers.
+- Scene 9 answer buttons forced above the backdrop and made touch-safe.
+- Scene 9 speech bubbles moved away from the teacher and Dunno faces.
+- Dunno voice switched from the adult-sounding track set to the alternate child-boy set.
+- Scene 10 action button remains visible after every command and now explains the required action.
+- Scene 10 feedback no longer hides the task controls.
+- Cache version updated to 41.

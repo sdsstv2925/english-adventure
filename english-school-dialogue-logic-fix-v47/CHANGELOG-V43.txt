@@ -1,0 +1,9 @@
+VERSION 43
+- Scene 9: teacher and Dunno dialogue cards placed in the correct ownership order and kept above faces.
+- Scene 11: toy word card and continue button separated into independent rows.
+- Scene 13: teacher prompt moved to the empty board; rhyme card and action button no longer overlap.
+- Scene 17: reveal picture, vocabulary prompt, answer controls and continue button separated.
+- Scene 18: compact complete lyrics panel, separate answer row, and a real musical backing track.
+- Scene 19: result panel and replay button separated.
+- Dunno voice routed to the clearer child voice set.
+- Cache/version updated to 43.
