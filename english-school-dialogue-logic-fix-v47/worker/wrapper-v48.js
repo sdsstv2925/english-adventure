@@ -66,6 +66,82 @@ const SCENE_11_SCRIPT = `<script>(()=>{
   document.readyState==='loading'?document.addEventListener('DOMContentLoaded',enhance,{once:true}):enhance();
 })();</script>`;
 
+const SCENE_18_SCRIPT = `<script>(()=>{
+  if(window.__eaRoySongFixInstalled) return;
+  window.__eaRoySongFixInstalled=true;
+
+  const installStyles=()=>{
+    if(document.getElementById('ea-roy-song-style')) return;
+    const style=document.createElement('style');
+    style.id='ea-roy-song-style';
+    style.textContent='@media(min-width:881px){.scene-roy .song-card{left:50%!important;right:auto!important;bottom:116px!important;top:auto!important;width:56%!important;max-width:56%!important;height:auto!important;max-height:none!important;min-height:138px!important;padding:18px 24px!important;transform:translateX(-50%)!important;overflow:hidden!important;border-radius:24px!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:10px!important}.scene-roy .song-card.ea-roy-ready>:not(button):not(.primary-action):not(.ea-roy-helper){display:none!important}.scene-roy .song-card.ea-roy-playing{min-height:230px!important}.scene-roy .song-card.ea-roy-playing>:not(.ea-roy-helper){display:revert}.scene-roy .song-card .ea-roy-helper{font-size:18px;font-weight:800;color:#31546b;text-align:center}.scene-roy .song-card.ea-roy-playing .ea-roy-helper{display:none}.scene-roy .choice-row{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:56%!important;max-width:56%!important;min-height:82px!important;padding:14px 20px!important;transform:translateX(-50%)!important;border-radius:22px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:18px!important;z-index:450!important}.scene-roy .choice-row[data-roy-locked="true"]{visibility:hidden!important;pointer-events:none!important}.scene-roy .choice-row.ea-roy-unlocked{visibility:visible!important;pointer-events:auto!important}.scene-roy .choice-row .ea-roy-question{font-size:20px;font-weight:900;color:#173a57;margin-right:18px;white-space:nowrap}.scene-roy .choice-row button{min-width:105px!important;min-height:54px!important}.scene-roy .song-card:before,.scene-roy .song-card:after,.scene-roy .choice-row:before,.scene-roy .choice-row:after{display:none!important}}@media(max-width:880px){.scene-roy .choice-row[data-roy-locked="true"]{display:none!important}.scene-roy .choice-row.ea-roy-unlocked{display:flex!important}.scene-roy .choice-row .ea-roy-question{width:100%;text-align:center;font-weight:900;color:#173a57}.scene-roy .choice-row{flex-wrap:wrap!important}.scene-roy .song-card .ea-roy-helper{text-align:center;font-weight:800;color:#31546b}}';
+    document.head.appendChild(style);
+  };
+
+  const unlock=(stage)=>{
+    const choices=stage.querySelector('.choice-row');
+    if(!choices) return;
+    choices.removeAttribute('data-roy-locked');
+    choices.classList.add('ea-roy-unlocked');
+    if(!choices.querySelector('.ea-roy-question')){
+      const question=document.createElement('div');
+      question.className='ea-roy-question';
+      question.textContent='How old is Roy?';
+      choices.prepend(question);
+    }
+  };
+
+  const enhance=()=>{
+    installStyles();
+    const stage=document.querySelector('.scene-roy');
+    if(!stage) return;
+    const card=stage.querySelector('.song-card');
+    const choices=stage.querySelector('.choice-row');
+    if(!card||!choices) return;
+
+    if(!stage.dataset.roySongStarted){
+      choices.setAttribute('data-roy-locked','true');
+      card.classList.add('ea-roy-ready');
+      if(!card.querySelector('.ea-roy-helper')){
+        const helper=document.createElement('div');
+        helper.className='ea-roy-helper';
+        helper.textContent='Послушай песню и узнай, сколько лет Рою';
+        const playButton=card.querySelector('button,.primary-action');
+        playButton?.after(helper);
+      }
+    }
+
+    const playButton=card.querySelector('button,.primary-action');
+    if(playButton&&!playButton.dataset.roySongBound){
+      playButton.dataset.roySongBound='true';
+      playButton.addEventListener('click',()=>{
+        stage.dataset.roySongStarted='true';
+        card.classList.remove('ea-roy-ready');
+        card.classList.add('ea-roy-playing');
+        let unlocked=false;
+        const finish=()=>{
+          if(unlocked) return;
+          unlocked=true;
+          card.classList.remove('ea-roy-playing');
+          card.classList.add('ea-roy-finished');
+          unlock(stage);
+        };
+        setTimeout(()=>{
+          const audio=[...document.querySelectorAll('audio')].find(a=>!a.paused);
+          if(audio){
+            audio.addEventListener('ended',finish,{once:true});
+            audio.addEventListener('error',finish,{once:true});
+          }
+        },250);
+        setTimeout(finish,22000);
+      });
+    }
+  };
+
+  new MutationObserver(enhance).observe(document.documentElement,{childList:true,subtree:true});
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',enhance,{once:true}):enhance();
+})();</script>`;
+
 const STATIC_PREFIXES = ['/assets/', '/scenes/', '/audio/', '/characters/', '/_next/'];
 const STATIC_FILES = new Set(['/favicon.ico', '/robots.txt', '/manifest.webmanifest']);
 
@@ -101,7 +177,7 @@ export default {
       })
       .on('body', {
         element(element) {
-          element.append(VERSION_SCRIPT + SCENE_11_SCRIPT, { html: true });
+          element.append(VERSION_SCRIPT + SCENE_11_SCRIPT + SCENE_18_SCRIPT, { html: true });
         }
       })
       .transform(htmlResponse);
