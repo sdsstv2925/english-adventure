@@ -60,6 +60,7 @@
   },
   "assets": {
     "directory": "../client",
+    "binding": "ASSETS",
     "run_worker_first": true
   },
   "observability": {
