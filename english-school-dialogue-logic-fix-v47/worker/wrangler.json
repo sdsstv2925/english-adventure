@@ -36,7 +36,7 @@
   "flagship": [],
   "ratelimits": [],
   "worker_loaders": [],
-  "main": "index.js",
+  "main": "wrapper-v48.js",
   "jsx_factory": "React.createElement",
   "jsx_fragment": "React.Fragment",
   "migrations": [],
