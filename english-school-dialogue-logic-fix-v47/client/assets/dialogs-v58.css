@@ -1,0 +1,163 @@
+/* English Adventure VERSION 58
+   Unified transparent, borderless dialogue system.
+*/
+
+/* All dialogue/task surfaces: transparent dark veil, no frame. */
+html body main.game-shell section.stage[class*="scene-"] article.scene-card .scene-content > :is(
+  .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.seating-progress,
+  .knock-event,.toy-cloud,.story-card,.hero-phrase,.table-toys,.word-card,
+  .toy-choice-grid,.rhyme-card,.gift-row,.kindness,.near-far,.bag-scene,
+  .picture-card,.character-card,.song-card,.cinderella-card,.lesson-complete,
+  .count-first-card
+),
+html body main.game-shell section.stage[class*="scene-"] article.scene-card > .feedback {
+  background: rgba(8, 31, 48, .26) !important;
+  background-image: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+/* White readable typography on every scene. */
+html body main.game-shell section.stage[class*="scene-"] article.scene-card .scene-content :is(
+  .speech-copy,.speech-text,.speech-text b,.speaker-name,.translation-line,
+  .prompt,.prompt b,.prompt-translation,.gesture-note,.verse-translation,
+  .song-translation,.story-card,.name-line,.echo-gnomes,.rhyme-card,
+  .song-card,.word-card,.kindness,.near-far,.lesson-complete,.count-first-card
+),
+html body main.game-shell section.stage[class*="scene-"] article.scene-card > .feedback {
+  color: #fff !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 3px rgba(0,0,0,.98), 0 0 7px rgba(0,0,0,.88) !important;
+}
+
+html body main.game-shell section.stage[class*="scene-"] .speech-text {
+  font-size: 16px !important;
+  line-height: 1.42 !important;
+}
+
+html body main.game-shell section.stage[class*="scene-"] :is(
+  .translation-line,.prompt-translation,.gesture-note,.verse-translation,.song-translation
+) {
+  background: rgba(7, 27, 42, .22) !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+
+/* Controls remain translucent and readable, without frames. */
+html body main.game-shell section.stage[class*="scene-"] article.scene-card .scene-content :is(
+  .choice-button,.choice-grid>button,.choice-row>button,.toy-choice-grid>button,
+  .gift-row>button,.echo-gnomes>button,.word-card button,.rhyme-card button,
+  .song-card button,.kindness button,.inline-word
+) {
+  background: rgba(8, 31, 48, .30) !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  color: #fff !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 3px rgba(0,0,0,.98), 0 0 6px rgba(0,0,0,.82) !important;
+  box-shadow: none !important;
+}
+
+html body main.game-shell section.stage[class*="scene-"] input,
+html body main.game-shell section.stage[class*="scene-"] textarea {
+  background: rgba(8, 31, 48, .28) !important;
+  border: 0 !important;
+  outline: 0 !important;
+  color: #fff !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 3px rgba(0,0,0,.95) !important;
+  box-shadow: none !important;
+}
+html body main.game-shell section.stage[class*="scene-"] input::placeholder,
+html body main.game-shell section.stage[class*="scene-"] textarea::placeholder {
+  color: rgba(255,255,255,.82) !important;
+}
+
+/* Audio control is independent and never covers text. */
+html body main.game-shell section.stage[class*="scene-"] .scene-content > .speech {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) 42px !important;
+  align-items: center !important;
+  column-gap: 12px !important;
+  padding: 14px 14px 14px 18px !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech .speaker-avatar {
+  display: none !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech .speech-copy {
+  grid-column: 1 !important;
+  min-width: 0 !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech .round-sound {
+  grid-column: 2 !important;
+  position: relative !important;
+  inset: auto !important;
+  transform: none !important;
+  justify-self: end !important;
+  width: 38px !important;
+  height: 38px !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+/* Scene 3: only the currently active reply is visible. */
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .speech[aria-hidden="true"],
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid,
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .prompt,
+html body .stage.scene-why-english.ea-scene3-complete article.scene-card > .feedback {
+  display: none !important;
+}
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .speech:not([aria-hidden="true"]) {
+  background: rgba(8,31,48,.34) !important;
+  border: 0 !important;
+  color: #fff !important;
+}
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .speech:not([aria-hidden="true"]) :is(.speaker-name,.translation-line) {
+  display: none !important;
+}
+
+/* Start page uses the same borderless transparent language. */
+html body main.game-shell section.stage.scene-arrival .arrival-title,
+html body main.game-shell section.stage.scene-arrival .school-friend span {
+  background: rgba(8,31,48,.30) !important;
+  background-image: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+html body main.game-shell section.stage.scene-arrival :is(.arrival-title,.arrival-title *, .school-friend span, .school-friend span *) {
+  color: #fff !important;
+  font-weight: 900 !important;
+  text-shadow: 0 2px 3px rgba(0,0,0,.98), 0 0 7px rgba(0,0,0,.88) !important;
+}
+
+/* Remove decorative pseudo frames. */
+html body main.game-shell section.stage[class*="scene-"] article.scene-card .scene-content > :is(
+  .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.rhyme-card,
+  .song-card,.word-card,.picture-card,.lesson-complete,.count-first-card
+)::before,
+html body main.game-shell section.stage[class*="scene-"] article.scene-card .scene-content > :is(
+  .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.rhyme-card,
+  .song-card,.word-card,.picture-card,.lesson-complete,.count-first-card
+)::after {
+  content: none !important;
+  display: none !important;
+}
+
+@media (max-width:880px) {
+  html body main.game-shell section.stage[class*="scene-"] .scene-content > .speech {
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+  html body main.game-shell section.stage[class*="scene-"] .speech .round-sound {
+    grid-column: 1 !important;
+    justify-self: stretch !important;
+    width: 100% !important;
+    margin-top: 8px !important;
+  }
+}
