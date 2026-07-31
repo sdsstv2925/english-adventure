@@ -31,12 +31,14 @@ export default {
       .on('head', {
         element(element) {
           element.append(
-            '<link rel="stylesheet" href="/assets/fix-v48.css?v=62">' +
-            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=62">' +
-            '<link rel="stylesheet" href="/assets/scene-state-v62.css?v=62">' +
-            '<script defer src="/assets/runtime-v48.js?v=62"></script>' +
-            '<script defer src="/assets/scene-state-v62.js?v=62"></script>' +
-            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 62"!important;font-size:12px!important}</style>',
+            '<link rel="stylesheet" href="/assets/fix-v48.css?v=63">' +
+            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=63">' +
+            '<link rel="stylesheet" href="/assets/scene-state-v62.css?v=63">' +
+            '<link rel="stylesheet" href="/assets/scene2-v63.css?v=63">' +
+            '<script defer src="/assets/runtime-v48.js?v=63"></script>' +
+            '<script defer src="/assets/scene-state-v62.js?v=63"></script>' +
+            '<script defer src="/assets/scene2-v63.js?v=63"></script>' +
+            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 63"!important;font-size:12px!important}</style>',
             { html: true }
           );
         }
