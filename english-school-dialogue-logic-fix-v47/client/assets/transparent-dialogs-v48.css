@@ -1,86 +1,74 @@
-/* Global transparent dialogue system for English Adventure v50 */
+/* Global transparent dialogue system for English Adventure v51 */
 
-/* Every non-interactive text surface uses the same transparent glass. */
-html body .stage :is(
-  .speech,
-  .prompt,
-  .song-card,
-  .rhyme-card,
-  .word-card,
-  .picture-card,
-  .count-first-card,
-  .lesson-complete,
-  .feedback,
-  .kindness,
-  .intro-card,
-  .instruction-card,
-  .task-card,
-  .question-card,
-  .answer-card,
-  .phrase-card,
-  .repeat-card,
-  .name-card,
-  .input-card,
-  .input-row,
-  .sentence-builder,
-  .sentence-row,
-  .dialog-card,
-  .dialogue-card,
-  .text-card,
-  .info-card,
-  .panel,
-  .content-panel
-){
-  background:rgba(255,255,255,.22)!important;
-  -webkit-backdrop-filter:blur(5px) saturate(1.05)!important;
-  backdrop-filter:blur(5px) saturate(1.05)!important;
-  border:1px solid rgba(255,255,255,.46)!important;
-  box-shadow:0 7px 20px rgba(23,58,87,.10)!important;
-}
-
-/* Catch scene-specific cards that use generated class names. */
-html body .stage .scene-content > div:not(.speech):not(.choice-row):not(.gift-row):not(.near-far):not(.primary-action):not(.secondary-action):not(.feedback):not(:has(> img:only-child)){
-  --ea-glass-bg:rgba(255,255,255,.22);
-}
-html body .stage .scene-content > div[style*="background"],
-html body .stage .scene-content > section[style*="background"]{
-  background:rgba(255,255,255,.22)!important;
-  -webkit-backdrop-filter:blur(5px) saturate(1.05)!important;
-  backdrop-filter:blur(5px) saturate(1.05)!important;
-}
-
-/* Remove opaque decorative overlays and tails that make white slabs. */
+/* Dialogue and information surfaces must not hide the illustration. */
 html body .stage :is(
   .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
   .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
   .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
   .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
-  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel
+  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
+  .panel,.content-panel
+){
+  background:rgba(255,255,255,.06)!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  border:1px solid rgba(255,255,255,.34)!important;
+  box-shadow:0 4px 14px rgba(23,58,87,.06)!important;
+}
+
+/* Eliminate white pseudo-layers and speech tails. */
+html body .stage :is(
+  .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
+  .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
+  .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
+  .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
+  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
+  .panel,.content-panel
 )::before,
 html body .stage :is(
   .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
   .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
   .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
   .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
-  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel
+  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
+  .panel,.content-panel
 )::after{
-  background:rgba(255,255,255,.12)!important;
-  opacity:.28!important;
+  background:transparent!important;
+  opacity:0!important;
+  box-shadow:none!important;
   pointer-events:none!important;
 }
 
-/* Interactive answer containers remain slightly stronger, controls stay solid. */
-html body .stage :is(.choice-row,.gift-row,.near-far){
-  background:rgba(255,255,255,.34)!important;
-  -webkit-backdrop-filter:blur(6px) saturate(1.05)!important;
-  backdrop-filter:blur(6px) saturate(1.05)!important;
-  border:1px solid rgba(255,255,255,.5)!important;
-  box-shadow:0 7px 20px rgba(23,58,87,.10)!important;
+/* Generated scene blocks with inline white backgrounds. */
+html body .stage .scene-content > div[style*="background"],
+html body .stage .scene-content > section[style*="background"]{
+  background:rgba(255,255,255,.06)!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
 }
+
+/* Answer-area containers remain visible but do not form white slabs. */
+html body .stage :is(.choice-row,.gift-row,.near-far){
+  background:rgba(255,255,255,.12)!important;
+  -webkit-backdrop-filter:none!important;
+  backdrop-filter:none!important;
+  border:1px solid rgba(255,255,255,.34)!important;
+  box-shadow:0 4px 14px rgba(23,58,87,.06)!important;
+}
+
+/* Controls remain solid and readable. */
 html body .stage :is(button,.primary-action,.secondary-action,.round-sound,input,textarea,.choice-row button,.gift-row button){
   opacity:1!important;
   -webkit-backdrop-filter:none!important;
   backdrop-filter:none!important;
+}
+html body .stage input,html body .stage textarea{
+  background:rgba(255,255,255,.90)!important;
+}
+
+/* Improve text contrast without creating a white background. */
+html body .stage :is(.speech,.prompt,.song-card,.rhyme-card,.word-card,.instruction-card,.task-card,.question-card,.phrase-card,.repeat-card,.name-card,.sentence-builder,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel){
+  text-shadow:0 1px 0 rgba(255,255,255,.65)!important;
 }
 
 @media(max-width:880px){
@@ -89,8 +77,12 @@ html body .stage :is(button,.primary-action,.secondary-action,.round-sound,input
     .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
     .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
     .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
-    .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel
+    .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
+    .panel,.content-panel
   ){
-    background:rgba(255,255,255,.34)!important;
+    background:rgba(255,255,255,.10)!important;
+  }
+  html body .stage :is(.choice-row,.gift-row,.near-far){
+    background:rgba(255,255,255,.16)!important;
   }
 }
