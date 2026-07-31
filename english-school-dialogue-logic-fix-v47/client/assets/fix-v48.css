@@ -5,9 +5,29 @@ html body .stage .speech,html body .stage .speech .round-sound,html body .stage 
 html body .stage .speech{z-index:410!important}
 html body .stage .speech .round-sound{z-index:440!important;cursor:pointer!important}
 
+/* Transparent glass speech bubbles: preserve the scene and characters */
+html body .stage .speech{
+  background:rgba(255,255,255,.34)!important;
+  -webkit-backdrop-filter:blur(7px) saturate(1.08)!important;
+  backdrop-filter:blur(7px) saturate(1.08)!important;
+  border:1px solid rgba(255,255,255,.58)!important;
+  box-shadow:0 7px 22px rgba(20,55,75,.12)!important;
+  pointer-events:none!important;
+}
+html body .stage .speech:before,html body .stage .speech:after{opacity:.34!important;pointer-events:none!important}
+html body .stage .speech .round-sound{
+  position:relative!important;
+  pointer-events:auto!important;
+  touch-action:manipulation!important;
+  isolation:isolate!important;
+}
+html body .stage .speech .round-sound:before,html body .stage .speech .round-sound:after{pointer-events:none!important}
+html body .stage .speech>*:not(.round-sound){pointer-events:none!important}
+
 /* 9 */
 html body .stage.scene-age .speech-dunno{left:25%!important;right:auto!important;top:7%!important;bottom:auto!important;width:27%!important;max-width:27%!important;transform:none!important}
 html body .stage.scene-age .speech-teacher{left:53%!important;right:auto!important;top:7%!important;bottom:auto!important;width:25%!important;max-width:25%!important;transform:none!important}
+html body .stage.scene-age .speech-teacher .round-sound{z-index:999!important;pointer-events:auto!important}
 html body .stage.scene-age .choice-row{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:58%!important;max-width:58%!important;transform:translateX(-50%)!important;z-index:420!important}
 
 /* 11: first count, then learn words */
