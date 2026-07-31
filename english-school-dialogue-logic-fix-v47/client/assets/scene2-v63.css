@@ -1,0 +1,184 @@
+/* English Adventure VERSION 63
+   Scene 2: explicit user action, no automatic-looking completion.
+*/
+
+html body .stage.scene-come-in.ea63-scene2-controlled .scene-content {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+html body .stage.scene-come-in.ea63-scene2-controlled.ea63-scene2-waiting .scene-content > .speech,
+html body .stage.scene-come-in.ea63-scene2-controlled.ea63-scene2-waiting .scene-content > .seating-progress {
+  display: none !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-flow {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 620 !important;
+  pointer-events: none !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-caption {
+  position: absolute !important;
+  left: 50% !important;
+  top: 7% !important;
+  width: min(470px, 54%) !important;
+  transform: translateX(-50%) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 38px !important;
+  gap: 11px !important;
+  align-items: center !important;
+  padding: 13px 15px !important;
+  background: rgba(12, 22, 34, .72) !important;
+  border: 0 !important;
+  border-radius: 15px !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  pointer-events: auto !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-copy {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-copy strong,
+html body .stage.scene-come-in .ea63-scene2-copy span,
+html body .stage.scene-come-in .ea63-scene2-copy small {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .72) !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-copy strong {
+  font-size: 17px !important;
+  line-height: 1.2 !important;
+  font-weight: 750 !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-copy span {
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+  font-weight: 650 !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-copy small {
+  margin-top: 3px !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  font-weight: 500 !important;
+  opacity: .88 !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-sound {
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  outline: 0 !important;
+  background: rgba(255, 255, 255, .16) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-task {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 24px !important;
+  width: min(520px, 58%) !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 10px !important;
+  pointer-events: auto !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-task > span {
+  padding: 8px 13px !important;
+  background: rgba(12, 22, 34, .60) !important;
+  border-radius: 12px !important;
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.3 !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .72) !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-seat {
+  min-width: 220px !important;
+  min-height: 48px !important;
+  padding: 11px 20px !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  outline: 0 !important;
+  background: #45bd7d !important;
+  color: #fff !important;
+  box-shadow: 0 4px 0 rgba(27, 132, 82, .72) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 750 !important;
+  text-shadow: none !important;
+  cursor: pointer !important;
+}
+
+html body .stage.scene-come-in .ea63-scene2-seat:disabled {
+  opacity: .78 !important;
+  cursor: wait !important;
+}
+
+html body .stage.scene-come-in.ea63-scene2-complete .scene-content > .speech {
+  display: none !important;
+}
+
+html body .stage.scene-come-in.ea63-scene2-complete .scene-content > .speech-girl {
+  display: grid !important;
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: 8% !important;
+  bottom: auto !important;
+  width: min(390px, 46%) !important;
+  max-width: 46% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  z-index: 630 !important;
+  background: rgba(12, 22, 34, .72) !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+}
+
+html body .lesson-controls .next-button.ea63-scene2-locked,
+html body .lesson-controls .next-button.ea63-scene2-locked:disabled {
+  opacity: .46 !important;
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+@media (max-width: 880px) {
+  html body .stage.scene-come-in .ea63-scene2-caption,
+  html body .stage.scene-come-in .ea63-scene2-task,
+  html body .stage.scene-come-in.ea63-scene2-complete .scene-content > .speech-girl {
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+  }
+
+  html body .stage.scene-come-in .ea63-scene2-caption {
+    top: 12px !important;
+  }
+
+  html body .stage.scene-come-in .ea63-scene2-task {
+    bottom: 14px !important;
+  }
+}
