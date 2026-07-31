@@ -31,10 +31,10 @@ export default {
       .on('head', {
         element(element) {
           element.append(
-            '<link rel="stylesheet" href="/assets/fix-v48.css?v=55">' +
-            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=55">' +
-            '<script defer src="/assets/runtime-v48.js?v=55"></script>' +
-            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 55"!important;font-size:12px!important}</style>',
+            '<link rel="stylesheet" href="/assets/fix-v48.css?v=56">' +
+            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=56">' +
+            '<script defer src="/assets/runtime-v48.js?v=56"></script>' +
+            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 56"!important;font-size:12px!important}</style>',
             { html: true }
           );
         }
