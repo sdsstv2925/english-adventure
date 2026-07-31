@@ -1,6 +1,6 @@
-/* Global transparent dialogue system for English Adventure v48 */
+/* Global transparent dialogue system for English Adventure v50 */
 
-/* All text/dialogue surfaces stay translucent so characters remain visible. */
+/* Every non-interactive text surface uses the same transparent glass. */
 html body .stage :is(
   .speech,
   .prompt,
@@ -11,82 +11,86 @@ html body .stage :is(
   .count-first-card,
   .lesson-complete,
   .feedback,
-  .kindness
+  .kindness,
+  .intro-card,
+  .instruction-card,
+  .task-card,
+  .question-card,
+  .answer-card,
+  .phrase-card,
+  .repeat-card,
+  .name-card,
+  .input-card,
+  .input-row,
+  .sentence-builder,
+  .sentence-row,
+  .dialog-card,
+  .dialogue-card,
+  .text-card,
+  .info-card,
+  .panel,
+  .content-panel
 ){
-  background:rgba(255,255,255,.34)!important;
-  -webkit-backdrop-filter:blur(8px) saturate(1.08)!important;
-  backdrop-filter:blur(8px) saturate(1.08)!important;
-  border:1px solid rgba(255,255,255,.58)!important;
-  box-shadow:0 8px 24px rgba(23,58,87,.12)!important;
+  background:rgba(255,255,255,.22)!important;
+  -webkit-backdrop-filter:blur(5px) saturate(1.05)!important;
+  backdrop-filter:blur(5px) saturate(1.05)!important;
+  border:1px solid rgba(255,255,255,.46)!important;
+  box-shadow:0 7px 20px rgba(23,58,87,.10)!important;
 }
 
-/* Remove opaque decorative overlays and tails that create white blocks. */
+/* Catch scene-specific cards that use generated class names. */
+html body .stage .scene-content > div:not(.speech):not(.choice-row):not(.gift-row):not(.near-far):not(.primary-action):not(.secondary-action):not(.feedback):not(:has(> img:only-child)){
+  --ea-glass-bg:rgba(255,255,255,.22);
+}
+html body .stage .scene-content > div[style*="background"],
+html body .stage .scene-content > section[style*="background"]{
+  background:rgba(255,255,255,.22)!important;
+  -webkit-backdrop-filter:blur(5px) saturate(1.05)!important;
+  backdrop-filter:blur(5px) saturate(1.05)!important;
+}
+
+/* Remove opaque decorative overlays and tails that make white slabs. */
 html body .stage :is(
-  .speech,
-  .prompt,
-  .song-card,
-  .rhyme-card,
-  .word-card,
-  .picture-card,
-  .count-first-card,
-  .lesson-complete,
-  .feedback,
-  .kindness
+  .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
+  .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
+  .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
+  .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
+  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel
 )::before,
 html body .stage :is(
-  .speech,
-  .prompt,
-  .song-card,
-  .rhyme-card,
-  .word-card,
-  .picture-card,
-  .count-first-card,
-  .lesson-complete,
-  .feedback,
-  .kindness
+  .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
+  .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
+  .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
+  .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
+  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel
 )::after{
-  background:rgba(255,255,255,.24)!important;
-  opacity:.42!important;
+  background:rgba(255,255,255,.12)!important;
+  opacity:.28!important;
   pointer-events:none!important;
 }
 
-/* Interactive answer panels stay readable, but are still lighter than before. */
+/* Interactive answer containers remain slightly stronger, controls stay solid. */
 html body .stage :is(.choice-row,.gift-row,.near-far){
-  background:rgba(255,255,255,.48)!important;
-  -webkit-backdrop-filter:blur(8px) saturate(1.06)!important;
-  backdrop-filter:blur(8px) saturate(1.06)!important;
-  border:1px solid rgba(255,255,255,.62)!important;
-  box-shadow:0 8px 24px rgba(23,58,87,.12)!important;
+  background:rgba(255,255,255,.34)!important;
+  -webkit-backdrop-filter:blur(6px) saturate(1.05)!important;
+  backdrop-filter:blur(6px) saturate(1.05)!important;
+  border:1px solid rgba(255,255,255,.5)!important;
+  box-shadow:0 7px 20px rgba(23,58,87,.10)!important;
 }
-
-/* Buttons remain opaque for contrast and reliable interaction. */
-html body .stage :is(
-  button,
-  .primary-action,
-  .secondary-action,
-  .round-sound,
-  .choice-row button,
-  .gift-row button
-){
+html body .stage :is(button,.primary-action,.secondary-action,.round-sound,input,textarea,.choice-row button,.gift-row button){
   opacity:1!important;
   -webkit-backdrop-filter:none!important;
   backdrop-filter:none!important;
 }
 
-/* Mobile uses slightly stronger glass for readability on small screens. */
 @media(max-width:880px){
   html body .stage :is(
-    .speech,
-    .prompt,
-    .song-card,
-    .rhyme-card,
-    .word-card,
-    .picture-card,
-    .count-first-card,
-    .lesson-complete,
-    .feedback,
-    .kindness
+    .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
+    .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
+    .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
+    .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
+    .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel
   ){
-    background:rgba(255,255,255,.46)!important;
+    background:rgba(255,255,255,.34)!important;
   }
 }
