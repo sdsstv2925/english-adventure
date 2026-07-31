@@ -1,0 +1,293 @@
+/* English Adventure VERSION 75
+   Scene 17 (secret bag): correct speaker positions and a usable bottom flow.
+*/
+
+html body main.game-shell .stage.scene-secret-bag article.scene-card {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag article.scene-card > .scene-content {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 640 !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag .scene-content > .bag-scene {
+  display: none !important;
+}
+
+/* Teacher belongs on the right, next to the teacher. */
+html body main.game-shell .stage.scene-secret-bag .scene-content > .speech-teacher {
+  position: absolute !important;
+  top: 7% !important;
+  right: 4% !important;
+  left: auto !important;
+  bottom: auto !important;
+  width: min(350px, 34%) !important;
+  max-width: 34% !important;
+  margin: 0 !important;
+  transform: none !important;
+  z-index: 662 !important;
+  pointer-events: auto !important;
+}
+
+/* Dunno belongs in the centre, above Dunno. */
+html body main.game-shell .stage.scene-secret-bag .scene-content > .speech-dunno {
+  position: absolute !important;
+  top: 7% !important;
+  left: 36% !important;
+  right: auto !important;
+  bottom: auto !important;
+  width: min(290px, 28%) !important;
+  max-width: 28% !important;
+  margin: 0 !important;
+  transform: none !important;
+  z-index: 661 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag .scene-content > :is(.speech-teacher, .speech-dunno) {
+  grid-template-columns: minmax(0, 1fr) 36px !important;
+  gap: 9px !important;
+  padding: 11px 12px !important;
+  background: rgba(12, 22, 34, .76) !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag .scene-content > :is(.speech-teacher, .speech-dunno) :is(.speech-text, .translation-line, .speaker-name) {
+  color: #fff !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .8) !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag .scene-content > :is(.speech-teacher, .speech-dunno) .round-sound {
+  position: relative !important;
+  inset: auto !important;
+  width: 34px !important;
+  height: 34px !important;
+  z-index: 2 !important;
+  pointer-events: auto !important;
+}
+
+/* Initial question. */
+html body main.game-shell .stage.scene-secret-bag:not(.ea75-revealed) .scene-content > .prompt {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 78px !important;
+  width: min(280px, 34%) !important;
+  max-width: 34% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  background: rgba(12, 22, 34, .78) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 750 !important;
+  text-align: center !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .8) !important;
+  z-index: 670 !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag:not(.ea75-revealed) .scene-content > .choice-row {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 18px !important;
+  width: min(560px, 62%) !important;
+  max-width: 62% !important;
+  min-height: 0 !important;
+  transform: translateX(-50%) !important;
+  display: grid !important;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  gap: 9px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  z-index: 672 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag:not(.ea75-revealed) .scene-content > .choice-row > button {
+  min-width: 0 !important;
+  min-height: 46px !important;
+  padding: 9px 10px !important;
+  background: rgba(12, 22, 34, .80) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  line-height: 1.15 !important;
+  font-weight: 750 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .8) !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag:not(.ea75-revealed) .scene-content > .choice-row > button:hover,
+html body main.game-shell .stage.scene-secret-bag:not(.ea75-revealed) .scene-content > .choice-row > button:focus-visible {
+  background: rgba(43, 93, 127, .92) !important;
+}
+
+/* Correct answer state: one result panel, vocabulary, then a clear completion button. */
+html body main.game-shell .stage.scene-secret-bag.ea75-revealed .scene-content > .picture-card {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 105px !important;
+  width: min(410px, 46%) !important;
+  max-width: 46% !important;
+  min-height: 0 !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin: 0 !important;
+  padding: 10px 14px !important;
+  background: rgba(12, 22, 34, .78) !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  z-index: 670 !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag.ea75-revealed .scene-content > .picture-card > span {
+  font-size: 27px !important;
+  line-height: 1 !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag.ea75-revealed .scene-content > .prompt {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 59px !important;
+  width: min(430px, 48%) !important;
+  max-width: 48% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 7px 11px !important;
+  background: rgba(12, 22, 34, .76) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  font-size: 12px !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .8) !important;
+  z-index: 671 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag.ea75-revealed .scene-content > .prompt .inline-word {
+  padding: 3px 6px !important;
+  background: transparent !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  font-weight: 750 !important;
+  text-decoration: underline !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag.ea75-revealed .scene-content > .primary-action {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 12px !important;
+  width: min(300px, 36%) !important;
+  max-width: 36% !important;
+  min-height: 43px !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 10px 15px !important;
+  background: #45bd7d !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 13px !important;
+  box-shadow: 0 4px 0 rgba(27, 132, 82, .72) !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  font-weight: 780 !important;
+  text-align: center !important;
+  text-shadow: none !important;
+  cursor: pointer !important;
+  z-index: 674 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-secret-bag article.scene-card > .feedback {
+  display: none !important;
+}
+
+@media (max-width: 880px) {
+  html body main.game-shell .stage.scene-secret-bag .scene-content > .speech-teacher,
+  html body main.game-shell .stage.scene-secret-bag .scene-content > .speech-dunno {
+    top: 10px !important;
+    width: calc(50% - 17px) !important;
+    max-width: none !important;
+  }
+
+  html body main.game-shell .stage.scene-secret-bag .scene-content > .speech-dunno {
+    left: 10px !important;
+  }
+
+  html body main.game-shell .stage.scene-secret-bag .scene-content > .speech-teacher {
+    right: 10px !important;
+  }
+
+  html body main.game-shell .stage.scene-secret-bag:not(.ea75-revealed) .scene-content > .choice-row {
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  html body main.game-shell .stage.scene-secret-bag:not(.ea75-revealed) .scene-content > .prompt {
+    bottom: 121px !important;
+    width: calc(100% - 40px) !important;
+    max-width: none !important;
+  }
+
+  html body main.game-shell .stage.scene-secret-bag.ea75-revealed .scene-content > :is(.picture-card, .prompt, .primary-action) {
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+  }
+}
