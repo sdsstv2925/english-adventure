@@ -1,88 +1,70 @@
-/* Global transparent dialogue system for English Adventure v51 */
+/* English Adventure VERSION 52
+   Scene 6 only. Selectors are based on the real React DOM:
+   .stage.scene-names
+   .speech.speech-teacher
+   .echo-gnomes
+   .name-line
+   .name-line input
+*/
 
-/* Dialogue and information surfaces must not hide the illustration. */
-html body .stage :is(
-  .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
-  .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
-  .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
-  .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
-  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
-  .panel,.content-panel
-){
-  background:rgba(255,255,255,.06)!important;
-  -webkit-backdrop-filter:none!important;
-  backdrop-filter:none!important;
-  border:1px solid rgba(255,255,255,.34)!important;
-  box-shadow:0 4px 14px rgba(23,58,87,.06)!important;
-}
-
-/* Eliminate white pseudo-layers and speech tails. */
-html body .stage :is(
-  .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
-  .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
-  .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
-  .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
-  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
-  .panel,.content-panel
-)::before,
-html body .stage :is(
-  .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
-  .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
-  .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
-  .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
-  .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
-  .panel,.content-panel
-)::after{
-  background:transparent!important;
-  opacity:0!important;
-  box-shadow:none!important;
-  pointer-events:none!important;
-}
-
-/* Generated scene blocks with inline white backgrounds. */
-html body .stage .scene-content > div[style*="background"],
-html body .stage .scene-content > section[style*="background"]{
-  background:rgba(255,255,255,.06)!important;
-  -webkit-backdrop-filter:none!important;
-  backdrop-filter:none!important;
-}
-
-/* Answer-area containers remain visible but do not form white slabs. */
-html body .stage :is(.choice-row,.gift-row,.near-far){
-  background:rgba(255,255,255,.12)!important;
-  -webkit-backdrop-filter:none!important;
-  backdrop-filter:none!important;
-  border:1px solid rgba(255,255,255,.34)!important;
-  box-shadow:0 4px 14px rgba(23,58,87,.06)!important;
-}
-
-/* Controls remain solid and readable. */
-html body .stage :is(button,.primary-action,.secondary-action,.round-sound,input,textarea,.choice-row button,.gift-row button){
-  opacity:1!important;
-  -webkit-backdrop-filter:none!important;
-  backdrop-filter:none!important;
-}
-html body .stage input,html body .stage textarea{
-  background:rgba(255,255,255,.90)!important;
-}
-
-/* Improve text contrast without creating a white background. */
-html body .stage :is(.speech,.prompt,.song-card,.rhyme-card,.word-card,.instruction-card,.task-card,.question-card,.phrase-card,.repeat-card,.name-card,.sentence-builder,.dialog-card,.dialogue-card,.text-card,.info-card,.panel,.content-panel){
-  text-shadow:0 1px 0 rgba(255,255,255,.65)!important;
-}
-
-@media(max-width:880px){
-  html body .stage :is(
-    .speech,.prompt,.song-card,.rhyme-card,.word-card,.picture-card,
-    .count-first-card,.lesson-complete,.feedback,.kindness,.intro-card,
-    .instruction-card,.task-card,.question-card,.answer-card,.phrase-card,
-    .repeat-card,.name-card,.input-card,.input-row,.sentence-builder,
-    .sentence-row,.dialog-card,.dialogue-card,.text-card,.info-card,
-    .panel,.content-panel
-  ){
-    background:rgba(255,255,255,.10)!important;
+@media (min-width: 881px) {
+  html body .stage.scene-names .scene-content > .speech.speech-teacher {
+    background: rgba(255, 255, 255, 0.10) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.38) !important;
+    box-shadow: 0 4px 14px rgba(23, 58, 87, 0.07) !important;
   }
-  html body .stage :is(.choice-row,.gift-row,.near-far){
-    background:rgba(255,255,255,.16)!important;
+
+  html body .stage.scene-names .scene-content > .echo-gnomes {
+    background: rgba(255, 255, 255, 0.08) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.34) !important;
+    box-shadow: 0 4px 14px rgba(23, 58, 87, 0.06) !important;
+  }
+
+  html body .stage.scene-names .scene-content > .name-line {
+    background: rgba(255, 255, 255, 0.08) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.34) !important;
+    box-shadow: 0 4px 14px rgba(23, 58, 87, 0.06) !important;
+  }
+
+  html body .stage.scene-names .scene-content > .name-line input {
+    background: rgba(255, 255, 255, 0.22) !important;
+    border: 1px solid rgba(255, 255, 255, 0.36) !important;
+    box-shadow: none !important;
+  }
+
+  html body .stage.scene-names .scene-content > .speech.speech-teacher::before,
+  html body .stage.scene-names .scene-content > .speech.speech-teacher::after,
+  html body .stage.scene-names .scene-content > .echo-gnomes::before,
+  html body .stage.scene-names .scene-content > .echo-gnomes::after,
+  html body .stage.scene-names .scene-content > .name-line::before,
+  html body .stage.scene-names .scene-content > .name-line::after {
+    background: transparent !important;
+    box-shadow: none !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+}
+
+@media (max-width: 880px) {
+  html body .stage.scene-names .scene-content > .speech.speech-teacher,
+  html body .stage.scene-names .scene-content > .echo-gnomes,
+  html body .stage.scene-names .scene-content > .name-line {
+    background: rgba(255, 255, 255, 0.14) !important;
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.38) !important;
+    box-shadow: 0 4px 14px rgba(23, 58, 87, 0.07) !important;
+  }
+
+  html body .stage.scene-names .scene-content > .name-line input {
+    background: rgba(255, 255, 255, 0.28) !important;
+    border: 1px solid rgba(255, 255, 255, 0.40) !important;
+    box-shadow: none !important;
   }
 }
