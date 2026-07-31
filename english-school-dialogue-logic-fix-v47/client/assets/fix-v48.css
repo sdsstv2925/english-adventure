@@ -1,0 +1,60 @@
+/* English Adventure v48: deterministic desktop fixes for scenes 9 and 13–19 */
+@media (min-width:881px){
+html body .stage .scene-card,html body .stage .scene-content{pointer-events:auto!important}
+html body .stage .speech,html body .stage .speech .round-sound,html body .stage .choice-row,html body .stage .choice-row button,html body .stage .primary-action,html body .stage .secondary-action{pointer-events:auto!important}
+html body .stage .speech{z-index:410!important}
+html body .stage .speech .round-sound{z-index:440!important;cursor:pointer!important}
+
+/* 9 */
+html body .stage.scene-age .speech-dunno{left:25%!important;right:auto!important;top:7%!important;bottom:auto!important;width:27%!important;max-width:27%!important;transform:none!important}
+html body .stage.scene-age .speech-teacher{left:53%!important;right:auto!important;top:7%!important;bottom:auto!important;width:25%!important;max-width:25%!important;transform:none!important}
+html body .stage.scene-age .choice-row{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:58%!important;max-width:58%!important;transform:translateX(-50%)!important;z-index:420!important}
+
+/* 13 */
+html body .stage.scene-rhyme .speech-teacher{left:38%!important;right:auto!important;top:7%!important;bottom:auto!important;width:30%!important;max-width:30%!important;transform:none!important}
+html body .stage.scene-rhyme .rhyme-card{left:20%!important;right:auto!important;bottom:24px!important;top:auto!important;width:50%!important;max-width:50%!important;height:150px!important;max-height:150px!important;transform:none!important;overflow:hidden!important;z-index:410!important}
+html body .stage.scene-rhyme .primary-action{left:auto!important;right:5%!important;bottom:42px!important;top:auto!important;width:190px!important;max-width:20%!important;min-height:54px!important;transform:none!important;z-index:430!important}
+html body .stage.scene-rhyme .feedback{display:none!important}
+
+/* 14 */
+html body .stage.scene-dunno-test .speech-teacher{left:5%!important;right:auto!important;top:7%!important;width:31%!important;max-width:31%!important;transform:none!important}
+html body .stage.scene-dunno-test .speech-dunno{left:auto!important;right:5%!important;top:7%!important;width:29%!important;max-width:29%!important;transform:none!important}
+html body .stage.scene-dunno-test .prompt{display:none!important}
+html body .stage.scene-dunno-test .choice-row{left:50%!important;bottom:18px!important;top:auto!important;width:58%!important;max-width:58%!important;transform:translateX(-50%)!important;z-index:420!important}
+html body .stage.scene-dunno-test .feedback{display:none!important}
+
+/* 15 */
+html body .stage.scene-likes .speech-teacher{left:5%!important;right:auto!important;top:7%!important;width:31%!important;max-width:31%!important;transform:none!important}
+html body .stage.scene-likes .speech-dunno{left:auto!important;right:5%!important;top:7%!important;width:28%!important;max-width:28%!important;transform:none!important}
+html body .stage.scene-likes .gift-row,html body .stage.scene-likes .kindness{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:58%!important;max-width:58%!important;transform:translateX(-50%)!important;z-index:420!important}
+html body .stage.scene-likes .feedback{display:none!important}
+
+/* 16 */
+html body .stage.scene-nice-nasty .speech-teacher{left:auto!important;right:5%!important;top:7%!important;width:31%!important;max-width:31%!important;transform:none!important}
+html body .stage.scene-nice-nasty .near-far{left:22%!important;right:auto!important;bottom:88px!important;top:auto!important;width:56%!important;max-width:56%!important;height:175px!important;max-height:175px!important;transform:none!important;overflow:hidden!important;z-index:400!important}
+html body .stage.scene-nice-nasty .prompt{display:none!important}
+html body .stage.scene-nice-nasty .choice-row{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:34%!important;max-width:34%!important;transform:translateX(-50%)!important;z-index:430!important}
+html body .stage.scene-nice-nasty .feedback{display:none!important}
+
+/* 17 */
+html body .stage.scene-secret-bag .speech-teacher{left:5%!important;right:auto!important;top:7%!important;width:31%!important;max-width:31%!important;transform:none!important}
+html body .stage.scene-secret-bag .speech-dunno{left:39%!important;right:auto!important;top:7%!important;width:25%!important;max-width:25%!important;transform:none!important}
+html body .stage.scene-secret-bag .scene-content:has(.picture-card) .speech-teacher{display:none!important}
+html body .stage.scene-secret-bag .choice-row{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:52%!important;max-width:52%!important;transform:translateX(-50%)!important;z-index:430!important}
+html body .stage.scene-secret-bag .picture-card{left:50%!important;right:auto!important;bottom:82px!important;top:auto!important;width:52%!important;max-width:52%!important;height:76px!important;max-height:76px!important;transform:translateX(-50%)!important;overflow:hidden!important;z-index:400!important}
+html body .stage.scene-secret-bag .scene-content>.prompt{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:52%!important;max-width:52%!important;min-height:52px!important;transform:translateX(-50%)!important;z-index:420!important}
+html body .stage.scene-secret-bag .primary-action{left:auto!important;right:5%!important;bottom:22px!important;top:auto!important;width:180px!important;max-width:18%!important;transform:none!important;z-index:440!important}
+html body .stage.scene-secret-bag .feedback{display:none!important}
+
+/* 18 */
+html body .stage.scene-roy .speech-teacher{left:40%!important;right:auto!important;top:7%!important;width:29%!important;max-width:29%!important;transform:none!important}
+html body .stage.scene-roy .song-card{left:20%!important;right:auto!important;bottom:88px!important;top:auto!important;width:58%!important;max-width:58%!important;height:248px!important;max-height:248px!important;padding:14px 20px!important;transform:none!important;overflow:auto!important;z-index:410!important}
+html body .stage.scene-roy .choice-row{left:50%!important;right:auto!important;bottom:18px!important;top:auto!important;width:42%!important;max-width:42%!important;transform:translateX(-50%)!important;z-index:440!important}
+html body .stage.scene-roy .prompt,html body .stage.scene-roy .feedback{display:none!important}
+
+/* 19 */
+html body .stage.scene-final .lesson-complete{left:50%!important;right:auto!important;top:49%!important;bottom:auto!important;width:58%!important;max-width:58%!important;min-height:430px!important;height:430px!important;max-height:430px!important;padding:20px 24px 92px!important;transform:translate(-50%,-50%)!important;overflow:hidden!important;z-index:400!important}
+html body .stage.scene-final .score-card{margin:12px auto 0!important}
+html body .stage.scene-final .secondary-action{left:50%!important;right:auto!important;bottom:44px!important;top:auto!important;width:330px!important;max-width:38%!important;min-height:54px!important;transform:translateX(-50%)!important;z-index:440!important}
+html body .stage.scene-final .feedback{display:none!important}
+}
