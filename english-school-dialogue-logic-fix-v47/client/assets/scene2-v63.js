@@ -1,20 +1,66 @@
 (() => {
-  if (window.__eaScene2V65Installed) return;
-  window.__eaScene2V65Installed = true;
+  if (window.__eaScene2V70Installed) return;
+  window.__eaScene2V70Installed = true;
 
-  const COMPLETE_KEY = 'english-adventure-scene2-user-complete-v65';
+  const COMPLETE_KEY = 'english-adventure-scene2-user-complete-v70';
   let replayAudio = null;
   let resultAudioPlayed = false;
+  let transitionScheduled = false;
+  let transitionTimer = null;
 
-  const playFile = src => {
+  const clearTransition = () => {
+    if (transitionTimer) {
+      window.clearTimeout(transitionTimer);
+      transitionTimer = null;
+    }
+    transitionScheduled = false;
+  };
+
+  const goToNextScene = () => {
+    const stage = document.querySelector('.stage.scene-come-in');
+    if (!stage) return;
+
+    const next = document.querySelector('.lesson-controls .next-button');
+    if (!next || next.disabled) return;
+
+    next.click();
+  };
+
+  const scheduleNextScene = delay = 250 => {
+    if (transitionScheduled) return;
+    transitionScheduled = true;
+
+    transitionTimer = window.setTimeout(() => {
+      transitionTimer = null;
+      goToNextScene();
+    }, delay);
+  };
+
+  const playFile = (src, onFinished) => {
     if (replayAudio) {
+      replayAudio.onended = null;
+      replayAudio.onerror = null;
       replayAudio.pause();
       replayAudio.src = '';
     }
 
     replayAudio = new Audio(src);
     replayAudio.volume = 0.96;
-    replayAudio.play().catch(() => {});
+
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      onFinished?.();
+    };
+
+    replayAudio.onended = finish;
+    replayAudio.onerror = finish;
+
+    const promise = replayAudio.play();
+    if (promise && typeof promise.catch === 'function') {
+      promise.catch(finish);
+    }
   };
 
   const setNextEnabled = enabled => {
@@ -59,6 +105,9 @@
   };
 
   const renderWaiting = layer => {
+    clearTransition();
+    resultAudioPlayed = false;
+
     if (layer.dataset.state === 'waiting') return;
     layer.dataset.state = 'waiting';
 
@@ -94,7 +143,7 @@
       button.textContent = 'Дети садятся на ковёр…';
 
       sessionStorage.setItem(COMPLETE_KEY, '1');
-      window.setTimeout(syncScene2, 260);
+      window.setTimeout(syncScene2, 180);
     });
   };
 
@@ -112,13 +161,18 @@
       `;
 
       layer.querySelector('.ea64-scene2-sound')?.addEventListener('click', () => {
-        playFile('/audio/voice-girl/good-morning.mp3?v=65');
+        clearTransition();
+        playFile('/audio/voice-girl/good-morning.mp3?v=70');
       });
     }
 
     if (!resultAudioPlayed) {
       resultAudioPlayed = true;
-      window.setTimeout(() => playFile('/audio/voice-girl/good-morning.mp3?v=65'), 100);
+      window.setTimeout(() => {
+        playFile('/audio/voice-girl/good-morning.mp3?v=70', () => scheduleNextScene(300));
+        transitionTimer = window.setTimeout(() => goToNextScene(), 3200);
+        transitionScheduled = true;
+      }, 100);
     }
   };
 
@@ -156,6 +210,7 @@
 
     sessionStorage.removeItem(COMPLETE_KEY);
     resultAudioPlayed = false;
+    clearTransition();
   });
 
   const observer = new MutationObserver(() => {
