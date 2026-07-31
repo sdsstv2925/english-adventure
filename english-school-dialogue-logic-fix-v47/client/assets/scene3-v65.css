@@ -1,0 +1,108 @@
+/* English Adventure VERSION 65
+   Scene 3: selected answer and teacher confirmation are separate dialogs.
+*/
+
+html body .stage.scene-why-english .ea65-scene3-result {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 720 !important;
+  pointer-events: none !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-child,
+html body .stage.scene-why-english .ea65-scene3-teacher {
+  position: absolute !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 11px 14px !important;
+  border: 0 !important;
+  border-radius: 14px !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: rgba(12, 22, 34, .74) !important;
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .76) !important;
+  pointer-events: auto !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-child {
+  left: 18% !important;
+  bottom: 14% !important;
+  width: min(360px, 36%) !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-teacher {
+  left: 50% !important;
+  top: 8% !important;
+  width: min(390px, 42%) !important;
+  transform: translateX(-50%) !important;
+  justify-content: space-between !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-teacher > div {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  min-width: 0 !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-role {
+  color: rgba(255, 255, 255, .76) !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: .04em !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-child strong,
+html body .stage.scene-why-english .ea65-scene3-teacher strong {
+  color: #fff !important;
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+  font-weight: 750 !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-teacher small {
+  color: rgba(255, 255, 255, .86) !important;
+  font-size: 11px !important;
+  line-height: 1.25 !important;
+  font-weight: 500 !important;
+}
+
+html body .stage.scene-why-english .ea65-scene3-sound {
+  flex: 0 0 auto !important;
+  width: 36px !important;
+  height: 36px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  outline: 0 !important;
+  background: rgba(255, 255, 255, .16) !important;
+  color: #fff !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+}
+
+@media (max-width: 880px) {
+  html body .stage.scene-why-english .ea65-scene3-child {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 16px !important;
+    width: auto !important;
+  }
+
+  html body .stage.scene-why-english .ea65-scene3-teacher {
+    left: 12px !important;
+    right: 12px !important;
+    top: 12px !important;
+    width: auto !important;
+    transform: none !important;
+  }
+}
