@@ -1,6 +1,6 @@
 (() => {
-  if (window.__eaScene3V58Installed) return;
-  window.__eaScene3V58Installed = true;
+  if (window.__eaScene3V59Installed) return;
+  window.__eaScene3V59Installed = true;
 
   const syncScene3 = () => {
     const stage = document.querySelector('.stage.scene-why-english');
@@ -10,11 +10,11 @@
     if (!content) return;
 
     const speeches = [...content.querySelectorAll(':scope > .speech')];
-    const successSpeech = content.querySelector(':scope > .choice-grid + .speech');
+    const choiceGrid = content.querySelector(':scope > .choice-grid');
+    const successSpeech = content.querySelector(':scope > .choice-grid + .speech') || speeches.at(-1);
 
-    if (!successSpeech) {
+    if (!successSpeech || speeches.length < 2) {
       stage.classList.remove('ea-scene3-complete');
-      speeches.forEach(speech => speech.removeAttribute('aria-hidden'));
       return;
     }
 
@@ -22,26 +22,24 @@
 
     speeches.forEach(speech => {
       if (speech === successSpeech) {
+        speech.style.removeProperty('display');
         speech.removeAttribute('aria-hidden');
       } else {
+        speech.style.setProperty('display', 'none', 'important');
         speech.setAttribute('aria-hidden', 'true');
       }
     });
 
-    /* Match the visible text to the audio triggered by the correct answer. */
-    const speechText = successSpeech.querySelector('.speech-text');
-    if (speechText && speechText.textContent.trim() !== 'Yes! Excellent!') {
-      speechText.textContent = 'Yes! Excellent!';
+    if (choiceGrid) {
+      choiceGrid.style.setProperty('display', 'none', 'important');
+      choiceGrid.setAttribute('aria-hidden', 'true');
     }
 
-    const translation = successSpeech.querySelector('.translation-line');
-    if (translation) translation.remove();
-
-    const speakerName = successSpeech.querySelector('.speaker-name');
-    if (speakerName) speakerName.remove();
-
-    const feedback = stage.querySelector('article.scene-card > .feedback');
-    if (feedback) feedback.setAttribute('aria-hidden', 'true');
+    const feedback = stage.querySelector('.feedback');
+    if (feedback) {
+      feedback.style.setProperty('display', 'none', 'important');
+      feedback.setAttribute('aria-hidden', 'true');
+    }
   };
 
   const observer = new MutationObserver(syncScene3);
