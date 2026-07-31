@@ -53,6 +53,7 @@ export default {
             '<script defer src="/assets/scene9-audio-v68.js?v=76"></script>' +
             '<script defer src="/assets/scene17-v75.js?v=76"></script>' +
             '<script defer src="/assets/scene18-v76.js?v=76"></script>' +
+            '<script defer src="/assets/scene18-v76-fix.js?v=76"></script>' +
             '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 76"!important;font-size:12px!important}</style>',
             { html: true }
           );
