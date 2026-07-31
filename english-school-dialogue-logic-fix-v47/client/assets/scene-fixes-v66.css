@@ -1,0 +1,314 @@
+/* English Adventure VERSION 66
+   Targeted fixes for scenes 6, 7, 9 and 11.
+   Loaded last so legacy v48 rules cannot restore white panels.
+*/
+
+:root {
+  --ea66-panel: rgba(12, 22, 34, .72);
+  --ea66-panel-soft: rgba(12, 22, 34, .58);
+  --ea66-control: rgba(255, 255, 255, .14);
+  --ea66-text: #fff;
+  --ea66-muted: rgba(255, 255, 255, .84);
+  --ea66-shadow: 0 1px 2px rgba(0, 0, 0, .78);
+}
+
+/* Scene 6 — the entered name must remain white in every browser state. */
+html body main.game-shell .stage.scene-names .name-line input,
+html body main.game-shell .stage.scene-names .name-line input:hover,
+html body main.game-shell .stage.scene-names .name-line input:focus,
+html body main.game-shell .stage.scene-names .name-line input:active,
+html body main.game-shell .stage.scene-names .name-line input:not(:placeholder-shown) {
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  caret-color: #fff !important;
+  opacity: 1 !important;
+  background: var(--ea66-panel) !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .72) !important;
+}
+
+html body main.game-shell .stage.scene-names .name-line input::selection {
+  color: #fff !important;
+  background: rgba(70, 185, 126, .72) !important;
+}
+
+/* Scene 7 — one compact lower dialogue, no white outer strip. */
+html body main.game-shell section.stage:has(.toy-cloud) article.scene-card .scene-content > .toy-cloud,
+html body main.game-shell section.stage:has(.table-toys) article.scene-card .scene-content > .table-toys {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 16px !important;
+  top: auto !important;
+  width: min(720px, 66%) !important;
+  max-width: 66% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  overflow: visible !important;
+  background: var(--ea66-panel) !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  color: var(--ea66-text) !important;
+  z-index: 560 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell section.stage:has(.toy-cloud) .toy-cloud::before,
+html body main.game-shell section.stage:has(.toy-cloud) .toy-cloud::after,
+html body main.game-shell section.stage:has(.table-toys) .table-toys::before,
+html body main.game-shell section.stage:has(.table-toys) .table-toys::after {
+  display: none !important;
+  content: none !important;
+}
+
+html body main.game-shell section.stage:has(.toy-cloud) .toy-cloud :is(
+  .prompt,.toy-question,.question,.toy-count,.answer,.toy-answer,
+  p,b,strong,small,span
+),
+html body main.game-shell section.stage:has(.table-toys) .table-toys :is(
+  .prompt,.toy-question,.question,.toy-count,.answer,.toy-answer,
+  p,b,strong,small,span
+) {
+  color: #fff !important;
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  text-shadow: var(--ea66-shadow) !important;
+}
+
+html body main.game-shell section.stage:has(.toy-cloud) .toy-cloud :is(button,.choice-button),
+html body main.game-shell section.stage:has(.table-toys) .table-toys :is(button,.choice-button) {
+  min-width: 74px !important;
+  min-height: 42px !important;
+  padding: 7px 10px !important;
+  background: var(--ea66-control) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  font-size: 13px !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+  text-shadow: var(--ea66-shadow) !important;
+  pointer-events: auto !important;
+}
+
+/* Scene 9 — audio control must be above every scene layer. */
+html body main.game-shell .stage.scene-age .speech-teacher {
+  position: absolute !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+  isolation: isolate !important;
+  z-index: 9000 !important;
+}
+
+html body main.game-shell .stage.scene-age .speech-teacher .round-sound {
+  position: relative !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
+  cursor: pointer !important;
+  isolation: isolate !important;
+  z-index: 99990 !important;
+}
+
+html body main.game-shell .stage.scene-age .ea66-age-sound-proxy {
+  position: absolute !important;
+  width: 46px !important;
+  height: 46px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  cursor: pointer !important;
+  z-index: 100000 !important;
+  pointer-events: auto !important;
+}
+
+/* Scene 11 — count question and toy word card use the same compact dark style. */
+html body main.game-shell .stage.scene-four-toys .count-first-card {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 18px !important;
+  top: auto !important;
+  width: min(620px, 58%) !important;
+  max-width: 58% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 13px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  background: var(--ea66-panel) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  z-index: 650 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .count-first-card::before,
+html body main.game-shell .stage.scene-four-toys .count-first-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .count-first-card b {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+  font-weight: 750 !important;
+  text-align: center !important;
+  text-shadow: var(--ea66-shadow) !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .count-first-options {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  width: auto !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .count-first-options button {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  min-width: 90px !important;
+  min-height: 44px !important;
+  padding: 9px 16px !important;
+  background: var(--ea66-control) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  font-weight: 750 !important;
+  text-shadow: var(--ea66-shadow) !important;
+  cursor: pointer !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .count-first-options button.correct {
+  background: rgba(36, 151, 86, .82) !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .count-first-message {
+  min-height: 0 !important;
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  font-weight: 650 !important;
+  text-align: center !important;
+  text-shadow: var(--ea66-shadow) !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .word-card {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  bottom: 18px !important;
+  top: auto !important;
+  width: min(580px, 56%) !important;
+  max-width: 56% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 12px 15px !important;
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 11px !important;
+  overflow: visible !important;
+  background: var(--ea66-panel) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  z-index: 640 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .word-card::before,
+html body main.game-shell .stage.scene-four-toys .word-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .word-card :is(p,b,strong,small,span) {
+  color: #fff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  text-shadow: var(--ea66-shadow) !important;
+}
+
+html body main.game-shell .stage.scene-four-toys .word-card button {
+  min-height: 42px !important;
+  padding: 8px 12px !important;
+  background: var(--ea66-control) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  text-shadow: var(--ea66-shadow) !important;
+}
+
+@media (max-width: 880px) {
+  html body main.game-shell section.stage:has(.toy-cloud) article.scene-card .scene-content > .toy-cloud,
+  html body main.game-shell section.stage:has(.table-toys) article.scene-card .scene-content > .table-toys,
+  html body main.game-shell .stage.scene-four-toys .count-first-card,
+  html body main.game-shell .stage.scene-four-toys .word-card {
+    width: calc(100% - 22px) !important;
+    max-width: none !important;
+    bottom: 11px !important;
+  }
+
+  html body main.game-shell .stage.scene-four-toys .word-card {
+    grid-template-columns: auto minmax(0, 1fr) !important;
+  }
+}
