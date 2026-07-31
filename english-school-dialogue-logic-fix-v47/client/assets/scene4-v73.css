@@ -1,0 +1,61 @@
+/* English Adventure VERSION 73
+   Scene 4: keep wrong-answer feedback separate from the teacher dialogue.
+*/
+
+html body main.game-shell .stage.scene-languages article.scene-card:not(.ea62-complete) > .feedback {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 78px !important;
+  width: min(330px, 38%) !important;
+  max-width: 38% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  display: block !important;
+  background: rgba(12, 22, 34, .76) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.25 !important;
+  font-weight: 650 !important;
+  text-align: center !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .78) !important;
+  white-space: normal !important;
+  z-index: 660 !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell .stage.scene-languages article.scene-card:not(.ea62-complete) > .feedback::before,
+html body main.game-shell .stage.scene-languages article.scene-card:not(.ea62-complete) > .feedback::after,
+html body main.game-shell .stage.scene-languages article.scene-card:not(.ea62-complete) > .feedback .success-stars {
+  display: none !important;
+  content: none !important;
+}
+
+html body main.game-shell .stage.scene-languages article.scene-card .scene-content > .speech {
+  z-index: 640 !important;
+}
+
+html body main.game-shell .stage.scene-languages article.scene-card .scene-content > .choice-row {
+  z-index: 650 !important;
+}
+
+@media (max-width: 880px) {
+  html body main.game-shell .stage.scene-languages article.scene-card:not(.ea62-complete) > .feedback {
+    bottom: 72px !important;
+    width: calc(100% - 36px) !important;
+    max-width: none !important;
+    font-size: 12px !important;
+  }
+}
