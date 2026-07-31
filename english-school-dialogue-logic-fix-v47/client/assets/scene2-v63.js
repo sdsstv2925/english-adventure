@@ -1,16 +1,17 @@
 (() => {
-  if (window.__eaScene2V63Installed) return;
-  window.__eaScene2V63Installed = true;
+  if (window.__eaScene2V64Installed) return;
+  window.__eaScene2V64Installed = true;
 
-  const COMPLETE_KEY = 'english-adventure-scene2-user-complete-v63';
-  let goodMorningPlayed = false;
+  const COMPLETE_KEY = 'english-adventure-scene2-user-complete-v64';
   let replayAudio = null;
+  let resultAudioPlayed = false;
 
   const playFile = src => {
     if (replayAudio) {
       replayAudio.pause();
       replayAudio.src = '';
     }
+
     replayAudio = new Audio(src);
     replayAudio.volume = 0.96;
     replayAudio.play().catch(() => {});
@@ -20,81 +21,98 @@
     const next = document.querySelector('.lesson-controls .next-button');
     if (!next) return;
 
-    next.disabled = !enabled;
-    next.setAttribute('aria-disabled', enabled ? 'false' : 'true');
-    next.classList.toggle('ea63-scene2-locked', !enabled);
+    const mustDisable = !enabled;
+    if (next.disabled !== mustDisable) next.disabled = mustDisable;
+
+    const ariaValue = enabled ? 'false' : 'true';
+    if (next.getAttribute('aria-disabled') !== ariaValue) {
+      next.setAttribute('aria-disabled', ariaValue);
+    }
+
+    next.classList.toggle('ea64-scene2-locked', mustDisable);
   };
 
-  const buildFlow = content => {
-    let flow = content.querySelector(':scope > .ea63-scene2-flow');
-    if (flow) return flow;
+  const hideNativeScene2 = card => {
+    const content = card.querySelector(':scope > .scene-content');
+    if (!content) return;
 
-    flow = document.createElement('div');
-    flow.className = 'ea63-scene2-flow';
-    flow.innerHTML = `
-      <div class="ea63-scene2-caption">
-        <div class="ea63-scene2-copy">
+    [...content.children].forEach(element => {
+      element.style.setProperty('display', 'none', 'important');
+      element.setAttribute('aria-hidden', 'true');
+    });
+
+    const feedback = card.querySelector(':scope > .feedback');
+    if (feedback) {
+      feedback.style.setProperty('display', 'none', 'important');
+      feedback.setAttribute('aria-hidden', 'true');
+    }
+  };
+
+  const createLayer = card => {
+    let layer = card.querySelector(':scope > .ea64-scene2-layer');
+    if (layer) return layer;
+
+    layer = document.createElement('div');
+    layer.className = 'ea64-scene2-layer';
+    card.append(layer);
+    return layer;
+  };
+
+  const renderWaiting = layer => {
+    if (layer.dataset.state === 'waiting') return;
+    layer.dataset.state = 'waiting';
+
+    layer.innerHTML = `
+      <div class="ea64-scene2-caption">
+        <div class="ea64-scene2-copy">
           <strong>Come in, boys and girls!</strong>
           <span>Sit down! Sit on the chairs!</span>
           <small>Входите, мальчики и девочки! Садитесь на стулья.</small>
         </div>
-        <button type="button" class="ea63-scene2-sound" aria-label="Послушать приглашение учительницы">🔊</button>
+        <button type="button" class="ea64-scene2-sound" aria-label="Послушать приглашение учительницы">🔊</button>
       </div>
-      <div class="ea63-scene2-task">
+
+      <div class="ea64-scene2-task">
         <span>Послушай учительницу и помоги детям занять свои места.</span>
-        <button type="button" class="ea63-scene2-seat">🪑 Сесть на стулья</button>
+        <button type="button" class="ea64-scene2-seat">🪑 Сесть на стулья</button>
       </div>
     `;
 
-    flow.querySelector('.ea63-scene2-sound')?.addEventListener('click', () => {
-      playFile('/audio/voice/come-in.mp3?v=63');
+    layer.querySelector('.ea64-scene2-sound')?.addEventListener('click', () => {
+      playFile('/audio/voice/come-in.mp3?v=64');
     });
 
-    flow.querySelector('.ea63-scene2-seat')?.addEventListener('click', event => {
-      sessionStorage.setItem(COMPLETE_KEY, '1');
+    layer.querySelector('.ea64-scene2-seat')?.addEventListener('click', event => {
       const button = event.currentTarget;
       button.disabled = true;
       button.textContent = 'Дети садятся…';
-      syncScene2();
-    });
 
-    content.append(flow);
-    return flow;
-  };
-
-  const hideNativeBeforeAction = content => {
-    [...content.children].forEach(element => {
-      if (element.matches('.speech, .seating-progress')) {
-        element.style.setProperty('display', 'none', 'important');
-        element.setAttribute('aria-hidden', 'true');
-      }
+      sessionStorage.setItem(COMPLETE_KEY, '1');
+      window.setTimeout(syncScene2, 260);
     });
   };
 
-  const showGoodMorning = (stage, content, girlSpeech) => {
-    content.querySelector(':scope > .ea63-scene2-flow')?.remove();
+  const renderComplete = layer => {
+    if (layer.dataset.state !== 'complete') {
+      layer.dataset.state = 'complete';
+      layer.innerHTML = `
+        <div class="ea64-scene2-result">
+          <div>
+            <strong>Good morning!</strong>
+            <small>Доброе утро!</small>
+          </div>
+          <button type="button" class="ea64-scene2-sound" aria-label="Послушать Good morning">🔊</button>
+        </div>
+      `;
 
-    [...content.children].forEach(element => {
-      if (element.matches('.speech') && element !== girlSpeech) {
-        element.style.setProperty('display', 'none', 'important');
-        element.setAttribute('aria-hidden', 'true');
-      }
-    });
+      layer.querySelector('.ea64-scene2-sound')?.addEventListener('click', () => {
+        playFile('/audio/voice-girl/good-morning.mp3?v=64');
+      });
+    }
 
-    girlSpeech.style.removeProperty('display');
-    girlSpeech.removeAttribute('aria-hidden');
-    stage.classList.remove('ea63-scene2-waiting');
-    stage.classList.add('ea63-scene2-complete');
-    setNextEnabled(true);
-
-    if (!goodMorningPlayed) {
-      goodMorningPlayed = true;
-      const soundButton = girlSpeech.querySelector('.round-sound');
-      if (soundButton) {
-        window.setTimeout(() => soundButton.click(), 80);
-      } else {
-        playFile('/audio/voice-girl/good-morning.mp3?v=63');
-      }
+    if (!resultAudioPlayed) {
+      resultAudioPlayed = true;
+      window.setTimeout(() => playFile('/audio/voice-girl/good-morning.mp3?v=64'), 100);
     }
   };
 
@@ -102,37 +120,26 @@
     const stage = document.querySelector('.stage.scene-come-in');
     if (!stage) return;
 
-    const content = stage.querySelector(':scope > article.scene-card > .scene-content');
-    if (!content) return;
+    const card = stage.querySelector(':scope > article.scene-card');
+    if (!card) return;
 
-    stage.classList.add('ea63-scene2-controlled');
+    stage.classList.add('ea64-scene2-controlled');
+    hideNativeScene2(card);
 
-    const userCompleted = sessionStorage.getItem(COMPLETE_KEY) === '1';
-    const girlSpeech = content.querySelector(':scope > .speech-girl');
+    const layer = createLayer(card);
+    const completedByUser = sessionStorage.getItem(COMPLETE_KEY) === '1';
 
-    if (!userCompleted) {
-      stage.classList.add('ea63-scene2-waiting');
-      stage.classList.remove('ea63-scene2-complete');
-      hideNativeBeforeAction(content);
-      buildFlow(content);
+    if (completedByUser) {
+      stage.classList.remove('ea64-scene2-waiting');
+      stage.classList.add('ea64-scene2-complete');
+      renderComplete(layer);
+      setNextEnabled(true);
+    } else {
+      stage.classList.add('ea64-scene2-waiting');
+      stage.classList.remove('ea64-scene2-complete');
+      renderWaiting(layer);
       setNextEnabled(false);
-      return;
     }
-
-    if (girlSpeech) {
-      showGoodMorning(stage, content, girlSpeech);
-      return;
-    }
-
-    stage.classList.add('ea63-scene2-waiting');
-    const flow = buildFlow(content);
-    const button = flow.querySelector('.ea63-scene2-seat');
-    if (button) {
-      button.disabled = true;
-      button.textContent = 'Дети садятся…';
-    }
-    hideNativeBeforeAction(content);
-    setNextEnabled(false);
   }
 
   document.addEventListener('click', event => {
@@ -142,10 +149,13 @@
     if (!restart) return;
 
     sessionStorage.removeItem(COMPLETE_KEY);
-    goodMorningPlayed = false;
+    resultAudioPlayed = false;
   });
 
-  const observer = new MutationObserver(syncScene2);
+  const observer = new MutationObserver(() => {
+    window.requestAnimationFrame(syncScene2);
+  });
+
   observer.observe(document.documentElement, {
     childList: true,
     subtree: true
