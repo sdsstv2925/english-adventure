@@ -1,0 +1,205 @@
+/* English Adventure VERSION 76
+   Scene 18: melodic Roy performance with music and timed lyrics.
+*/
+
+html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .song-card {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 76px !important;
+  width: min(590px, 58%) !important;
+  max-width: 58% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 14px 18px !important;
+  display: block !important;
+  background: rgba(11, 22, 35, .82) !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 18px !important;
+  box-shadow: none !important;
+  overflow: visible !important;
+  z-index: 720 !important;
+}
+
+html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .song-card::before,
+html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .song-card::after,
+html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .song-card > [data-ea76-native-song="true"] {
+  display: none !important;
+  content: none !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-song-ui {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 8px !important;
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-song-play {
+  min-width: 260px !important;
+  min-height: 44px !important;
+  padding: 10px 18px !important;
+  border: 0 !important;
+  border-radius: 13px !important;
+  outline: 0 !important;
+  background: #45bd7d !important;
+  color: #fff !important;
+  box-shadow: 0 4px 0 rgba(27, 132, 82, .72) !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  font-weight: 780 !important;
+  text-shadow: none !important;
+  cursor: pointer !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-song-play:disabled {
+  opacity: .72 !important;
+  cursor: wait !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-song-status {
+  color: rgba(255, 255, 255, .78) !important;
+  font-size: 11px !important;
+  line-height: 1.25 !important;
+  font-weight: 600 !important;
+  text-align: center !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-song-lyrics {
+  width: 100% !important;
+  min-height: 54px !important;
+  display: grid !important;
+  place-items: center !important;
+  text-align: center !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-lyric-line {
+  display: none !important;
+  color: rgba(255, 255, 255, .84) !important;
+  font-size: 16px !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+  letter-spacing: .01em !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .75) !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-lyric-line.is-active {
+  display: block !important;
+  color: #fff !important;
+  font-size: 18px !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-song-progress {
+  width: 100% !important;
+  height: 5px !important;
+  overflow: hidden !important;
+  border-radius: 999px !important;
+  background: rgba(255, 255, 255, .15) !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea76-song-progress > i {
+  display: block !important;
+  width: 0 !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  background: #4ed29a !important;
+  transition: width .09s linear !important;
+}
+
+html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .choice-row[data-roy-locked="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .choice-row.ea76-roy-unlocked {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 15px !important;
+  width: min(590px, 58%) !important;
+  max-width: 58% !important;
+  min-height: 52px !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  background: rgba(11, 22, 35, .82) !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: 15px !important;
+  box-shadow: none !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 725 !important;
+}
+
+html body main.game-shell .stage.scene-roy .choice-row.ea76-roy-unlocked::before,
+html body main.game-shell .stage.scene-roy .choice-row.ea76-roy-unlocked::after {
+  display: none !important;
+  content: none !important;
+}
+
+html body main.game-shell .stage.scene-roy .choice-row.ea76-roy-unlocked .ea-roy-question {
+  margin: 0 8px 0 0 !important;
+  color: #fff !important;
+  font-size: 15px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  white-space: nowrap !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .75) !important;
+}
+
+html body main.game-shell .stage.scene-roy .choice-row.ea76-roy-unlocked button {
+  min-width: 62px !important;
+  min-height: 38px !important;
+  padding: 7px 13px !important;
+  background: rgba(255, 255, 255, .14) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 750 !important;
+  text-shadow: none !important;
+}
+
+@media (max-width: 880px) {
+  html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .song-card,
+  html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .choice-row.ea76-roy-unlocked {
+    width: calc(100% - 24px) !important;
+    max-width: none !important;
+  }
+
+  html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .song-card {
+    bottom: 86px !important;
+    padding: 12px !important;
+  }
+
+  html body main.game-shell .stage.scene-roy .ea76-song-play {
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  html body main.game-shell .stage.scene-roy.ea76-scene18-controlled .choice-row.ea76-roy-unlocked {
+    flex-wrap: wrap !important;
+  }
+
+  html body main.game-shell .stage.scene-roy .choice-row.ea76-roy-unlocked .ea-roy-question {
+    width: 100% !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+}
