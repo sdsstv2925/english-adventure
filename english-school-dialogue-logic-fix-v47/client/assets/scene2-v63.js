@@ -1,8 +1,8 @@
 (() => {
-  if (window.__eaScene2V64Installed) return;
-  window.__eaScene2V64Installed = true;
+  if (window.__eaScene2V65Installed) return;
+  window.__eaScene2V65Installed = true;
 
-  const COMPLETE_KEY = 'english-adventure-scene2-user-complete-v64';
+  const COMPLETE_KEY = 'english-adventure-scene2-user-complete-v65';
   let replayAudio = null;
   let resultAudioPlayed = false;
 
@@ -66,26 +66,32 @@
       <div class="ea64-scene2-caption">
         <div class="ea64-scene2-copy">
           <strong>Come in, boys and girls!</strong>
-          <span>Sit down! Sit on the chairs!</span>
-          <small>Входите, мальчики и девочки! Садитесь на стулья.</small>
+          <span>Sit down on the carpet!</span>
+          <small>Входите, мальчики и девочки! Садитесь на ковёр.</small>
         </div>
         <button type="button" class="ea64-scene2-sound" aria-label="Послушать приглашение учительницы">🔊</button>
       </div>
 
       <div class="ea64-scene2-task">
-        <span>Послушай учительницу и помоги детям занять свои места.</span>
-        <button type="button" class="ea64-scene2-seat">🪑 Сесть на стулья</button>
+        <span>Послушай учительницу и помоги детям сесть на ковёр.</span>
+        <button type="button" class="ea64-scene2-seat">Сесть на ковёр</button>
       </div>
     `;
 
     layer.querySelector('.ea64-scene2-sound')?.addEventListener('click', () => {
-      playFile('/audio/voice/come-in.mp3?v=64');
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance('Come in, boys and girls! Sit down on the carpet!');
+        utterance.lang = 'en-GB';
+        utterance.rate = 0.88;
+        window.speechSynthesis.speak(utterance);
+      }
     });
 
     layer.querySelector('.ea64-scene2-seat')?.addEventListener('click', event => {
       const button = event.currentTarget;
       button.disabled = true;
-      button.textContent = 'Дети садятся…';
+      button.textContent = 'Дети садятся на ковёр…';
 
       sessionStorage.setItem(COMPLETE_KEY, '1');
       window.setTimeout(syncScene2, 260);
@@ -106,13 +112,13 @@
       `;
 
       layer.querySelector('.ea64-scene2-sound')?.addEventListener('click', () => {
-        playFile('/audio/voice-girl/good-morning.mp3?v=64');
+        playFile('/audio/voice-girl/good-morning.mp3?v=65');
       });
     }
 
     if (!resultAudioPlayed) {
       resultAudioPlayed = true;
-      window.setTimeout(() => playFile('/audio/voice-girl/good-morning.mp3?v=64'), 100);
+      window.setTimeout(() => playFile('/audio/voice-girl/good-morning.mp3?v=65'), 100);
     }
   };
 
