@@ -1,0 +1,182 @@
+/* English Adventure VERSION 72
+   Scene 13: compact readable rhyme block, visible translation and action.
+*/
+
+html body main.game-shell .stage.scene-rhyme article.scene-card .scene-content > .rhyme-card {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 82px !important;
+  width: min(620px, 58%) !important;
+  max-width: 58% !important;
+  min-height: 0 !important;
+  height: auto !important;
+  max-height: none !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 13px 15px !important;
+  display: grid !important;
+  grid-template-columns: 42px minmax(0, 1fr) !important;
+  align-items: center !important;
+  gap: 12px !important;
+  overflow: visible !important;
+  background: rgba(12, 22, 34, .74) !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  color: #fff !important;
+  z-index: 650 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-rhyme article.scene-card .scene-content > .rhyme-card::before,
+html body main.game-shell .stage.scene-rhyme article.scene-card .scene-content > .rhyme-card::after {
+  display: none !important;
+  content: none !important;
+}
+
+html body main.game-shell .stage.scene-rhyme .rhyme-card > button {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  width: 42px !important;
+  height: 42px !important;
+  min-width: 42px !important;
+  min-height: 42px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  align-self: center !important;
+  background: rgba(255, 255, 255, .16) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 50% !important;
+  box-shadow: none !important;
+  font-size: 17px !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell .stage.scene-rhyme .rhyme-card > div {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+html body main.game-shell .stage.scene-rhyme .rhyme-card p {
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #fff !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.34 !important;
+  font-weight: 650 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .78) !important;
+}
+
+html body main.game-shell .stage.scene-rhyme .rhyme-card p b {
+  color: #fff !important;
+  font-weight: 800 !important;
+}
+
+html body main.game-shell .stage.scene-rhyme .rhyme-card .verse-translation {
+  display: block !important;
+  position: static !important;
+  width: auto !important;
+  max-width: 100% !important;
+  margin: 6px 0 0 !important;
+  padding: 0 !important;
+  color: rgba(255, 255, 255, .84) !important;
+  background: transparent !important;
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 11px !important;
+  line-height: 1.3 !important;
+  font-weight: 500 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .78) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+html body main.game-shell .stage.scene-rhyme article.scene-card .scene-content > .primary-action {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 18px !important;
+  width: min(280px, 32%) !important;
+  max-width: 32% !important;
+  min-height: 48px !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 11px 18px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: #45bd7d !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 4px 0 rgba(27, 132, 82, .72) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  font-weight: 750 !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  z-index: 670 !important;
+}
+
+html body main.game-shell .stage.scene-rhyme article.scene-card > .feedback {
+  display: none !important;
+}
+
+@media (max-width: 880px) {
+  html body main.game-shell .stage.scene-rhyme article.scene-card .scene-content > .rhyme-card {
+    bottom: 76px !important;
+    width: calc(100% - 22px) !important;
+    max-width: none !important;
+    grid-template-columns: 38px minmax(0, 1fr) !important;
+    gap: 9px !important;
+    padding: 11px 12px !important;
+  }
+
+  html body main.game-shell .stage.scene-rhyme .rhyme-card > button {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+  }
+
+  html body main.game-shell .stage.scene-rhyme .rhyme-card p {
+    font-size: 13px !important;
+  }
+
+  html body main.game-shell .stage.scene-rhyme article.scene-card .scene-content > .primary-action {
+    bottom: 14px !important;
+    width: min(260px, calc(100% - 44px)) !important;
+    max-width: none !important;
+  }
+}
