@@ -1,0 +1,67 @@
+/* English Adventure VERSION 57 — scene 3 exact DOM fix */
+
+/* Before the answer: readable dark text without a pale glow. */
+html body .stage.scene-why-english:not(.ea-scene3-complete) .scene-content > .speech:first-child .speech-text,
+html body .stage.scene-why-english:not(.ea-scene3-complete) .scene-content > .speech:first-child .speech-text b {
+  color: #071f33 !important;
+  font-weight: 950 !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.75) !important;
+}
+
+/* Once the success dialogue exists, the previous question, answers and feedback disappear. */
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .speech:first-child,
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid,
+html body .stage.scene-why-english.ea-scene3-complete article.scene-card > .feedback {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+/* Show only the new dialogue, centred and clearly readable. */
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid + .speech {
+  display: grid !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  top: 13% !important;
+  left: 50% !important;
+  right: auto !important;
+  width: min(390px, 34%) !important;
+  max-width: 34% !important;
+  min-height: 82px !important;
+  transform: translateX(-50%) !important;
+  background: rgba(9, 43, 65, .36) !important;
+  border: 1px solid rgba(255,255,255,.52) !important;
+  box-shadow: 0 5px 16px rgba(3,23,35,.18) !important;
+}
+
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid + .speech .speech-text,
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid + .speech .speech-text b {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 950 !important;
+  line-height: 1.32 !important;
+  text-align: center !important;
+  text-shadow: 0 2px 4px rgba(0,0,0,.85) !important;
+}
+
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid + .speech .speaker-name,
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid + .speech .translation-line {
+  display: none !important;
+}
+
+html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid + .speech .round-sound {
+  background: #3aa9df !important;
+  border: 2px solid rgba(255,255,255,.82) !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,.22) !important;
+}
+
+@media (max-width: 880px) {
+  html body .stage.scene-why-english.ea-scene3-complete .scene-content > .choice-grid + .speech {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    transform: none !important;
+    margin: 0 auto !important;
+  }
+}
