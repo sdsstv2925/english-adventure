@@ -12,7 +12,10 @@ html body .stage.scene-age .choice-row{left:50%!important;right:auto!important;b
 
 /* 13 */
 html body .stage.scene-rhyme .speech-teacher{left:38%!important;right:auto!important;top:7%!important;bottom:auto!important;width:30%!important;max-width:30%!important;transform:none!important}
-html body .stage.scene-rhyme .rhyme-card{left:20%!important;right:auto!important;bottom:24px!important;top:auto!important;width:50%!important;max-width:50%!important;height:150px!important;max-height:150px!important;transform:none!important;overflow:hidden!important;z-index:410!important}
+html body .stage.scene-rhyme .rhyme-card{left:20%!important;right:auto!important;bottom:24px!important;top:auto!important;width:50%!important;max-width:50%!important;height:auto!important;min-height:160px!important;max-height:none!important;transform:none!important;overflow:visible!important;z-index:410!important;padding:20px 24px!important;background:rgba(255,255,255,.94)!important;border:0!important}
+html body .stage.scene-rhyme .rhyme-card p{margin:0!important;line-height:1.45!important}
+html body .stage.scene-rhyme .rhyme-card .verse-translation{display:block!important;margin-top:10px!important;padding-top:8px!important;border-top:0!important;background:transparent!important;color:#55758a!important;opacity:1!important;visibility:visible!important}
+html body .stage.scene-rhyme .rhyme-card:before,html body .stage.scene-rhyme .rhyme-card:after{display:none!important;content:none!important}
 html body .stage.scene-rhyme .primary-action{left:auto!important;right:5%!important;bottom:42px!important;top:auto!important;width:190px!important;max-width:20%!important;min-height:54px!important;transform:none!important;z-index:430!important}
 html body .stage.scene-rhyme .feedback{display:none!important}
 
