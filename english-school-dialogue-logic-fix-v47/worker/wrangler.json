@@ -59,7 +59,8 @@
     "bindings": []
   },
   "assets": {
-    "directory": "../client"
+    "directory": "../client",
+    "run_worker_first": true
   },
   "observability": {
     "enabled": true
