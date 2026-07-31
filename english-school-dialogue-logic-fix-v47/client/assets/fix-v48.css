@@ -61,3 +61,7 @@ html body .stage.scene-final .score-card{margin:12px auto 0!important}
 html body .stage.scene-final .secondary-action{left:50%!important;right:auto!important;bottom:44px!important;top:auto!important;width:330px!important;max-width:38%!important;min-height:54px!important;transform:translateX(-50%)!important;z-index:440!important}
 html body .stage.scene-final .feedback{display:none!important}
 }
+
+/* Always display the deployed release number, even when the old bundle still contains VERSION 47. */
+.brand small{font-size:0!important}
+.brand small::after{content:"LESSON 1-1 · VERSION 48";font-size:12px;line-height:1.2;letter-spacing:.08em}
