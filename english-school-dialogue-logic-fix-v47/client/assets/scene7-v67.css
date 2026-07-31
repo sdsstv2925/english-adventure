@@ -1,0 +1,253 @@
+/* English Adventure VERSION 67
+   Scene 7 (many-toys): real DOM is .toy-cloud + .prompt + .choice-row.
+   Keep these as three clear rows instead of forcing them into one broken slab.
+*/
+
+/* Remove the VERSION 66 combined panel from the emoji row. */
+html body main.game-shell section.stage.scene-many-toys article.scene-card .scene-content > .toy-cloud {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 84px !important;
+  width: min(760px, 74%) !important;
+  max-width: 74% !important;
+  min-height: 42px !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 7px !important;
+  overflow: visible !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  z-index: 670 !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .toy-cloud::before,
+html body main.game-shell section.stage.scene-many-toys .toy-cloud::after {
+  content: none !important;
+  display: none !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .toy-cloud > span {
+  flex: 0 0 38px !important;
+  width: 38px !important;
+  height: 38px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  background: rgba(12, 22, 34, .58) !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-size: 27px !important;
+  line-height: 1 !important;
+  text-shadow: none !important;
+}
+
+/* The question is its own compact readable caption. */
+html body main.game-shell section.stage.scene-many-toys article.scene-card .scene-content > .prompt {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 49px !important;
+  width: auto !important;
+  max-width: calc(100% - 32px) !important;
+  min-height: 0 !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 6px 12px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 9px !important;
+  white-space: nowrap !important;
+  overflow: visible !important;
+  background: rgba(12, 22, 34, .72) !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  color: #fff !important;
+  z-index: 680 !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .prompt > b {
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  font-weight: 750 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .78) !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .prompt > .prompt-translation {
+  display: inline !important;
+  position: static !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: rgba(255, 255, 255, .82) !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  font-size: 10px !important;
+  line-height: 1.2 !important;
+  font-weight: 550 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .72) !important;
+}
+
+/* Four actual answer buttons — no white outer strip. */
+html body main.game-shell section.stage.scene-many-toys article.scene-card .scene-content > .choice-row {
+  position: absolute !important;
+  left: 50% !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 8px !important;
+  width: auto !important;
+  max-width: calc(100% - 26px) !important;
+  min-height: 0 !important;
+  height: auto !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+  overflow: visible !important;
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+  z-index: 690 !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .choice-row::before,
+html body main.game-shell section.stage.scene-many-toys .choice-row::after {
+  content: none !important;
+  display: none !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .choice-row > button,
+html body main.game-shell section.stage.scene-many-toys .choice-row > .choice-button {
+  flex: 0 0 auto !important;
+  min-width: 58px !important;
+  min-height: 36px !important;
+  margin: 0 !important;
+  padding: 7px 13px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(12, 22, 34, .66) !important;
+  background-image: none !important;
+  color: #fff !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  font-size: 13px !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .78) !important;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .choice-row > button:last-child,
+html body main.game-shell section.stage.scene-many-toys .choice-row > .choice-button:last-child {
+  min-width: 146px !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .choice-row > button:hover,
+html body main.game-shell section.stage.scene-many-toys .choice-row > button:focus-visible,
+html body main.game-shell section.stage.scene-many-toys .choice-row > .choice-button:hover,
+html body main.game-shell section.stage.scene-many-toys .choice-row > .choice-button:focus-visible {
+  background: rgba(12, 22, 34, .84) !important;
+  transform: none !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .choice-row > .right,
+html body main.game-shell section.stage.scene-many-toys .choice-row > button.right {
+  background: rgba(38, 151, 87, .88) !important;
+}
+
+html body main.game-shell section.stage.scene-many-toys .choice-row > .wrong,
+html body main.game-shell section.stage.scene-many-toys .choice-row > button.wrong {
+  background: rgba(181, 58, 48, .84) !important;
+}
+
+/* Do not add another success slab over the fixed lower UI. */
+html body main.game-shell section.stage.scene-many-toys article.scene-card > .feedback {
+  display: none !important;
+}
+
+@media (max-width: 880px) {
+  html body main.game-shell section.stage.scene-many-toys article.scene-card .scene-content > .toy-cloud {
+    bottom: 94px !important;
+    width: calc(100% - 18px) !important;
+    max-width: none !important;
+    gap: 4px !important;
+    flex-wrap: wrap !important;
+  }
+
+  html body main.game-shell section.stage.scene-many-toys .toy-cloud > span {
+    flex-basis: 31px !important;
+    width: 31px !important;
+    height: 31px !important;
+    font-size: 22px !important;
+  }
+
+  html body main.game-shell section.stage.scene-many-toys article.scene-card .scene-content > .prompt {
+    bottom: 49px !important;
+    white-space: normal !important;
+    text-align: center !important;
+  }
+
+  html body main.game-shell section.stage.scene-many-toys article.scene-card .scene-content > .choice-row {
+    width: calc(100% - 18px) !important;
+    max-width: none !important;
+    gap: 5px !important;
+  }
+
+  html body main.game-shell section.stage.scene-many-toys .choice-row > button,
+  html body main.game-shell section.stage.scene-many-toys .choice-row > .choice-button {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    padding: 7px 6px !important;
+    font-size: 12px !important;
+  }
+
+  html body main.game-shell section.stage.scene-many-toys .choice-row > button:last-child,
+  html body main.game-shell section.stage.scene-many-toys .choice-row > .choice-button:last-child {
+    flex-grow: 2 !important;
+    min-width: 0 !important;
+  }
+}
