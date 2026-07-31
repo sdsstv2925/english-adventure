@@ -1,9 +1,9 @@
-/* English Adventure VERSION 55
-   Final high-specificity transparency layer for every real lesson scene.
+/* English Adventure VERSION 56
+   Transparent surfaces with stable dialogue layout.
 */
 
-/* All non-arrival scene cards */
-html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) div.scene-content > :is(
+/* Shared transparent surfaces */
+html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) .scene-content > :is(
   .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.seating-progress,
   .knock-event,.toy-cloud,.story-card,.hero-phrase,.table-toys,.word-card,
   .toy-choice-grid,.rhyme-card,.gift-row,.kindness,.near-far,.bag-scene,
@@ -11,45 +11,69 @@ html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(
   .count-first-card
 ),
 html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) > .feedback {
-  background: rgba(255,255,255,.07) !important;
+  background: rgba(255,255,255,.13) !important;
   background-image: none !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,.36) !important;
-  box-shadow: 0 4px 12px rgba(8,36,52,.08) !important;
+  border: 1px solid rgba(255,255,255,.46) !important;
+  box-shadow: 0 4px 14px rgba(8,36,52,.10) !important;
 }
 
-/* Remove all white decorative layers */
-html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) div.scene-content > :is(
-  .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.rhyme-card,
-  .song-card,.word-card,.picture-card,.lesson-complete,.count-first-card
-)::before,
-html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) div.scene-content > :is(
-  .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.rhyme-card,
-  .song-card,.word-card,.picture-card,.lesson-complete,.count-first-card
-)::after {
-  content: none !important;
+/* Dialogue structure: text never collides with audio button */
+html body main.game-shell section.stage[class*="scene-"] .scene-content > .speech {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) 42px !important;
+  align-items: center !important;
+  column-gap: 12px !important;
+  min-height: 86px !important;
+  padding: 14px 14px 14px 18px !important;
+  overflow: visible !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech .speaker-avatar {
   display: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  opacity: 0 !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech .speech-copy {
+  grid-column: 1 !important;
+  min-width: 0 !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech .round-sound {
+  grid-column: 2 !important;
+  position: relative !important;
+  inset: auto !important;
+  right: auto !important;
+  top: auto !important;
+  transform: none !important;
+  justify-self: end !important;
+  align-self: center !important;
+  width: 38px !important;
+  height: 38px !important;
+  z-index: 3 !important;
+  pointer-events: auto !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech .translation-line {
+  position: static !important;
+  display: flex !important;
+  margin-top: 7px !important;
+  padding: 6px 8px !important;
+  width: auto !important;
+  max-width: 100% !important;
+  line-height: 1.3 !important;
 }
 
-/* Strong readable text */
-html body main.game-shell section.stage[class*="scene-"] .speech-copy,
-html body main.game-shell section.stage[class*="scene-"] .speech-text,
-html body main.game-shell section.stage[class*="scene-"] .speech-text b,
-html body main.game-shell section.stage[class*="scene-"] .prompt,
-html body main.game-shell section.stage[class*="scene-"] .prompt b,
-html body main.game-shell section.stage[class*="scene-"] .name-line,
-html body main.game-shell section.stage[class*="scene-"] .echo-gnomes {
+/* Strong readable typography */
+html body main.game-shell section.stage[class*="scene-"] :is(.speech-copy,.speech-text,.speech-text b,.prompt,.prompt b,.name-line,.echo-gnomes) {
   color: #0d2f49 !important;
-  font-weight: 900 !important;
-  text-shadow: 0 1px 0 rgba(255,255,255,.95), 0 0 3px rgba(255,255,255,.9) !important;
+  text-shadow: 0 1px 0 rgba(255,255,255,.96), 0 0 3px rgba(255,255,255,.82) !important;
 }
 html body main.game-shell section.stage[class*="scene-"] .speech-text {
   font-size: 16px !important;
-  line-height: 1.38 !important;
+  line-height: 1.42 !important;
+  font-weight: 850 !important;
+}
+html body main.game-shell section.stage[class*="scene-"] .speech-text b {
+  font-weight: 950 !important;
 }
 html body main.game-shell section.stage[class*="scene-"] .speaker-name {
   color: #174f70 !important;
@@ -58,30 +82,60 @@ html body main.game-shell section.stage[class*="scene-"] .speaker-name {
 }
 html body main.game-shell section.stage[class*="scene-"] :is(.translation-line,.prompt-translation,.gesture-note,.verse-translation,.song-translation) {
   color: #173f59 !important;
-  background: rgba(255,255,255,.12) !important;
-  font-weight: 850 !important;
+  background: rgba(255,255,255,.18) !important;
+  font-weight: 800 !important;
   text-shadow: 0 1px 0 rgba(255,255,255,.95) !important;
 }
 
-/* Controls stay readable but no white slabs */
-html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) div.scene-content :is(
+/* Scene 3: keep the initial and success dialogues separate */
+@media (min-width:881px) {
+  html body .stage.scene-why-english .scene-content > .speech:first-child {
+    top: 9% !important;
+    left: 50% !important;
+    right: auto !important;
+    width: min(560px,46%) !important;
+    max-width: 46% !important;
+    transform: translateX(-50%) !important;
+  }
+  html body .stage.scene-why-english .scene-content > .choice-grid + .speech {
+    top: 27% !important;
+    left: 50% !important;
+    right: auto !important;
+    width: min(300px,27%) !important;
+    max-width: 27% !important;
+    min-height: 64px !important;
+    padding: 10px 12px 10px 16px !important;
+    transform: translateX(-50%) !important;
+  }
+  html body .stage.scene-why-english .scene-content > .choice-grid + .speech .translation-line,
+  html body .stage.scene-why-english .scene-content > .choice-grid + .speech .speaker-name {
+    display: none !important;
+  }
+  html body .stage.scene-why-english .scene-content > .choice-grid + .speech .speech-text {
+    font-size: 17px !important;
+    text-align: center !important;
+  }
+}
+
+/* Controls */
+html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) .scene-content :is(
   .choice-button,.choice-grid>button,.choice-row>button,.toy-choice-grid>button,
   .gift-row>button,.echo-gnomes>button,.word-card button,.rhyme-card button,
   .song-card button,.kindness button,.inline-word
 ) {
-  background: rgba(255,255,255,.26) !important;
+  background: rgba(255,255,255,.32) !important;
   background-image: none !important;
-  border-color: rgba(255,255,255,.58) !important;
+  border-color: rgba(255,255,255,.66) !important;
   color: #0d2f49 !important;
   font-weight: 900 !important;
   text-shadow: 0 1px 0 rgba(255,255,255,.95) !important;
-  box-shadow: 0 3px 8px rgba(8,36,52,.09) !important;
+  box-shadow: 0 3px 8px rgba(8,36,52,.10) !important;
 }
 html body main.game-shell section.stage[class*="scene-"] input,
 html body main.game-shell section.stage[class*="scene-"] textarea {
-  background: rgba(255,255,255,.20) !important;
+  background: rgba(255,255,255,.24) !important;
   background-image: none !important;
-  border: 1px solid rgba(255,255,255,.52) !important;
+  border: 1px solid rgba(255,255,255,.56) !important;
   color: #0d2f49 !important;
   font-weight: 900 !important;
   box-shadow: none !important;
@@ -89,12 +143,12 @@ html body main.game-shell section.stage[class*="scene-"] textarea {
 
 /* Start page */
 html body main.game-shell section.stage.scene-arrival .arrival-title {
-  background: rgba(13,57,82,.18) !important;
+  background: rgba(13,57,82,.22) !important;
   background-image: none !important;
   -webkit-backdrop-filter: none !important;
   backdrop-filter: none !important;
-  border: 1px solid rgba(255,255,255,.42) !important;
-  box-shadow: 0 4px 14px rgba(4,27,40,.12) !important;
+  border: 1px solid rgba(255,255,255,.48) !important;
+  box-shadow: 0 4px 14px rgba(4,27,40,.14) !important;
 }
 html body main.game-shell section.stage.scene-arrival .arrival-title,
 html body main.game-shell section.stage.scene-arrival .arrival-title * {
@@ -103,33 +157,48 @@ html body main.game-shell section.stage.scene-arrival .arrival-title * {
   text-shadow: 0 2px 5px rgba(3,24,36,.95) !important;
 }
 html body main.game-shell section.stage.scene-arrival .school-friend span {
-  background: rgba(255,255,255,.22) !important;
-  background-image: none !important;
-  border-color: rgba(255,255,255,.56) !important;
+  background: rgba(255,255,255,.28) !important;
+  border-color: rgba(255,255,255,.60) !important;
   color: #0d2f49 !important;
   font-weight: 950 !important;
   text-shadow: 0 1px 0 #fff !important;
-  box-shadow: 0 3px 9px rgba(4,27,40,.1) !important;
 }
 
-/* Preserve correct/wrong states */
+/* Remove old decorative layers */
+html body main.game-shell section.stage[class*="scene-"] .scene-content > :is(
+  .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.rhyme-card,
+  .song-card,.word-card,.picture-card,.lesson-complete,.count-first-card
+)::before,
+html body main.game-shell section.stage[class*="scene-"] .scene-content > :is(
+  .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.rhyme-card,
+  .song-card,.word-card,.picture-card,.lesson-complete,.count-first-card
+)::after {
+  content: none !important;
+  display: none !important;
+}
+
 html body main.game-shell section.stage[class*="scene-"] .choice-button.right,
 html body main.game-shell section.stage[class*="scene-"] .toy-choice-grid button.right {
-  background: rgba(207,247,220,.72) !important;
+  background: rgba(207,247,220,.76) !important;
   border-color: #3eb270 !important;
 }
 html body main.game-shell section.stage[class*="scene-"] .choice-button.wrong,
 html body main.game-shell section.stage[class*="scene-"] .toy-choice-grid button.wrong {
-  background: rgba(255,220,212,.72) !important;
+  background: rgba(255,220,212,.76) !important;
   border-color: #e97561 !important;
 }
 
 @media (max-width:880px) {
-  html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) div.scene-content > :is(
-    .speech,.prompt,.choice-row,.choice-grid,.echo-gnomes,.name-line,.rhyme-card,
-    .song-card,.word-card,.picture-card,.lesson-complete,.count-first-card
-  ) { background: rgba(255,255,255,.12) !important; }
-  html body main.game-shell section.stage[class*="scene-"] article.scene-card:not(.arrival-stage-card) div.scene-content :is(
-    .choice-button,.choice-grid>button,.choice-row>button,.echo-gnomes>button
-  ) { background: rgba(255,255,255,.34) !important; }
+  html body main.game-shell section.stage[class*="scene-"] .scene-content > .speech {
+    grid-template-columns: minmax(0,1fr) !important;
+    min-height: 0 !important;
+    padding: 13px !important;
+  }
+  html body main.game-shell section.stage[class*="scene-"] .speech .round-sound {
+    grid-column: 1 !important;
+    justify-self: stretch !important;
+    width: 100% !important;
+    height: 34px !important;
+    margin-top: 8px !important;
+  }
 }
