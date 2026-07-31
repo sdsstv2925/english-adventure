@@ -31,12 +31,12 @@ export default {
       .on('head', {
         element(element) {
           element.append(
-            '<link rel="stylesheet" href="/assets/fix-v48.css?v=58">' +
-            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=58">' +
-            '<link rel="stylesheet" href="/assets/dialogs-v58.css?v=58">' +
-            '<script defer src="/assets/runtime-v48.js?v=58"></script>' +
-            '<script defer src="/assets/scene3-v58.js?v=58"></script>' +
-            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 58"!important;font-size:12px!important}</style>',
+            '<link rel="stylesheet" href="/assets/fix-v48.css?v=59">' +
+            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=59">' +
+            '<script defer src="/assets/runtime-v48.js?v=59"></script>' +
+            '<script defer src="/assets/scene3-v58.js?v=59"></script>' +
+            '<script defer src="/assets/dialogue-cleanup-v59.js?v=59"></script>' +
+            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 59"!important;font-size:12px!important}</style>',
             { html: true }
           );
         }
