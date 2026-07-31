@@ -31,14 +31,16 @@ export default {
       .on('head', {
         element(element) {
           element.append(
-            '<link rel="stylesheet" href="/assets/fix-v48.css?v=64">' +
-            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=64">' +
-            '<link rel="stylesheet" href="/assets/scene-state-v62.css?v=64">' +
-            '<link rel="stylesheet" href="/assets/scene2-v63.css?v=64">' +
-            '<script defer src="/assets/runtime-v48.js?v=64"></script>' +
-            '<script defer src="/assets/scene-state-v62.js?v=64"></script>' +
-            '<script defer src="/assets/scene2-v63.js?v=64"></script>' +
-            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 64"!important;font-size:12px!important}</style>',
+            '<link rel="stylesheet" href="/assets/fix-v48.css?v=65">' +
+            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=65">' +
+            '<link rel="stylesheet" href="/assets/scene-state-v62.css?v=65">' +
+            '<link rel="stylesheet" href="/assets/scene2-v63.css?v=65">' +
+            '<link rel="stylesheet" href="/assets/scene3-v65.css?v=65">' +
+            '<script defer src="/assets/runtime-v48.js?v=65"></script>' +
+            '<script defer src="/assets/scene-state-v62.js?v=65"></script>' +
+            '<script defer src="/assets/scene2-v63.js?v=65"></script>' +
+            '<script defer src="/assets/scene3-v65.js?v=65"></script>' +
+            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 65"!important;font-size:12px!important}</style>',
             { html: true }
           );
         }
