@@ -53,6 +53,9 @@ jobs:
       - name: Create the exact MusicXML score
         run: python tools/roy_song/make_score.py
 
+      - name: Inspect current Sinsy upload form
+        run: python tools/roy_song/inspect_sinsy.py
+
       - name: Generate actual singing voice with Sinsy
         run: python tools/roy_song/synthesize_sinsy.py
 
@@ -71,6 +74,19 @@ jobs:
             roy_song_work/roy_song.musicxml
           if-no-files-found: error
           retention-days: 7
+
+      - name: Upload Sinsy diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sinsy-diagnostics
+          path: |
+            roy_song_work/sinsy_raw.html
+            roy_song_work/sinsy_before_submit.png
+            roy_song_work/sinsy_after_submit.png
+            roy_song_work/sinsy_after_submit.html
+          if-no-files-found: ignore
+          retention-days: 2
 
       - name: Record successful completion
         if: success()
