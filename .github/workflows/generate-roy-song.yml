@@ -1,0 +1,92 @@
+name: Generate Roy sung example
+
+on:
+  push:
+    paths:
+      - .github/workflows/generate-roy-song.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Record workflow run ID
+        shell: bash
+        run: |
+          set -euxo pipefail
+          mkdir -p .generated
+          printf '%s\n' "$GITHUB_RUN_ID" > .generated/roy-song-run.txt
+          printf 'running\n' > .generated/roy-song-status.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .generated/roy-song-run.txt .generated/roy-song-status.txt
+          git commit -m "Record Roy song generation run ${GITHUB_RUN_ID}" || true
+          git push
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install audio and browser dependencies
+        shell: bash
+        run: |
+          set -euxo pipefail
+          python -m pip install --upgrade pip
+          python -m pip install playwright numpy soundfile
+          python -m playwright install --with-deps chromium
+          ffmpeg -version | head -n 1
+
+      - name: Create the exact MusicXML score
+        run: python tools/roy_song/make_score.py
+
+      - name: Generate actual singing voice with Sinsy
+        run: python tools/roy_song/synthesize_sinsy.py
+
+      - name: Add children's-song accompaniment and master MP3
+        run: python tools/roy_song/mix_song.py
+
+      - name: Upload song example
+        uses: actions/upload-artifact@v4
+        with:
+          name: roy-song-normal
+          path: |
+            roy_song_work/roy-song-normal.mp3
+            roy_song_work/roy-song-normal.wav
+            roy_song_work/roy-song-vocal-only.wav
+            roy_song_work/lyrics.txt
+            roy_song_work/roy_song.musicxml
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Record successful completion
+        if: success()
+        shell: bash
+        run: |
+          set -euxo pipefail
+          printf 'success\n' > .generated/roy-song-status.txt
+          git add .generated/roy-song-status.txt
+          git commit -m "Roy song generation completed for run ${GITHUB_RUN_ID}" || true
+          git pull --rebase
+          git push
+
+      - name: Record failure
+        if: failure()
+        shell: bash
+        run: |
+          set -euxo pipefail
+          printf 'failed\n' > .generated/roy-song-status.txt
+          git add .generated/roy-song-status.txt
+          git commit -m "Roy song generation failed for run ${GITHUB_RUN_ID}" || true
+          git pull --rebase || true
+          git push || true
