@@ -53,7 +53,10 @@
     const direct = document.querySelector(selector);
     if (direct) return direct;
 
-    const pattern = direction === 'next' ? /Следующая сцена/i : /^\s*←?\s*Назад\s*$/i;
+    const pattern = direction === 'next'
+      ? /(?:Следующая сцена|Войти в школу)/i
+      : /^\s*←?\s*Назад\s*$/i;
+
     return [...document.querySelectorAll('button')]
       .find(button => !button.closest('.ea88-picker-dialog') && pattern.test(normalize(button.textContent))) || null;
   };
@@ -121,15 +124,22 @@
   const updateUi = () => {
     const current = getCurrentIndex();
     document.querySelectorAll('.ea88-picker-open').forEach(button => {
-      button.innerHTML = `<span>Сцена</span> <b>${current + 1}</b><i>▾</i>`;
-      button.setAttribute('aria-label', `Открыть выбор сцены. Сейчас сцена ${current + 1}`);
+      const number = button.querySelector('b');
+      if (number && number.textContent !== String(current + 1)) {
+        number.textContent = String(current + 1);
+      }
+      const label = `Открыть выбор сцены. Сейчас сцена ${current + 1}`;
+      if (button.getAttribute('aria-label') !== label) button.setAttribute('aria-label', label);
     });
 
     const dialog = document.querySelector('.ea88-picker-dialog');
     dialog?.querySelectorAll('[data-ea88-scene]').forEach(button => {
       const active = Number(button.dataset.ea88Scene) === current;
       button.classList.toggle('is-active', active);
-      button.setAttribute('aria-current', active ? 'step' : 'false');
+      const ariaCurrent = active ? 'step' : 'false';
+      if (button.getAttribute('aria-current') !== ariaCurrent) {
+        button.setAttribute('aria-current', ariaCurrent);
+      }
     });
   };
 
@@ -248,7 +258,11 @@
 
     const host = document.createElement('span');
     host.className = 'ea88-picker-host';
-    host.innerHTML = '<button type="button" class="ea88-picker-open"></button>';
+    host.innerHTML = `
+      <button type="button" class="ea88-picker-open">
+        <span>Сцена</span><b>1</b><i>▾</i>
+      </button>
+    `;
     host.querySelector('button').addEventListener('click', openPicker);
     counter.insertAdjacentElement('afterend', host);
     updateUi();
