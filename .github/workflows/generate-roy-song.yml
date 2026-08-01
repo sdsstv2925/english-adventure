@@ -7,6 +7,10 @@ on:
       - tools/roy_song/**
   workflow_dispatch:
 
+concurrency:
+  group: roy-song-generation
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -25,13 +29,15 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
           mkdir -p .generated
           printf '%s\n' "$GITHUB_RUN_ID" > .generated/roy-song-run.txt
           printf 'running\n' > .generated/roy-song-status.txt
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add .generated/roy-song-run.txt .generated/roy-song-status.txt
           git commit -m "Record Roy song generation run ${GITHUB_RUN_ID}" || true
+          git pull --rebase
           git push
 
       - name: Set up Python
@@ -89,6 +95,9 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase
           printf 'success\n' > .generated/roy-song-status.txt
           git add .generated/roy-song-status.txt
           git commit -m "Roy song generation completed for run ${GITHUB_RUN_ID}" || true
@@ -100,6 +109,9 @@ jobs:
         shell: bash
         run: |
           set -euxo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase || true
           printf 'failed\n' > .generated/roy-song-status.txt
           git add .generated/roy-song-status.txt
           git commit -m "Roy song generation failed for run ${GITHUB_RUN_ID}" || true
