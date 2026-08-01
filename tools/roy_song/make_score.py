@@ -9,24 +9,22 @@ TEMPO = 108
 # Exact words from scene 18. "little" is split only into sung syllables.
 MEASURES = [
     # A full opening rest is required by Sinsy.
-    [(None, 16, None, None)],
+    [(None, None, 16, None)],
     [("G", 4, 4, "What's"), ("A", 4, 4, "your"), ("C", 5, 8, "name")],
     [("G", 4, 4, "What's"), ("A", 4, 4, "your"), ("D", 5, 8, "name")],
     [
         ("G", 4, 2, "What's"), ("A", 4, 2, "your"), ("C", 5, 4, "name"),
         ("B", 4, 2, ("lit", "begin")), ("A", 4, 2, ("tle", "end")), ("G", 4, 4, "boy"),
     ],
-    [("E", 4, 2, "My"), ("G", 4, 2, "name"), ("A", 4, 2, "is"), ("C", 5, 8, "Roy"), (None, 2, None, None)],
+    [("E", 4, 2, "My"), ("G", 4, 2, "name"), ("A", 4, 2, "is"), ("C", 5, 8, "Roy"), (None, None, 2, None)],
     [
         ("G", 4, 2, "How"), ("A", 4, 2, "old"), ("B", 4, 2, "are"), ("C", 5, 2, "you"),
         ("A", 4, 2, "How"), ("B", 4, 2, "old"), ("C", 5, 2, "are"), ("D", 5, 2, "you"),
     ],
-    [("C", 5, 2, "How"), ("B", 4, 2, "old"), ("A", 4, 2, "are"), ("G", 4, 8, "you"), (None, 2, None, None)],
+    [("C", 5, 2, "How"), ("B", 4, 2, "old"), ("A", 4, 2, "are"), ("G", 4, 8, "you"), (None, None, 2, None)],
     [("C", 5, 2, "I"), ("A", 4, 2, "am"), ("G", 4, 4, "six"), ("C", 5, 2, "I"), ("A", 4, 2, "am"), ("G", 4, 4, "six")],
-    [("E", 4, 4, "and"), ("C", 4, 8, "you"), (None, 4, None, None)],
+    [("E", 4, 4, "and"), ("C", 4, 8, "you"), (None, None, 4, None)],
 ]
-
-STEP_TO_ALTER = {"C": 0, "D": 0, "E": 0, "F": 0, "G": 0, "A": 0, "B": 0}
 
 
 def note_type(duration: int) -> tuple[str, bool]:
