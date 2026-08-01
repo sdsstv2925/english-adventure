@@ -1,0 +1,28 @@
+/* English Adventure VERSION 86
+   Scene 14: keep the right Dunno sound control above all visual overlays.
+*/
+
+html body main.game-shell .stage.scene-dunno-test .speech-dunno {
+  pointer-events: auto !important;
+  isolation: isolate !important;
+  z-index: 960 !important;
+}
+
+html body main.game-shell .stage.scene-dunno-test .speech-dunno .speech-copy {
+  pointer-events: none !important;
+}
+
+html body main.game-shell .stage.scene-dunno-test .speech-dunno .round-sound {
+  position: relative !important;
+  z-index: 999 !important;
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  touch-action: manipulation !important;
+  user-select: none !important;
+  opacity: 1 !important;
+}
+
+html body main.game-shell .stage.scene-dunno-test .speech-dunno .round-sound.ea86-is-playing {
+  transform: scale(.94) !important;
+  box-shadow: 0 0 0 4px rgba(74, 190, 226, .28) !important;
+}
