@@ -1,0 +1,687 @@
+/* English Adventure VERSION 92
+   Mobile hard reset for lesson scenes 7-17.
+   The image is decorative only; every interactive element is rendered once
+   in normal document flow below it.
+*/
+
+@media (max-width: 880px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  html body main.game-shell {
+    min-height: 100dvh !important;
+    padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px)) !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    width: calc(100% - 28px) !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 22px 14px 0 !important;
+    padding: 0 !important;
+    gap: 12px !important;
+    overflow: visible !important;
+    transform: none !important;
+  }
+
+  /* The generated scene image already contains all characters and objects.
+     Hide every second interactive/decorative layer inside the image. */
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > .stage-visual > :not(img.scene-backdrop) {
+    display: none !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > .stage-visual {
+    position: relative !important;
+    inset: auto !important;
+    order: 1 !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    transform: none !important;
+    border-radius: 20px !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > .stage-visual > img.scene-backdrop {
+    position: absolute !important;
+    inset: 0 !important;
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > article.scene-card {
+    position: relative !important;
+    inset: auto !important;
+    order: 2 !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    transform: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > article.scene-card > .scene-content {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 1 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 10px !important;
+    overflow: visible !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > article.scene-card > .scene-content > * {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    float: none !important;
+    clear: both !important;
+    display: block;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+  }
+
+  /* Speech cards: always one under another. */
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > article.scene-card > .scene-content > .speech,
+  html body main.game-shell > section.stage.scene-secret-bag > article.scene-card > .scene-content > :is(.speech-teacher, .speech-dunno) {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) 46px !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 0 !important;
+    padding: 13px 12px 13px 15px !important;
+    transform: none !important;
+    overflow: hidden !important;
+    border-radius: 17px !important;
+    background: rgba(52, 67, 77, .88) !important;
+    color: #fff !important;
+    box-shadow: 0 3px 0 rgba(20, 36, 47, .16) !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) .speech .speech-text {
+    color: #fff !important;
+    font-size: clamp(16px, 4.7vw, 21px) !important;
+    line-height: 1.25 !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) .speech :is(.speaker-name, .translation-line, .gesture-note) {
+    color: rgba(255,255,255,.9) !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-dunno-arrives,
+    .scene-age,
+    .scene-actions,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) .speech .round-sound {
+    position: relative !important;
+    inset: auto !important;
+    justify-self: end !important;
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  /* Prompts and answer grids. */
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-age,
+    .scene-four-toys,
+    .scene-guess,
+    .scene-rhyme,
+    .scene-dunno-test,
+    .scene-likes,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > article.scene-card > .scene-content > .prompt {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 54px !important;
+    margin: 0 !important;
+    padding: 10px 12px !important;
+    transform: none !important;
+    border-radius: 16px !important;
+    background: rgba(20, 35, 48, .93) !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    line-height: 1.2 !important;
+    text-align: center !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-age,
+    .scene-guess,
+    .scene-dunno-test,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > article.scene-card > .scene-content > .choice-row {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    background: transparent !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage:is(
+    .scene-many-toys,
+    .scene-age,
+    .scene-guess,
+    .scene-dunno-test,
+    .scene-nice-nasty,
+    .scene-secret-bag
+  ) > article.scene-card > .scene-content > .choice-row > button {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 56px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 10px 8px !important;
+    transform: none !important;
+    border-radius: 15px !important;
+    background: #8e9ba1 !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    line-height: 1.15 !important;
+    font-weight: 800 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Scene 7 */
+  html body main.game-shell > section.stage.scene-many-toys > article.scene-card > .scene-content > .toy-cloud {
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    padding: 10px !important;
+    border-radius: 16px !important;
+    background: #fff !important;
+  }
+
+  html body main.game-shell > section.stage.scene-many-toys .toy-cloud span {
+    display: grid !important;
+    place-items: center !important;
+    font-size: 25px !important;
+  }
+
+  /* Scene 8 */
+  html body main.game-shell > section.stage.scene-dunno-arrives > article.scene-card > .scene-content > .knock-event {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 9px !important;
+    padding: 13px !important;
+    border-radius: 18px !important;
+    background: #fff !important;
+  }
+
+  html body main.game-shell > section.stage.scene-dunno-arrives .knock-rings {
+    display: none !important;
+  }
+
+  html body main.game-shell > section.stage.scene-dunno-arrives .knock-button {
+    width: 100% !important;
+    min-height: 56px !important;
+    border-radius: 15px !important;
+    background: #ff8247 !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    font-weight: 900 !important;
+  }
+
+  /* Scenes 9 and 14: three answers stay compact. */
+  html body main.game-shell > section.stage:is(.scene-age, .scene-dunno-test) > article.scene-card > .scene-content > .choice-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  /* Scene 10 */
+  html body main.game-shell > section.stage.scene-actions > article.scene-card > .scene-content > .primary-action,
+  html body main.game-shell > section.stage.scene-rhyme > article.scene-card > .scene-content > .primary-action,
+  html body main.game-shell > section.stage.scene-secret-bag > article.scene-card > .scene-content > .primary-action {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 58px !important;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+    transform: none !important;
+    border-radius: 16px !important;
+    background: #51c887 !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage.scene-actions > article.scene-card > .scene-content > .mini-progress {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 7px !important;
+    padding: 9px !important;
+    border-radius: 999px !important;
+    background: #fff !important;
+  }
+
+  /* Scene 11 */
+  html body main.game-shell > section.stage.scene-four-toys > article.scene-card > .scene-content > .table-toys {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    padding: 10px !important;
+    border-radius: 16px !important;
+    background: #fff !important;
+  }
+
+  html body main.game-shell > section.stage.scene-four-toys > article.scene-card > .scene-content > .word-card {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: 54px minmax(0, 1fr) 44px !important;
+    align-items: center !important;
+    gap: 4px 9px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    transform: none !important;
+    border-radius: 17px !important;
+    background: rgba(20,35,48,.94) !important;
+    color: #fff !important;
+  }
+
+  html body main.game-shell > section.stage.scene-four-toys .word-card > span {
+    grid-column: 1 !important;
+    grid-row: 1 / 4 !important;
+    font-size: 43px !important;
+    text-align: center !important;
+  }
+
+  html body main.game-shell > section.stage.scene-four-toys .word-card > :is(p,b,small) {
+    grid-column: 2 !important;
+    margin: 0 !important;
+    color: #fff !important;
+  }
+
+  html body main.game-shell > section.stage.scene-four-toys .word-sound-button {
+    position: relative !important;
+    inset: auto !important;
+    grid-column: 3 !important;
+    grid-row: 1 / 3 !important;
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  html body main.game-shell > section.stage.scene-four-toys .word-next-button {
+    position: relative !important;
+    inset: auto !important;
+    grid-column: 1 / -1 !important;
+    width: 100% !important;
+    min-height: 50px !important;
+    margin-top: 7px !important;
+    transform: none !important;
+    border-radius: 14px !important;
+    background: #51c887 !important;
+    color: #fff !important;
+    font-weight: 800 !important;
+  }
+
+  /* Scene 12 */
+  html body main.game-shell > section.stage.scene-guess > article.scene-card > .scene-content > .toy-choice-grid {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell > section.stage.scene-guess .toy-choice-grid > button {
+    position: relative !important;
+    inset: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    width: 100% !important;
+    min-height: 82px !important;
+    margin: 0 !important;
+    padding: 9px !important;
+    transform: none !important;
+    border-radius: 15px !important;
+    background: #8e9ba1 !important;
+    color: #fff !important;
+  }
+
+  /* Scene 13 */
+  html body main.game-shell > section.stage.scene-rhyme > article.scene-card > .scene-content > .rhyme-card {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 12px !important;
+    transform: none !important;
+    border-radius: 17px !important;
+    background: rgba(20,35,48,.94) !important;
+    color: #fff !important;
+  }
+
+  html body main.game-shell > section.stage.scene-rhyme .rhyme-card :is(p,b,small) {
+    color: #fff !important;
+  }
+
+  /* Scene 15 */
+  html body main.game-shell > section.stage.scene-likes > article.scene-card > .scene-content > .gift-row {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  /* Scene 16 */
+  html body main.game-shell > section.stage.scene-nice-nasty > article.scene-card > .scene-content > .near-far {
+    position: relative !important;
+    inset: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 10px !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell > section.stage.scene-nice-nasty .near-far > div {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 112px !important;
+    padding: 9px !important;
+    border-radius: 16px !important;
+    background: rgba(20,35,48,.92) !important;
+    color: #fff !important;
+  }
+
+  /* Scene 17: old desktop file forces two side-by-side absolute cards.
+     These selectors deliberately have higher specificity. */
+  html body main.game-shell > section.stage.scene-secret-bag > article.scene-card > .scene-content > .bag-scene {
+    display: none !important;
+  }
+
+  html body main.game-shell > section.stage.scene-secret-bag:not(.ea75-revealed) > article.scene-card > .scene-content > .prompt,
+  html body main.game-shell > section.stage.scene-secret-bag.ea75-revealed > article.scene-card > .scene-content > .prompt {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell > section.stage.scene-secret-bag:not(.ea75-revealed) > article.scene-card > .scene-content > .choice-row {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell > section.stage.scene-secret-bag.ea75-revealed > article.scene-card > .scene-content > :is(.picture-card, .primary-action) {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell > footer.lesson-controls {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 2 !important;
+    width: calc(100% - 28px) !important;
+    margin: 16px 14px 0 !important;
+    padding-bottom: max(18px, env(safe-area-inset-bottom, 0px)) !important;
+    transform: none !important;
+  }
+}
+
+@media (max-width: 430px) {
+  html body main.game-shell > section.stage.scene-many-toys > article.scene-card > .scene-content > .toy-cloud {
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+  }
+
+  html body main.game-shell > section.stage:is(.scene-age, .scene-dunno-test) > article.scene-card > .scene-content > .choice-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+}
