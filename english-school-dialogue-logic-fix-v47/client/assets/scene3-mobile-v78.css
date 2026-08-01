@@ -1,0 +1,140 @@
+/* English Adventure VERSION 78
+   Mobile scene 3: keep the prompt readable and place the completed dialogs
+   inside the document flow above the navigation controls.
+*/
+
+@media (max-width: 880px) {
+  /* Before answering: remove the white-on-white prompt. */
+  html body main.game-shell .stage.scene-why-english article.scene-card .scene-content > .prompt {
+    position: relative !important;
+    inset: auto !important;
+    width: fit-content !important;
+    max-width: 100% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 auto 2px !important;
+    padding: 8px 13px !important;
+    transform: none !important;
+    display: block !important;
+    background: rgba(12, 22, 34, .72) !important;
+    background-image: none !important;
+    color: #fff !important;
+    border: 0 !important;
+    outline: 0 !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 1.25 !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .75) !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english article.scene-card .scene-content > .choice-grid {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english article.scene-card .scene-content > .choice-grid > button {
+    min-width: 0 !important;
+    min-height: 58px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 10px 8px !important;
+    font-size: 15px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Completed state: the result is appended to article.scene-card, not stage. */
+  html body main.game-shell .stage.scene-why-english.ea65-scene3-complete > article.scene-card {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    transform: none !important;
+    overflow: visible !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english article.scene-card > .ea65-scene3-result {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 9px !important;
+    transform: none !important;
+    overflow: visible !important;
+    z-index: auto !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english article.scene-card > .ea65-scene3-result > .ea65-scene3-child,
+  html body main.game-shell .stage.scene-why-english article.scene-card > .ea65-scene3-result > .ea65-scene3-teacher {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    border-radius: 15px !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english article.scene-card > .ea65-scene3-result > .ea65-scene3-child {
+    order: 1 !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english article.scene-card > .ea65-scene3-result > .ea65-scene3-teacher {
+    order: 2 !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english .ea65-scene3-role {
+    font-size: 10px !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english .ea65-scene3-child strong,
+  html body main.game-shell .stage.scene-why-english .ea65-scene3-teacher strong {
+    font-size: 17px !important;
+    line-height: 1.25 !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english + footer.lesson-controls,
+  html body main.game-shell > footer.lesson-controls {
+    position: relative !important;
+    z-index: auto !important;
+    clear: both !important;
+  }
+}
