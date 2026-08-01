@@ -7,7 +7,6 @@ import time
 from pathlib import Path
 from urllib.parse import urljoin
 
-from playwright.sync_api import TimeoutError as PlaywrightTimeoutError
 from playwright.sync_api import sync_playwright
 
 START_URLS = [
@@ -135,7 +134,7 @@ def extract_audio(page, context) -> bytes | None:
 
         absolute = urljoin(page.url, candidate)
         try:
-            response = context.request.get(absolute, timeout=120000)
+            response = context.request.get(absolute, timeout=120000, ignore_https_errors=True)
             if response.ok:
                 data = response.body()
                 content_type = response.headers.get("content-type", "")
@@ -155,7 +154,7 @@ def main() -> None:
 
     with sync_playwright() as playwright:
         browser = playwright.chromium.launch(headless=True)
-        context = browser.new_context(accept_downloads=True)
+        context = browser.new_context(accept_downloads=True, ignore_https_errors=True)
         page = context.new_page()
         downloaded: list[Path] = []
 
