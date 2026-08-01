@@ -62,31 +62,40 @@
     return hooks;
   };
 
+  const inspectFiber = (fiber, current) => {
+    const firstHook = fiber?.memoizedState;
+    if (
+      !firstHook ||
+      typeof firstHook.memoizedState !== 'number' ||
+      typeof firstHook.queue?.dispatch !== 'function'
+    ) return null;
+
+    const hooks = collectHooks(firstHook);
+    const looksLikeLesson =
+      hooks.length >= 12 &&
+      firstHook.memoizedState === current &&
+      typeof hooks[1]?.memoizedState === 'number' &&
+      hooks[2]?.memoizedState !== null &&
+      typeof hooks[2]?.memoizedState === 'object' &&
+      typeof hooks[3]?.memoizedState === 'number' &&
+      typeof hooks[7]?.memoizedState === 'number' &&
+      typeof hooks[8]?.memoizedState === 'number' &&
+      typeof hooks[9]?.memoizedState === 'number';
+
+    return looksLikeLesson ? { fiber, hooks } : null;
+  };
+
   const getLessonController = () => {
-    const stage = document.querySelector('.stage');
-    let fiber = getFiber(stage);
+    let fiber = getFiber(document.querySelector('.stage'));
     const current = getCurrentIndex();
 
     while (fiber) {
-      const firstHook = fiber.memoizedState;
-      if (
-        firstHook &&
-        typeof firstHook.memoizedState === 'number' &&
-        typeof firstHook.queue?.dispatch === 'function'
-      ) {
-        const hooks = collectHooks(firstHook);
-        const looksLikeLesson =
-          hooks.length >= 12 &&
-          firstHook.memoizedState === current &&
-          typeof hooks[1]?.memoizedState === 'number' &&
-          hooks[2]?.memoizedState &&
-          typeof hooks[2].memoizedState === 'object' &&
-          typeof hooks[3]?.memoizedState === 'number' &&
-          typeof hooks[7]?.memoizedState === 'number' &&
-          typeof hooks[8]?.memoizedState === 'number';
+      const primary = inspectFiber(fiber, current);
+      if (primary) return primary;
 
-        if (looksLikeLesson) return { fiber, hooks };
-      }
+      const alternate = inspectFiber(fiber.alternate, current);
+      if (alternate) return alternate;
+
       fiber = fiber.return;
     }
 
@@ -118,7 +127,7 @@
     const { hooks } = controller;
     stopAudio();
 
-    /* This mirrors the lesson's own U() reset function. */
+    /* Exact equivalent of the lesson's internal scene reset U(). */
     dispatchHook(hooks, 3, 0);
     dispatchHook(hooks, 4, '');
     dispatchHook(hooks, 5, '');
@@ -128,12 +137,12 @@
     dispatchHook(hooks, 10, 2);
     dispatchHook(hooks, 11, []);
 
-    /* First hook is the real scene number useState. */
+    /* The first hook is the actual scene index. */
     dispatchHook(hooks, 0, targetIndex);
     return true;
   };
 
-  const waitForScene = (targetIndex, timeout = 1800) => new Promise(resolve => {
+  const waitForScene = (targetIndex, timeout = 2000) => new Promise(resolve => {
     const started = performance.now();
     const check = () => {
       if (getCurrentIndex() === targetIndex) {
