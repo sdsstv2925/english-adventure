@@ -1,0 +1,18 @@
+/* English Adventure VERSION 82
+   Scene 10: remove the previous-step feedback when the next movement command is shown.
+*/
+
+html body main.game-shell .stage .ea82-scene10-stale-feedback {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  pointer-events: none !important;
+}
