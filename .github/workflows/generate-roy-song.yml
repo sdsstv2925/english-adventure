@@ -53,12 +53,8 @@ jobs:
       - name: Create the exact MusicXML score
         run: python tools/roy_song/make_score.py
 
-      - name: Inspect current Sinsy upload form
-        continue-on-error: true
-        run: python tools/roy_song/inspect_sinsy.py
-
-      - name: Generate actual singing voice with current Sinsy app
-        run: python tools/roy_song/synthesize_sinsy_v3.py
+      - name: Generate actual singing voice through proxied Sinsy app
+        run: python tools/roy_song/synthesize_sinsy_v4.py
 
       - name: Add children's-song accompaniment and master MP3
         run: python tools/roy_song/mix_song.py
@@ -82,12 +78,9 @@ jobs:
         with:
           name: sinsy-diagnostics
           path: |
-            roy_song_work/sinsy_raw.html
             roy_song_work/sinsy_before_submit.png
             roy_song_work/sinsy_after_submit.png
             roy_song_work/sinsy_after_submit.html
-            roy_song_work/sinsy_no_form.png
-            roy_song_work/sinsy_no_form.html
           if-no-files-found: ignore
           retention-days: 2
 
