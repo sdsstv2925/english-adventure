@@ -1,0 +1,197 @@
+/* English Adventure VERSION 84 — scene 18 takeover */
+html body main.game-shell .stage.scene-roy.ea84-scene18-controlled .ea83-roy-panel,
+html body main.game-shell .stage.scene-roy.ea84-scene18-controlled .song-card,
+html body main.game-shell .stage.scene-roy.ea84-scene18-controlled .scene-content > .prompt,
+html body main.game-shell .stage.scene-roy.ea84-scene18-controlled .scene-content > .choice-row {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-roy-panel {
+  position: absolute !important;
+  left: 50% !important;
+  bottom: 18px !important;
+  width: min(650px, 62%) !important;
+  max-width: 62% !important;
+  transform: translateX(-50%) !important;
+  margin: 0 !important;
+  padding: 13px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  background: rgba(10, 21, 34, .86) !important;
+  border: 0 !important;
+  border-radius: 17px !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .72) !important;
+  z-index: 980 !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-actions {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-play,
+html body main.game-shell .stage.scene-roy .ea84-song-skip {
+  min-height: 40px !important;
+  padding: 9px 16px !important;
+  border: 0 !important;
+  outline: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: none !important;
+  color: #fff !important;
+  font-size: 14px !important;
+  line-height: 1.2 !important;
+  font-weight: 800 !important;
+  text-shadow: none !important;
+  cursor: pointer !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-play {
+  min-width: 245px !important;
+  background: #45bd7d !important;
+  box-shadow: 0 4px 0 rgba(27, 132, 82, .72) !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-skip {
+  background: rgba(255, 255, 255, .16) !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-skip[hidden] {
+  display: none !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-status {
+  min-height: 15px !important;
+  color: rgba(255,255,255,.78) !important;
+  font-size: 11px !important;
+  font-weight: 650 !important;
+  text-align: center !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-line {
+  min-height: 38px !important;
+  display: grid !important;
+  place-items: center !important;
+  color: #fff !important;
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+  text-align: center !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-progress {
+  width: 100% !important;
+  height: 5px !important;
+  overflow: hidden !important;
+  border-radius: 999px !important;
+  background: rgba(255,255,255,.17) !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-song-progress > i {
+  display: block !important;
+  width: 0 !important;
+  height: 100% !important;
+  border-radius: inherit !important;
+  background: #4ed29a !important;
+  transition: width .1s linear !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-question[hidden] {
+  display: none !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-question {
+  display: grid !important;
+  grid-template-columns: minmax(0,1fr) auto !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding-top: 4px !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-question-copy {
+  color: #fff !important;
+  font-size: 16px !important;
+  font-weight: 850 !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-question-copy small {
+  display: block !important;
+  margin-top: 2px !important;
+  color: rgba(255,255,255,.78) !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-answer-row {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-answer-row button {
+  min-width: 62px !important;
+  min-height: 38px !important;
+  padding: 7px 13px !important;
+  background: rgba(255,255,255,.15) !important;
+  color: #fff !important;
+  border: 0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-answer-row button.is-wrong {
+  background: rgba(183,58,49,.84) !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-answer-row button.is-correct {
+  background: rgba(43,151,89,.9) !important;
+}
+
+html body main.game-shell .stage.scene-roy .ea84-answer-message {
+  grid-column: 1 / -1 !important;
+  min-height: 16px !important;
+  color: rgba(255,255,255,.9) !important;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+}
+
+@media (max-width: 880px) {
+  html body main.game-shell .stage.scene-roy .ea84-roy-panel {
+    position: relative !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    transform: none !important;
+    padding: 12px !important;
+  }
+
+  html body main.game-shell .stage.scene-roy .ea84-song-actions {
+    flex-direction: column !important;
+  }
+
+  html body main.game-shell .stage.scene-roy .ea84-song-play,
+  html body main.game-shell .stage.scene-roy .ea84-song-skip {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  html body main.game-shell .stage.scene-roy .ea84-question {
+    grid-template-columns: 1fr !important;
+  }
+
+  html body main.game-shell .stage.scene-roy .ea84-question-copy {
+    text-align: center !important;
+  }
+}
