@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - .github/workflows/generate-roy-song.yml
+      - tools/roy_song/**
   workflow_dispatch:
 
 permissions:
