@@ -1,0 +1,26 @@
+/* English Adventure VERSION 80
+   Scene 16: the upper speech belongs to the teacher on the left.
+*/
+
+@media (min-width: 881px) {
+  html body main.game-shell .stage.scene-nice-nasty article.scene-card .scene-content > .speech {
+    position: absolute !important;
+    left: 4.5% !important;
+    right: auto !important;
+    top: 7% !important;
+    bottom: auto !important;
+    width: min(370px, 36%) !important;
+    max-width: 36% !important;
+    min-height: 0 !important;
+    height: auto !important;
+    transform: none !important;
+    margin: 0 !important;
+    z-index: 690 !important;
+  }
+
+  html body main.game-shell .stage.scene-nice-nasty article.scene-card .scene-content > .speech .round-sound {
+    position: relative !important;
+    z-index: 691 !important;
+    pointer-events: auto !important;
+  }
+}
