@@ -1,0 +1,647 @@
+/* English Adventure VERSION 77
+   Mobile-only layout repair for the header and scenes 1–7.
+   Desktop rules are intentionally untouched.
+*/
+
+@media (max-width: 880px) {
+  html,
+  body {
+    overflow-x: hidden !important;
+  }
+
+  html body main.game-shell {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 100dvh !important;
+    padding: 0 0 28px !important;
+    overflow: visible !important;
+  }
+
+  /* ---------- Header ---------- */
+  html body main.game-shell > header.topbar {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    padding: 14px 16px 11px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 10px !important;
+    row-gap: 8px !important;
+    align-items: start !important;
+    background: rgba(255, 255, 255, .96) !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  html body main.game-shell .topbar .brand {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    overflow: hidden !important;
+  }
+
+  html body main.game-shell .topbar .brand-mark {
+    flex: 0 0 42px !important;
+    width: 42px !important;
+    height: 54px !important;
+    min-width: 42px !important;
+    margin: 0 !important;
+    font-size: 16px !important;
+  }
+
+  html body main.game-shell .topbar .brand > span:last-child {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 3px !important;
+    overflow: hidden !important;
+  }
+
+  html body main.game-shell .topbar .brand strong {
+    display: block !important;
+    max-width: 100% !important;
+    color: #173a57 !important;
+    font-size: clamp(18px, 5.5vw, 25px) !important;
+    line-height: 1.08 !important;
+    font-weight: 800 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  html body main.game-shell .topbar .brand small.ea77-version-clean {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    color: #e8682d !important;
+    font-size: 10px !important;
+    line-height: 1.2 !important;
+    font-weight: 800 !important;
+    letter-spacing: .055em !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  html body main.game-shell .topbar .brand small.ea77-version-clean::before,
+  html body main.game-shell .topbar .brand small.ea77-version-clean::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  html body main.game-shell .topbar .star-counter {
+    position: static !important;
+    inset: auto !important;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    align-self: start !important;
+    justify-self: end !important;
+    width: auto !important;
+    min-width: 84px !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    margin: 0 !important;
+    padding: 7px 13px !important;
+    transform: none !important;
+    box-sizing: border-box !important;
+    z-index: 2 !important;
+  }
+
+  html body main.game-shell .topbar .star-counter span {
+    font-size: 27px !important;
+  }
+
+  html body main.game-shell .topbar .star-counter b {
+    font-size: 21px !important;
+  }
+
+  html body main.game-shell .topbar .header-center {
+    position: static !important;
+    inset: auto !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, auto) minmax(60px, 1fr) auto !important;
+    align-items: center !important;
+    gap: 8px !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell .topbar .header-center small {
+    min-width: 0 !important;
+    max-width: 40vw !important;
+    color: #5f788c !important;
+    font-size: 10px !important;
+    line-height: 1.15 !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  html body main.game-shell .topbar .header-center .top-progress {
+    width: 100% !important;
+    min-width: 0 !important;
+    height: 6px !important;
+    margin: 0 !important;
+  }
+
+  html body main.game-shell .topbar .header-center > b {
+    color: #5f788c !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+  }
+
+  /* ---------- Shared mobile scene frame ---------- */
+  html body main.game-shell > section.stage {
+    width: calc(100% - 28px) !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 22px 14px 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    overflow: visible !important;
+    box-sizing: border-box !important;
+  }
+
+  html body main.game-shell > section.stage > .stage-visual {
+    position: relative !important;
+    inset: auto !important;
+    order: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 16 / 9 !important;
+    margin: 0 !important;
+    transform: none !important;
+    border-radius: 22px !important;
+    overflow: hidden !important;
+  }
+
+  html body main.game-shell > section.stage > .stage-visual .scene-backdrop {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+  }
+
+  html body main.game-shell > section.stage:not(.scene-arrival):not(.scene-come-in) > article.scene-card {
+    position: relative !important;
+    inset: auto !important;
+    order: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage:not(.scene-arrival):not(.scene-come-in) > article.scene-card > .scene-heading {
+    display: none !important;
+  }
+
+  html body main.game-shell > section.stage:not(.scene-arrival):not(.scene-come-in) > article.scene-card > .scene-content {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    transform: none !important;
+    overflow: visible !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell > section.stage:not(.scene-arrival):not(.scene-come-in) > article.scene-card > .scene-content > * {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- Navigation ---------- */
+  html body main.game-shell > footer.lesson-controls {
+    position: relative !important;
+    inset: auto !important;
+    width: calc(100% - 28px) !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    margin: 16px 14px 0 !important;
+    padding: 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.35fr) !important;
+    gap: 12px !important;
+    transform: none !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+  }
+
+  html body main.game-shell > footer.lesson-controls .chapter-dots {
+    display: none !important;
+  }
+
+  html body main.game-shell > footer.lesson-controls > button {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    min-height: 64px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 12px 10px !important;
+    transform: none !important;
+    border-radius: 17px !important;
+    font-size: clamp(14px, 4vw, 18px) !important;
+    line-height: 1.2 !important;
+    white-space: normal !important;
+    box-sizing: border-box !important;
+  }
+
+  /* ---------- Scene 1 ---------- */
+  html body main.game-shell .stage.scene-arrival {
+    gap: 14px !important;
+  }
+
+  html body main.game-shell .stage.scene-arrival > article.scene-card {
+    position: relative !important;
+    inset: auto !important;
+    order: 2 !important;
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell .stage.scene-arrival .primary-action.arrival-enter {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 64px !important;
+    margin: 0 !important;
+    transform: none !important;
+    font-size: 18px !important;
+  }
+
+  /* ---------- Scene 2 ---------- */
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-caption,
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-result {
+    left: 12px !important;
+    right: 12px !important;
+    top: auto !important;
+    bottom: 12px !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: none !important;
+    padding: 10px 12px !important;
+    grid-template-columns: minmax(0, 1fr) 34px !important;
+  }
+
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-task {
+    left: 12px !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: none !important;
+  }
+
+  /* ---------- Scene 3 ---------- */
+  html body main.game-shell .stage.scene-why-english > .ea65-scene3-result {
+    position: relative !important;
+    inset: auto !important;
+    order: 2 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 9px !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english .ea65-scene3-child,
+  html body main.game-shell .stage.scene-why-english .ea65-scene3-teacher {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 11px 13px !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english .ea65-scene3-teacher {
+    order: 1 !important;
+  }
+
+  html body main.game-shell .stage.scene-why-english .ea65-scene3-child {
+    order: 2 !important;
+  }
+
+  /* ---------- Scene 4 ---------- */
+  html body main.game-shell .stage.scene-languages .scene-content:has(> .story-card) > .speech,
+  html body main.game-shell .stage.scene-languages .scene-content:has(> .story-card) > .choice-row {
+    display: none !important;
+  }
+
+  html body main.game-shell .stage.scene-languages .scene-content > .speech,
+  html body main.game-shell .stage.scene-languages .scene-content > .story-card,
+  html body main.game-shell .stage.scene-languages .scene-content > .choice-row,
+  html body main.game-shell .stage.scene-languages article.scene-card > .feedback {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell .stage.scene-languages .story-card {
+    display: grid !important;
+    grid-template-columns: 42px minmax(0, 1fr) !important;
+    gap: 10px !important;
+    align-items: center !important;
+    padding: 13px 14px !important;
+    background: rgba(12, 22, 34, .70) !important;
+    border-radius: 16px !important;
+  }
+
+  html body main.game-shell .stage.scene-languages .story-card p {
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 14px !important;
+    line-height: 1.35 !important;
+  }
+
+  /* ---------- Scene 5 ---------- */
+  html body main.game-shell .stage.scene-tongue .scene-content > .speech,
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase,
+  html body main.game-shell .stage.scene-tongue .scene-content > .primary-action {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .hero-phrase {
+    min-height: 66px !important;
+    padding: 12px 14px !important;
+    display: grid !important;
+    grid-template-columns: 36px minmax(0, 1fr) !important;
+    grid-template-rows: auto auto !important;
+    column-gap: 10px !important;
+    background: rgba(12, 22, 34, .70) !important;
+    border: 0 !important;
+    border-radius: 16px !important;
+    box-shadow: none !important;
+    color: #fff !important;
+    text-align: left !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .hero-phrase > span {
+    grid-column: 1 !important;
+    grid-row: 1 / 3 !important;
+    align-self: center !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .hero-phrase > b,
+  html body main.game-shell .stage.scene-tongue .hero-phrase > small {
+    grid-column: 2 !important;
+    color: #fff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .72) !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .hero-phrase > b {
+    font-size: 22px !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .hero-phrase > small {
+    opacity: .84 !important;
+    font-size: 12px !important;
+  }
+
+  /* ---------- Scene 6 ---------- */
+  html body main.game-shell .stage.scene-names .scene-content > .speech,
+  html body main.game-shell .stage.scene-names .scene-content > .echo-gnomes,
+  html body main.game-shell .stage.scene-names .scene-content > .name-line,
+  html body main.game-shell .stage.scene-names .scene-content > .primary-action {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell .stage.scene-names .echo-gnomes {
+    display: grid !important;
+    grid-template-columns: 36px repeat(3, minmax(0, 1fr)) 36px !important;
+    gap: 6px !important;
+    width: 100% !important;
+  }
+
+  html body main.game-shell .stage.scene-names .echo-gnomes > * {
+    min-width: 0 !important;
+    padding: 9px 5px !important;
+    text-align: center !important;
+  }
+
+  html body main.game-shell .stage.scene-names .name-line {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 7px !important;
+    align-items: stretch !important;
+  }
+
+  html body main.game-shell .stage.scene-names .name-line > span {
+    display: block !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    line-height: 1.25 !important;
+    font-weight: 750 !important;
+    text-align: left !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .75) !important;
+  }
+
+  html body main.game-shell .stage.scene-names .name-line input {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 50px !important;
+    margin: 0 !important;
+    color: #fff !important;
+    font-size: 17px !important;
+  }
+
+  html body main.game-shell .stage.scene-names .primary-action {
+    min-height: 58px !important;
+    padding: 12px 16px !important;
+    background: #45bd7d !important;
+    color: #fff !important;
+    border-radius: 16px !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    box-shadow: 0 5px 0 rgba(27, 132, 82, .70) !important;
+  }
+
+  /* ---------- Scene 7 ---------- */
+  html body main.game-shell .stage.scene-many-toys .scene-content > .speech,
+  html body main.game-shell .stage.scene-many-toys .scene-content > .toy-cloud,
+  html body main.game-shell .stage.scene-many-toys .scene-content > .prompt,
+  html body main.game-shell .stage.scene-many-toys .scene-content > .choice-row {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    margin: 0 !important;
+    transform: none !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .scene-content > .speech {
+    order: 1 !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .scene-content > .toy-cloud {
+    order: 2 !important;
+    display: grid !important;
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+    gap: 5px !important;
+    padding: 8px !important;
+    pointer-events: none !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .toy-cloud > span {
+    width: 100% !important;
+    height: 38px !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    font-size: 25px !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .scene-content > .prompt {
+    order: 3 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 3px !important;
+    padding: 10px 12px !important;
+    white-space: normal !important;
+    text-align: center !important;
+    background: rgba(12, 22, 34, .72) !important;
+    border-radius: 14px !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .scene-content > .prompt > b {
+    font-size: 18px !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .scene-content > .prompt > .prompt-translation {
+    display: block !important;
+    font-size: 12px !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .scene-content > .choice-row {
+    order: 4 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px !important;
+    padding: 0 !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys .choice-row > button,
+  html body main.game-shell .stage.scene-many-toys .choice-row > .choice-button,
+  html body main.game-shell .stage.scene-many-toys .choice-row > button:last-child,
+  html body main.game-shell .stage.scene-many-toys .choice-row > .choice-button:last-child {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 48px !important;
+    padding: 9px 8px !important;
+    font-size: 14px !important;
+  }
+
+  html body main.game-shell .stage.scene-many-toys article.scene-card > .feedback {
+    display: none !important;
+  }
+}
+
+@media (max-width: 420px) {
+  html body main.game-shell .topbar .star-counter {
+    min-width: 74px !important;
+    height: 56px !important;
+    min-height: 56px !important;
+    padding: 6px 10px !important;
+  }
+
+  html body main.game-shell .topbar .brand strong {
+    font-size: 19px !important;
+  }
+
+  html body main.game-shell > footer.lesson-controls {
+    grid-template-columns: minmax(0, .85fr) minmax(0, 1.25fr) !important;
+    gap: 9px !important;
+  }
+
+  html body main.game-shell > footer.lesson-controls > button {
+    min-height: 58px !important;
+    font-size: 14px !important;
+  }
+}
