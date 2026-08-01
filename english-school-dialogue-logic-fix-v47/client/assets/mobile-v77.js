@@ -2,7 +2,7 @@
   if (window.__eaMobileV77Installed) return;
   window.__eaMobileV77Installed = true;
 
-  const VERSION_TEXT = 'LESSON 1-1 · VERSION 77';
+  const VERSION_TEXT = 'LESSON 1-1 · VERSION 91';
 
   const normalizeHeader = () => {
     const version = document.querySelector('.topbar .brand > span:last-child > small');
