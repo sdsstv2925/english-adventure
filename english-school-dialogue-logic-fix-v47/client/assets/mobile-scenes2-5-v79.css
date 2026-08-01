@@ -1,0 +1,176 @@
+/* English Adventure VERSION 79
+   Mobile scenes 2 and 5: fit the full scene into the viewport and remove
+   empty white result containers without changing desktop layout.
+*/
+
+@media (max-width: 880px) {
+  /* Compact the shared frame only while scene 2 or scene 5 is active. */
+  html body main.game-shell:has(> .stage.scene-come-in) > header.topbar,
+  html body main.game-shell:has(> .stage.scene-tongue) > header.topbar {
+    padding-top: 10px !important;
+    padding-bottom: 8px !important;
+    row-gap: 5px !important;
+  }
+
+  html body main.game-shell:has(> .stage.scene-come-in) .topbar .brand-mark,
+  html body main.game-shell:has(> .stage.scene-tongue) .topbar .brand-mark {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 48px !important;
+    flex-basis: 38px !important;
+  }
+
+  html body main.game-shell:has(> .stage.scene-come-in) .topbar .star-counter,
+  html body main.game-shell:has(> .stage.scene-tongue) .topbar .star-counter {
+    min-width: 76px !important;
+    height: 54px !important;
+    min-height: 54px !important;
+    padding: 6px 11px !important;
+  }
+
+  html body main.game-shell > .stage.scene-come-in,
+  html body main.game-shell > .stage.scene-tongue {
+    margin-top: 12px !important;
+    gap: 8px !important;
+  }
+
+  html body main.game-shell > .stage.scene-come-in > .stage-visual,
+  html body main.game-shell > .stage.scene-tongue > .stage-visual {
+    aspect-ratio: 16 / 8.15 !important;
+    max-height: 300px !important;
+    border-radius: 20px !important;
+  }
+
+  /* Scene 2 stays inside the image and does not create extra height below it. */
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-caption,
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-result {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    padding: 9px 11px !important;
+    grid-template-columns: minmax(0, 1fr) 32px !important;
+    gap: 8px !important;
+    border-radius: 13px !important;
+  }
+
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-copy strong,
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-result strong {
+    font-size: 16px !important;
+  }
+
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-copy span {
+    font-size: 13px !important;
+  }
+
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-copy small,
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-result small {
+    font-size: 10px !important;
+  }
+
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-task {
+    left: 10px !important;
+    right: 10px !important;
+    bottom: 10px !important;
+    gap: 7px !important;
+  }
+
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-task > span {
+    padding: 7px 10px !important;
+    font-size: 11px !important;
+  }
+
+  html body main.game-shell .stage.scene-come-in .ea64-scene2-seat {
+    min-width: 190px !important;
+    min-height: 42px !important;
+    padding: 9px 15px !important;
+    font-size: 14px !important;
+  }
+
+  /* Scene 5: all content participates in normal flow and remains compact. */
+  html body main.game-shell .stage.scene-tongue > article.scene-card,
+  html body main.game-shell .stage.scene-tongue > article.scene-card > .scene-content {
+    gap: 7px !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .scene-content > .speech {
+    padding: 10px 12px !important;
+    border-radius: 14px !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .scene-content > .speech strong,
+  html body main.game-shell .stage.scene-tongue .scene-content > .speech b,
+  html body main.game-shell .stage.scene-tongue .scene-content > .speech p,
+  html body main.game-shell .stage.scene-tongue .scene-content > .speech span:not(.ru-badge) {
+    font-size: 15px !important;
+    line-height: 1.28 !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase {
+    min-height: 0 !important;
+    padding: 9px 11px !important;
+    display: grid !important;
+    grid-template-columns: 40px minmax(0, 1fr) !important;
+    gap: 9px !important;
+    align-items: center !important;
+    border-radius: 14px !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase .round-sound,
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase button {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase strong,
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase b {
+    font-size: 19px !important;
+    line-height: 1.15 !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase small,
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase p,
+  html body main.game-shell .stage.scene-tongue .scene-content > .hero-phrase span:not(.ru-badge) {
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+  }
+
+  /* Empty native placeholders are removed. Filled action/result blocks stay visible. */
+  html body main.game-shell .stage.scene-tongue .ea79-mobile-empty {
+    display: none !important;
+  }
+
+  html body main.game-shell .stage.scene-tongue .ea79-mobile-filled-action {
+    min-height: 44px !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 9px 13px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #45bd7d !important;
+    background-image: none !important;
+    color: #fff !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 4px 0 rgba(27, 132, 82, .72) !important;
+    font-size: 14px !important;
+    line-height: 1.2 !important;
+    font-weight: 750 !important;
+    text-shadow: none !important;
+  }
+
+  html body main.game-shell:has(> .stage.scene-come-in) > footer.lesson-controls,
+  html body main.game-shell:has(> .stage.scene-tongue) > footer.lesson-controls {
+    margin-top: 10px !important;
+    gap: 10px !important;
+  }
+
+  html body main.game-shell:has(> .stage.scene-come-in) > footer.lesson-controls > button,
+  html body main.game-shell:has(> .stage.scene-tongue) > footer.lesson-controls > button {
+    min-height: 56px !important;
+    padding: 10px 8px !important;
+    border-radius: 16px !important;
+    font-size: 16px !important;
+  }
+}
