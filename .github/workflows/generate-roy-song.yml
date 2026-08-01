@@ -60,7 +60,7 @@ jobs:
         run: python tools/roy_song/make_score.py
 
       - name: Generate actual singing voice through proxied Sinsy app
-        run: python tools/roy_song/synthesize_sinsy_v4.py
+        run: python tools/roy_song/synthesize_sinsy_v5.py
 
       - name: Add children's-song accompaniment and master MP3
         run: python tools/roy_song/mix_song.py
