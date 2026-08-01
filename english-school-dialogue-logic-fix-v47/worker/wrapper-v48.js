@@ -31,39 +31,41 @@ export default {
       .on('head', {
         element(element) {
           element.append(
-            '<link rel="stylesheet" href="/assets/fix-v48.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene-state-v62.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene2-v63.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene3-v65.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene-fixes-v66.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene7-v67.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene11-v69.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene12-v71.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene13-v72.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene4-v73.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene16-v74.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene17-v75.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene18-v76.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/mobile-v77.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene3-mobile-v78.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/mobile-scenes2-5-v79.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene16-dialog-v80.css?v=82">' +
-            '<link rel="stylesheet" href="/assets/scene10-v82.css?v=82">' +
-            '<script defer src="/assets/runtime-v48.js?v=82"></script>' +
-            '<script defer src="/assets/scene-state-v62.js?v=82"></script>' +
-            '<script defer src="/assets/scene2-v63.js?v=82"></script>' +
-            '<script defer src="/assets/scene3-v65.js?v=82"></script>' +
-            '<script defer src="/assets/scene-fixes-v66.js?v=82"></script>' +
-            '<script defer src="/assets/scene9-audio-v68.js?v=82"></script>' +
-            '<script defer src="/assets/scene17-v75.js?v=82"></script>' +
-            '<script defer src="/assets/scene18-v76.js?v=82"></script>' +
-            '<script defer src="/assets/scene18-v76-fix.js?v=82"></script>' +
-            '<script defer src="/assets/scene18-v81-repair.js?v=82"></script>' +
-            '<script defer src="/assets/mobile-v77.js?v=82"></script>' +
-            '<script defer src="/assets/mobile-scenes2-5-v79.js?v=82"></script>' +
-            '<script defer src="/assets/scene10-v82.js?v=82"></script>' +
-            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 82"!important;font-size:12px!important}</style>',
+            '<link rel="stylesheet" href="/assets/fix-v48.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/transparent-dialogs-v48.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene-state-v62.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene2-v63.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene3-v65.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene-fixes-v66.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene7-v67.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene11-v69.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene12-v71.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene13-v72.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene4-v73.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene16-v74.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene17-v75.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene18-v76.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/mobile-v77.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene3-mobile-v78.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/mobile-scenes2-5-v79.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene16-dialog-v80.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene10-v82.css?v=83">' +
+            '<link rel="stylesheet" href="/assets/scene18-v83.css?v=83">' +
+            '<script defer src="/assets/runtime-v48.js?v=83"></script>' +
+            '<script defer src="/assets/scene-state-v62.js?v=83"></script>' +
+            '<script defer src="/assets/scene2-v63.js?v=83"></script>' +
+            '<script defer src="/assets/scene3-v65.js?v=83"></script>' +
+            '<script defer src="/assets/scene-fixes-v66.js?v=83"></script>' +
+            '<script defer src="/assets/scene9-audio-v68.js?v=83"></script>' +
+            '<script defer src="/assets/scene17-v75.js?v=83"></script>' +
+            '<script defer src="/assets/scene18-v76.js?v=83"></script>' +
+            '<script defer src="/assets/scene18-v76-fix.js?v=83"></script>' +
+            '<script defer src="/assets/scene18-v81-repair.js?v=83"></script>' +
+            '<script defer src="/assets/mobile-v77.js?v=83"></script>' +
+            '<script defer src="/assets/mobile-scenes2-5-v79.js?v=83"></script>' +
+            '<script defer src="/assets/scene10-v82.js?v=83"></script>' +
+            '<script defer src="/assets/scene18-v83.js?v=83"></script>' +
+            '<style>.brand small{font-size:0!important}.brand small:after{content:"LESSON 1-1 · VERSION 83"!important;font-size:12px!important}</style>',
             { html: true }
           );
         }
