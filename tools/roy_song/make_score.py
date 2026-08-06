@@ -1,26 +1,32 @@
-DIVISIONS = 4
-TEMPO = 132  # было 108 - было сонно, стало весело
-
+from pathlib import Path
+TEMPO = 132
 MEASURES = [
-    [(None, None, 16, None)],
-    # 1-й раз - тихо и вопросительно (низко)
-    [("C", 4, 4, "What's"), ("D", 4, 4, "your"), ("E", 4, 8, "name")],
-    # 2-й раз - громче и выше (как будто не расслышал)
-    [("E", 4, 4, "What's"), ("G", 4, 4, "your"), ("A", 4, 8, "name")],
-    # 3-й раз - самый веселый, с прыжком на little boy
-    [
-        ("C", 5, 2, "What's"), ("B", 4, 2, "your"), ("A", 4, 4, "name"),
-        ("G", 4, 2, ("lit", "begin")), ("A", 4, 2, ("tle", "end")), ("C", 5, 4, "boy"),
-    ],
-    # Ответ Роя - гордо! 
-    [("C", 5, 2, "My"), ("C", 5, 2, "name"), ("D", 5, 2, "is"), ("E", 5, 8, "Roy"), (None, None, 2, None)],
-    # How old are you - как считалочка
-    [
-        ("G", 4, 2, "How"), ("C", 5, 2, "old"), ("C", 5, 2, "are"), ("B", 4, 2, "you"),
-        ("A", 4, 2, "How"), ("G", 4, 2, "old"), ("E", 4, 2, "are"), ("G", 4, 2, "you"),
-    ],
-    [("C", 5, 2, "How"), ("B", 4, 2, "old"), ("A", 4, 2, "are"), ("G", 4, 8, "you"), (None, None, 2, None)],
-    # I am six - прыжок вверх, гордость
-    [("C", 4, 4, "I"), ("E", 4, 2, "am"), ("G", 4, 4, "six"), ("C", 5, 2, "I"), ("B", 4, 2, "am"), ("C", 5, 4, "six")],
-    [("A", 4, 4, "and"), ("G", 4, 8, "you"), (None, None, 4, None)],
+    [("C4", 1.0, "What's"), ("D4", 1.0, "your"), ("E4", 1.0, "name")],
+    [("E4", 1.0, "I"), ("G4", 1.0, "am"), ("A4", 2.0, "six")],
+    [("C5", 1.0, "and"), ("B4", 1.0, "you"), ("A4", 1.0, "you"), ("C5", 1.0, "you")],
 ]
+def make_musicxml():
+    root = Path(__file__).resolve().parents[2]
+    out_dir = root / "roy_song_work"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out = out_dir / "roy_song.musicxml"
+    xml = f'''<?xml version="1.0" encoding="UTF-8"?>
+<score-partwise version="3.1">
+  <part-list><score-part id="P1"><part-name>Voice</part-name></score-part></part-list>
+  <part id="P1">
+'''
+    for i, measure in enumerate(MEASURES, start=1):
+        xml += f' <measure number="{i}">\n'
+        if i==1:
+            xml += f' <attributes><divisions>1</divisions><key><fifths>0</fifths></key><time><beats>4</beats><beat-type>4</beat-type></time><clef><sign>G</sign><line>2</line></clef></attributes>\n'
+            xml += f' <direction><direction-type><metronome><beat-unit>quarter</beat-unit><per-minute>{TEMPO}</per-minute></metronome></direction-type></direction>\n'
+        for pitch, dur, lyric in measure:
+            step=pitch[0]; octave=pitch[-1]
+            xml += f' <note><pitch><step>{step}</step><octave>{octave}</octave></pitch><duration>{dur}</duration><type>quarter</type><lyric><text>{lyric}</text></lyric></note>\n'
+        xml += ' </measure>\n'
+    xml += ' </part>\n</score-partwise>\n'
+    out.write_text(xml, encoding="utf-8")
+    print(f"Wrote {out} TEMPO={TEMPO} size={out.stat().st_size}")
+
+if __name__ == "__main__":
+    make_musicxml()
